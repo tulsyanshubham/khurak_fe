@@ -6,7 +6,7 @@ import Review from './components/Review'
 export default function page() {
   return (
     <div className=''>
-      {/* <Header /> */}
+      <Header />
       <Home />
       {/* <Review /> */}
     </div>
