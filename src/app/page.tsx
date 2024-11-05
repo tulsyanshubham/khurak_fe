@@ -1,10 +1,14 @@
 import React from 'react'
 import Header from './components/Header'
+import Home from './components/Home'
+import Review from './components/Review'
 
 export default function page() {
   return (
-    <div className='bg-gray-300 h-screen'>
-      <Header />
+    <div className=''>
+      {/* <Header /> */}
+      <Home />
+      {/* <Review /> */}
     </div>
   )
 }
