@@ -6,8 +6,7 @@ import { Spotlight } from './ui/Spotlight';
 export default function Home() {
     return (
         <div className='flex flex-col items-center justify-center flex-wrap relative pt-32 overflow-hidden w-full antialiased'>
-            
-            <div className='flex flex-wrap justify-evenly items-center w-full'>
+            <div className='flex flex-wrap justify-evenly items-center w-full mb-10'>
                 <div className="flex flex-col justify-center items-center text-center z-10">
                     <h1 className="text-4xl md:text-6xl font-bold text-green-700">Welcome to Khurak</h1>
                     <h2 className="text-2xl md:text-4xl font-semibold mt-2">Your Hub for Healthy Eating</h2>
@@ -27,7 +26,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div>
-                    <img src={'/images/home/delivery.png'} alt="Khurak" className='w-[25vw] drop-shadow-xl' />
+                    <img src={'/images/home/order.svg'} alt="Khurak" className='w-[25vw] drop-shadow-xl' />
                 </div>
             </div>
             <div>
