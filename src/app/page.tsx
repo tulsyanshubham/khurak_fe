@@ -8,7 +8,7 @@ export default function page() {
     <div className=''>
       <Header />
       <Home />
-      {/* <Review /> */}
+      <Review />
     </div>
   )
 }

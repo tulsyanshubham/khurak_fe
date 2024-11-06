@@ -8,12 +8,6 @@ const reviewsData = [
         avatarColor: "#de716d"
     },
     {
-        title: "Life-Saver!",
-        content: "With Khurak, I can whip up a healthy meal in minutes! The variety and freshness of the ingredients are top-notch. Highly recommend it!",
-        reviewer: "Anuraag",
-        avatarColor: "#7362f2"
-    },
-    {
         title: "Amazing Variety",
         content: "I am impressed by the range of healthy dishes available. Khurak makes it easy to maintain a balanced diet without sacrificing taste.",
         reviewer: "Rakesh",
@@ -36,7 +30,13 @@ const reviewsData = [
         content: "Khurak has become my go-to for ordering meals. The flavors are incredible, and I feel good knowing I'm eating healthily!",
         reviewer: "Shila",
         avatarColor: "#d8925c"
-    }
+    },
+    {
+        title: "Life-Saver!",
+        content: "With Khurak, I can whip up a healthy meal in minutes! The variety and freshness of the ingredients are top-notch. Highly recommend it!",
+        reviewer: "Anuraag",
+        avatarColor: "#7362f2"
+    },
 ];
 
 export default function Message() {
