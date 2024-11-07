@@ -12,7 +12,7 @@ export default function Home() {
                     <h2 className="text-2xl md:text-4xl font-semibold mt-2">Your Hub for Healthy Eating</h2>
                     <h2 className="text-2xl md:text-4xl font-semibold">With Fresh Meals.</h2>
 
-                    <p className="text-bold mt-4 max-w-lg">
+                    <p className="text-bold mt-4 max-w-lg px-6 md:px-0">
                         Easily order wholesome meals tailored to your unique lifestyle, featuring fresh, nutritious ingredients that promote well-being, and enjoy a healthier, happier you with every delicious bite.
                     </p>
 
@@ -26,7 +26,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div>
-                    <img src={'/images/home/order.svg'} alt="Khurak" className='w-[25vw] drop-shadow-xl' />
+                    <img src={'/images/home/order.svg'} alt="Khurak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl' />
                 </div>
             </div>
             <div>
