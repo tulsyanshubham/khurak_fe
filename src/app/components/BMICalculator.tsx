@@ -30,9 +30,9 @@ const BMICalculator: React.FC = () => {
     <div className='overflow-hidden'>
     <div className='relative my-20'>
       <div className="absolute z-0 -top-16 left-9 right-0 mx-auto">
-        <img src="/images/home/bmi_bg.svg" alt="" className="w-[95vw] rotate-6" />
+        <img src="/images/home/bmi_bg.svg" alt="" className="w-[95vw] rotate-6 dark:opacity-80" />
       </div>
-      <h1 className="text-4xl font-bold text-center relative text-green-700 mb-6 z-10">Check Your Health Status</h1>
+      <h1 className="text-4xl font-bold text-center relative text-green-700 mb-6 z-10">Assess Your Health Now</h1>
       <div className="flex w-full items-center justify-evenly relative z-10">
         <div className="w-1/4">
           <div className="mb-4 ">
@@ -40,7 +40,7 @@ const BMICalculator: React.FC = () => {
               Select Unit
             </label>
             <select
-              className="w-full p-2 border border-green-300 rounded-md focus:ring-green-600 focus:border-green-700"
+              className="w-full p-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 dark:bg-gray-700"
               value={unit}
               onChange={(e) => {
                 setUnit(e.target.value);

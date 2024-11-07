@@ -24,12 +24,12 @@ export default function Header() {
   return (
     <div>
       <div
-        className={`py-3 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300  w-full ${isScrolled ? 'bg-white fixed top-0 z-50 shadow-lg' : 'absolute'}`}>
+        className={`py-3 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300  w-full ${isScrolled ? 'bg-white dark:bg-navbg fixed top-0 z-50 shadow-lg' : 'absolute'}`}>
         <div id="logo" className="font-bold text-base md:text-lg">
           KHURAK
         </div>
         <div>
-          <button className="bg-white text-green-500 font-bold text-sm md:text-lg py-2 px-6 md:px-12 rounded-lg border-2 border-green-500">
+          <button className="bg-white text-green-500 dark:text-white dark:bg-green-500 font-bold text-sm md:text-lg py-2 px-6 md:px-12 rounded-lg border-2 border-green-500 dark:border-gray-700">
             Join Us
           </button>
         </div>

@@ -12,7 +12,7 @@ import linkedin from '@/assets/icons/linkedin.png';
 
 
 export default function Footer() {
-    const imgClass = 'invert-[.75] hover:invert w-12';
+    const imgClass = 'invert-[.75] hover:invert w-12 dark:invert-[.25] dark:hover:invert-0';
     const data = {
         phone: "+919999999999",
         email: "abcd1234@gmail.com",
@@ -25,16 +25,16 @@ export default function Footer() {
         }
     }
     return (
-        <div className='flex flex-col items-center justify-center w-full gap-3 py-2 border-t-2 mt-2 bg-green-50'>
+        <div className='flex flex-col items-center justify-center w-full gap-3 py-2 border-t-2 mt-2 bg-green-50 dark:bg-green-900 dark:text-white'>
             <div className='flex items-center justify-evenly w-full flex-wrap py-7 gap-10'>
-                <div className='text-5xl text-green-800'>KHURAK </div>
+                <div className='text-5xl text-green-800 dark:text-white'>KHURAK </div>
                 <div className='flex flex-col gap-2'>
                     <div className='flex font-base text-4xl md:text-start justify-center md:justify-start'>Contact Us</div>
                     <a href={`tel:${data.phone}`} className='flex gap-1 text-lg justify-center md:justify-start' >
-                        <Image src={call} alt='call' className={"invert-[.75] w-7"} /><span>{data.phone}</span>
+                        <Image src={call} alt='call' className={"invert-[.75] w-7 dark:invert-[.25]"} /><span>{data.phone}</span>
                     </a>
                     <a href={`mailto:${data.email}`} className='flex gap-1 text-lg justify-center md:justify-start' >
-                        <Image src={mail} alt='call' className={"invert-[.75] w-7"} /><span>{data.email}</span>
+                        <Image src={mail} alt='call' className={"invert-[.75] w-7 dark:invert-[.25]"} /><span>{data.email}</span>
                     </a>
                 </div>
                 <div>
