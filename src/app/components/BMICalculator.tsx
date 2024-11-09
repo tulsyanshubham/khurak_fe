@@ -1,5 +1,5 @@
 "use client";
-import { div } from 'framer-motion/client';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const BMICalculator: React.FC = () => {
@@ -30,7 +30,7 @@ const BMICalculator: React.FC = () => {
     // <div className='overflow-hidden'>
     <div className='relative mb-20 mt-10'>
       {/* <div className="absolute z-0 -top-16 left-9 right-0 mx-auto">
-        <img src="/images/home/bmi_bg.svg" alt="" className="w-[95vw] rotate-6 dark:opacity-80" />
+        <Image src="/images/home/bmi_bg.svg" alt="" className="w-[95vw] rotate-6 dark:opacity-80" />
       </div> */}
       <h1 className="text-3xl md:text-4xl font-bold text-center relative text-green-700 dark:text-green-500 mb-8 z-10">
       Assess Your Health Now
@@ -112,7 +112,7 @@ const BMICalculator: React.FC = () => {
         </div>
 
         <div className='w-fit md:block hidden'>
-          <img src="/images/home/bmi.svg" alt="BMI" className='h-[25vw] dark:brightness-110' />
+          <Image src="/images/home/bmi.svg" alt="BMI" width={500} height={500} className='h-[25vw] dark:brightness-110' />
         </div>
       </div>
     </div>

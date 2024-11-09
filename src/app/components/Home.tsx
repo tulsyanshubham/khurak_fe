@@ -2,6 +2,7 @@
 import React from 'react'
 import { AppleCardsCarouselDemo } from './cards';
 import { Spotlight } from './ui/Spotlight';
+import Image from 'next/image';
 
 export default function Home() {
     return (
@@ -26,7 +27,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div>
-                    <img src={'/images/home/order.svg'} alt="Khurak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl' />
+                    <Image src={'/images/home/order.svg'} width={500} height={500} alt="Khurak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl' />
                 </div>
             </div>
             <div>

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "./components/theme-provider";
 
 
 export const metadata: Metadata = {
   title: "Khurak",
-  description: "something i dont know", 
+  description: "something i dont know",
 };
 
 export default function RootLayout({
@@ -14,11 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className=""
-      >
-        {children}
-      </body>
+      <ThemeProvider >
+        <body>
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

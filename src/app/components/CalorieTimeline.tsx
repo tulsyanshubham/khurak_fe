@@ -100,7 +100,7 @@ export default function CalorieTimeline() {
             Afternoon Snack
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-8">
-          A healthy snack, such as nuts or yogurt, can help curb hunger and prevent overeating during dinner. It's also a great opportunity to add some extra vitamins and nutrients to your day.
+          A healthy snack, such as nuts or yogurt, can help curb hunger and prevent overeating during dinner. It&apos;s also a great opportunity to add some extra vitamins and nutrients to your day.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
