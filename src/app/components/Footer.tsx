@@ -1,5 +1,3 @@
-import { div } from 'framer-motion/client';
-import Link from 'next/link';
 import React from 'react'
 import Image from 'next/image';
 import call from '@/assets/icons/call.png';
@@ -25,7 +23,7 @@ export default function Footer() {
         }
     }
     return (
-        <div className='flex flex-col items-center justify-center w-full gap-3 py-2 border-t-2 mt-2 bg-green-50 dark:bg-green-900 dark:text-white'>
+        <div className='flex flex-col items-center justify-center w-full gap-3 py-2 border-t-2 mt-2 bg-green-50 dark:bg-footergDarkBg dark:text-white'>
             <div className='flex items-center justify-evenly w-full flex-wrap py-7 gap-10'>
                 <div className='text-5xl text-green-800 dark:text-white'>KHURAK </div>
                 <div className='flex flex-col gap-2'>
@@ -48,8 +46,8 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='bg-green-800 w-3/4 md:w-1/2 h-[1.5px] rounded-full'></div>
-            <div>Copyright &copy; [2024] [<span className='text-green-700 font-bold'>KHURAK</span>]. All rights reserved.</div>
+            <div className='bg-green-800 dark:bg-white w-3/4 md:w-1/2 h-[1.5px] rounded-full'></div>
+            <div>Copyright &copy; [2024] [<span className='text-green-700 dark:text-green-500 font-bold'>KHURAK</span>]. All rights reserved.</div>
         </div>
 
     )

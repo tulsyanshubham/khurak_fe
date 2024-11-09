@@ -27,16 +27,18 @@ const BMICalculator: React.FC = () => {
   };
 
   return (
-    <div className='overflow-hidden'>
-    <div className='relative my-20'>
-      <div className="absolute z-0 -top-16 left-9 right-0 mx-auto">
+    // <div className='overflow-hidden'>
+    <div className='relative mb-20 mt-10'>
+      {/* <div className="absolute z-0 -top-16 left-9 right-0 mx-auto">
         <img src="/images/home/bmi_bg.svg" alt="" className="w-[95vw] rotate-6 dark:opacity-80" />
-      </div>
-      <h1 className="text-4xl font-bold text-center relative text-green-700 mb-6 z-10">Assess Your Health Now</h1>
+      </div> */}
+      <h1 className="text-3xl md:text-4xl font-bold text-center relative text-green-700 dark:text-green-500 mb-8 z-10">
+      Assess Your Health Now
+      </h1>
       <div className="flex w-full items-center justify-evenly relative z-10">
-        <div className="w-1/4">
+        <div className="w-[80vw] md:w-1/4">
           <div className="mb-4 ">
-            <label className="block mb-2 text-sm font-medium text-green-700">
+            <label className="block mb-2 text-sm font-medium text-green-700 dark:text-green-400">
               Select Unit
             </label>
             <select
@@ -53,7 +55,7 @@ const BMICalculator: React.FC = () => {
           </div>
 
           <div className="mb-4 z-10">
-            <label className="block mb-2 text-sm font-medium text-green-700">
+            <label className="block mb-2 text-sm font-medium text-green-700 dark:text-green-400">
               Weight ({unit === 'metric' ? 'kg' : 'lbs'}): {weight}
             </label>
             <input
@@ -70,7 +72,7 @@ const BMICalculator: React.FC = () => {
           </div>
 
           <div className="mb-4 z-10">
-            <label className="block mb-2 text-sm font-medium text-green-700">
+            <label className="block mb-2 text-sm font-medium text-green-700 dark:text-green-400">
               Height ({unit === 'metric' ? 'meters' : 'inches'}): {height.toFixed(2)}
             </label>
             <input
@@ -83,8 +85,7 @@ const BMICalculator: React.FC = () => {
                 setHeight(Number(e.target.value));
                 resetBMI(); // Reset BMI when input changes
               }}
-              className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"
-            />
+              className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"/>
           </div>
 
           {bmi === null ? (
@@ -96,8 +97,8 @@ const BMICalculator: React.FC = () => {
             </button>
           ) : (
             <div className="mt-6 text-center">
-              <p className="text-lg font-semibold text-green-600 pb-1">BMI: {bmi.toFixed(2)}
-                <span className="text-green-600 ml-2">
+              <p className="text-lg font-semibold text-green-600 dark:text-green-400 pb-1">BMI: {bmi.toFixed(2)}
+                <span className="text-green-600 dark:text-green-300 ml-2">
                   ({bmi < 18.5
                     ? 'Underweight'
                     : bmi >= 18.5 && bmi <= 24.9
@@ -110,12 +111,12 @@ const BMICalculator: React.FC = () => {
           )}
         </div>
 
-        <div className='w-fit'>
-          <img src="/images/home/bmi.svg" alt="BMI" className='h-[25vw]' />
+        <div className='w-fit md:block hidden'>
+          <img src="/images/home/bmi.svg" alt="BMI" className='h-[25vw] dark:brightness-110' />
         </div>
       </div>
     </div>
-    </div>
+    // </div>
   );
 };
 

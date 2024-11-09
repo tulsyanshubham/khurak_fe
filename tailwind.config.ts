@@ -65,7 +65,8 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-			navbg : "#022c22"
+			navbg : "#0d2512",
+			footergDarkBg : "#19381f",
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
