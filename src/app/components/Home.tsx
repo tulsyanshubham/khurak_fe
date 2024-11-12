@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import { AppleCardsCarouselDemo } from './cards';
+import { AppleCardsCarousel } from './cards';
 import { Spotlight } from './ui/Spotlight';
 import Image from 'next/image';
 
@@ -31,7 +31,7 @@ export default function Home() {
                 </div>
             </div>
             <div>
-                <AppleCardsCarouselDemo />
+                <AppleCardsCarousel />
             </div>
             <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"

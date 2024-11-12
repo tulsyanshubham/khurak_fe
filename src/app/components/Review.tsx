@@ -45,7 +45,7 @@ export default function Review() {
             <div className='w-[94%]'>
                 <div className='bg-gradient-to-br from-green-500 to-teal-600 dark:from-green-700 dark:to-green-800 w-full mx-auto rounded-2xl flex justify-center py-3 md:py-8 overflow-hidden'>
                     <div className='flex flex-col items-center justify-center text-3xl font-semibold w-[35%] md:w-2/5'>
-                        <div className='flex flex-col items-start text-lg md:text-5xl font-bold md:font-semibold pl-5 md:pl-0 text-neutral-900'>
+                        <div className='flex flex-col items-start text-lg md:text-5xl font-bold md:font-semibold pl-5 md:pl-0 text-neutral-800 dark:text-gray-100 z-10'>
                             <div><span className='text-indigo-900 dark:text-green-400'>Khurak</span></div>
                             <div>Received <span className='text-indigo-900 dark:text-green-400'>4.8/5</span></div>
                             <div>Starts in over</div>
