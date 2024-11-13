@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect } from 'react'
-import Header from './components/Header'
-import Home from './components/Home'
-import Review from './components/Review'
-import Footer from './components/Footer'
-import BMICalculator from './components/BMICalculator'
-import CalorieTimeline from './components/CalorieTimeline'
-import { useTheme } from './components/theme-provider'
+import Header from '@/components/Header'
+import Home from '@/components/Home'
+import Review from '@/components/Review'
+import Footer from '@/components/Footer'
+import BMICalculator from '@/components/BMICalculator'
+import CalorieTimeline from '@/components/CalorieTimeline'
+import { useTheme } from '@/components/theme-provider'
 
 export default function Page() {
 

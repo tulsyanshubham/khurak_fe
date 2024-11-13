@@ -33,10 +33,10 @@ const BMICalculator: React.FC = () => {
         <Image src="/images/home/bmi_bg.svg" alt="" className="w-[95vw] rotate-6 dark:opacity-80" />
       </div> */}
       <h1 className="text-3xl md:text-4xl font-bold text-center relative text-green-700 dark:text-green-500 mb-8 z-10">
-      Assess Your Health Now
+        Assess Your Health Now
       </h1>
       <div className="flex w-full items-center justify-evenly relative z-10">
-        <div className="w-[80vw] md:w-1/4">
+        <div className="w-[80vw] md:w-2/5 lg:w-1/4">
           <div className="mb-4 ">
             <label className="block mb-2 text-sm font-medium text-green-700 dark:text-green-400">
               Select Unit
@@ -56,7 +56,18 @@ const BMICalculator: React.FC = () => {
 
           <div className="mb-4 z-10">
             <label className="block mb-2 text-sm font-medium text-green-700 dark:text-green-400">
-              Weight ({unit === 'metric' ? 'kg' : 'lbs'}): {weight}
+              Weight ({unit === 'metric' ? 'kg' : 'lbs'}):
+              <input
+                type="number"
+                min={unit === 'metric' ? 30 : 66} // Minimum weight: 30kg or 66lbs
+                max={unit === 'metric' ? 200 : 440} // Maximum weight: 200kg or 440lbs
+                value={weight}
+                onChange={(e) => {
+                  setWeight(Number(e.target.value));
+                  resetBMI(); // Reset BMI when input changes
+                }}
+                className="w-1/5 md:w-1/6 ml-2 px-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 dark:bg-gray-700"
+              />
             </label>
             <input
               type="range"
@@ -73,7 +84,19 @@ const BMICalculator: React.FC = () => {
 
           <div className="mb-4 z-10">
             <label className="block mb-2 text-sm font-medium text-green-700 dark:text-green-400">
-              Height ({unit === 'metric' ? 'meters' : 'inches'}): {height.toFixed(2)}
+              Height ({unit === 'metric' ? 'meters' : 'inches'}):
+              <input
+                type="number"
+                min={unit === 'metric' ? 1.2 : 48} // Minimum height: 1.2m or 48inches
+                max={unit === 'metric' ? 2.5 : 100} // Maximum height: 2.5m or 100inches
+                step="0.01"
+                value={height}
+                onChange={(e) => {
+                  setHeight(Number(e.target.value));
+                  resetBMI(); // Reset BMI when input changes
+                }}
+                className="w-1/5 md:w-1/6 ml-2 px-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 dark:bg-gray-700"
+              />
             </label>
             <input
               type="range"
@@ -85,7 +108,7 @@ const BMICalculator: React.FC = () => {
                 setHeight(Number(e.target.value));
                 resetBMI(); // Reset BMI when input changes
               }}
-              className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"/>
+              className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600" />
           </div>
 
           {bmi === null ? (
@@ -98,21 +121,24 @@ const BMICalculator: React.FC = () => {
           ) : (
             <div className="mt-6 text-center">
               <p className="text-lg font-semibold text-green-600 dark:text-green-400 pb-1">BMI: {bmi.toFixed(2)}
-                <span className="text-green-600 dark:text-green-300 ml-2">
-                  ({bmi < 18.5
-                    ? 'Underweight'
-                    : bmi >= 18.5 && bmi <= 24.9
-                      ? 'Normal weight'
-                      : bmi >= 25 && bmi <= 29.9
-                        ? 'Overweight'
-                        : 'Obesity'})
-                </span></p>
+                <span className="ml-2">
+                  {bmi < 18.5 ? (
+                    <span className="text-blue-500 dark:text-blue-300">Underweight</span>
+                  ) : bmi >= 18.5 && bmi <= 24.9 ? (
+                    <span className="text-green-500 dark:text-green-200">Normal weight</span>
+                  ) : bmi >= 25 && bmi <= 29.9 ? (
+                    <span className="text-yellow-600 dark:text-yellow-300">Overweight</span>
+                  ) : (
+                    <span className="text-red-600 dark:text-red-300">Obesity</span>
+                  )}
+                </span>
+              </p>
             </div>
           )}
         </div>
 
         <div className='w-fit md:block hidden'>
-          <Image src="/images/home/bmi.svg" alt="BMI" width={500} height={500} className='h-[25vw] dark:brightness-110' />
+          <Image src="/images/home/bmi.svg" alt="BMI" width={500} height={500} className='w-[40vw] lg:w-[25vw] dark:brightness-110' />
         </div>
       </div>
     </div>

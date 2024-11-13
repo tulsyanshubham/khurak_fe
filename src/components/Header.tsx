@@ -39,7 +39,7 @@ export default function Header() {
           KHURAK
         </div>
         <div className='flex items-center justify-center gap-3'>
-          <button className="bg-white text-green-500 dark:text-white dark:bg-green-500 font-bold text-sm md:text-lg py-2 px-6 md:px-12 rounded-lg border-2 border-green-500 dark:border-gray-700">
+          <button className="bg-white text-green-500 dark:text-white dark:bg-green-500 font-bold text-sm md:text-lg py-2 px-6 md:px-12 rounded-lg border-2 border-green-500 dark:border-gray-800">
             Join Us
           </button>
           <button onClick={toggleTheme}>

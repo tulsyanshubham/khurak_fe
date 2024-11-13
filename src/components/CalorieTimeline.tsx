@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { Timeline } from "@/app/components/ui/timeline";
+import { Timeline } from "./ui/timeline";
 
 export default function CalorieTimeline() {
   const subTitleClass = "text-neutral-500 font-bold dark:text-neutral-300 text-xl md:text-2xl font-normal mb-2";

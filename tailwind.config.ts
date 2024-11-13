@@ -78,3 +78,5 @@ const config: Config = {
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
+
+// 320 1440
