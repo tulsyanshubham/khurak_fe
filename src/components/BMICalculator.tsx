@@ -66,7 +66,7 @@ const BMICalculator: React.FC = () => {
                   setWeight(Number(e.target.value));
                   resetBMI(); // Reset BMI when input changes
                 }}
-                className="w-1/5 md:w-1/6 ml-2 px-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 dark:bg-gray-700"
+                className="w-1/5 md:w-1/5 ml-2 px-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 bg-transparent"
               />
             </label>
             <input
@@ -95,7 +95,7 @@ const BMICalculator: React.FC = () => {
                   setHeight(Number(e.target.value));
                   resetBMI(); // Reset BMI when input changes
                 }}
-                className="w-1/5 md:w-1/6 ml-2 px-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 dark:bg-gray-700"
+                className="w-1/5 md:w-1/5 ml-2 px-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 bg-transparent"
               />
             </label>
             <input
