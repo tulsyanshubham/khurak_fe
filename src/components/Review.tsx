@@ -81,7 +81,7 @@ export default function Review() {
                                             <div className='font-semibold text-base'>{review.reviewer}</div>
                                         </div>
                                     </div>
-                                    <div className="absolute right-10 bottom-10 flex flex-row text-xl gap-1 font-bold"><span>{review.stars}</span><FaStar size={24} color='green' /></div>
+                                    <div className="absolute right-10 bottom-10 flex flex-row text-xl gap-1 font-bold"><span>{review.stars}</span><FaStar size={24} color='orange' /></div>
                                 </div>
                             ))}
                         </div>
@@ -97,7 +97,7 @@ export default function Review() {
                                             <div className='font-semibold text-base'>{review.reviewer}</div>
                                         </div>
                                     </div>
-                                    <div className="absolute right-10 bottom-10 flex flex-row text-xl gap-1 font-bold"><span>{review.stars}</span><FaStar size={24} color='green' /></div>
+                                    <div className="absolute right-10 bottom-10 flex flex-row text-xl gap-1 font-bold"><span>{review.stars}</span><FaStar size={24} color='orange' /></div>
                                 </div>
                             ))}
                         </div>

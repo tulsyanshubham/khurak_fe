@@ -101,7 +101,7 @@ export const InfiniteMovingCards = ({
                                 <div className='text-sm'>{item.reviewer}</div>
                             </div>
                         </div>
-                        <div className="absolute right-4 bottom-5 flex flex-row text-sm gap-1 font-bold"><span>{item.stars}</span><FaStar size={17} color='green' /></div>
+                        <div className="absolute right-4 bottom-5 flex flex-row text-sm gap-1 font-bold"><span>{item.stars}</span><FaStar size={17} color='orange' /></div>
                     </li>
                 ))}
             </ul>
