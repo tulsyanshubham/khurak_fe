@@ -2,7 +2,7 @@ import React from 'react';
 import { InfiniteMovingCards } from './ui/infinite-moving-cards';
 import { FaStar, FaRegStar } from "react-icons/fa";
 
-interface review{
+interface review {
     title: string;
     content: string;
     reviewer: string;
@@ -10,7 +10,7 @@ interface review{
     stars: number;
 }
 
-const reviewsData : review[] = [
+const reviewsData: review[] = [
     {
         title: "Delicious and Healthy",
         content: "Khurak has completely transformed my meal choices. The healthy options are not only delicious but also quick to order. I love how easy it is to find nutritious meals!",

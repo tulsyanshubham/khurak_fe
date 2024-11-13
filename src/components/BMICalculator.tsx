@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useState } from 'react';
+import images from '@/constants/Images.json';
 
 const BMICalculator: React.FC = () => {
   const [weight, setWeight] = useState<number>(70); // Default weight
@@ -138,7 +139,7 @@ const BMICalculator: React.FC = () => {
         </div>
 
         <div className='w-fit md:block hidden'>
-          <Image src="/images/home/bmi.svg" alt="BMI" width={500} height={500} className='w-[40vw] lg:w-[25vw] dark:brightness-110' />
+          <Image src={images.bmi} alt="BMI" width={500} height={500} className='w-[40vw] lg:w-[25vw] dark:brightness-110' />
         </div>
       </div>
     </div>

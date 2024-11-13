@@ -26,7 +26,11 @@ type Card = {
   src: string;
   title: string;
   category: string;
-  content: React.ReactNode;
+  content: {
+    head: string;
+    desc: string;
+    img_src: string;
+  };
 };
 
 export const CarouselContext = createContext<{
@@ -166,7 +170,7 @@ export const Card = ({
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose } = useContext(CarouselContext);
-  
+
   const handleClose = useCallback(() => {
     setOpen(false);
     onCardClose(index);
@@ -187,7 +191,7 @@ export const Card = ({
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open,handleClose]);
+  }, [open, handleClose]);
 
   useOutsideClick(containerRef, () => handleClose());
 
@@ -232,7 +236,26 @@ export const Card = ({
               >
                 {card.title}
               </motion.p>
-              <div className="py-10">{card.content}</div>
+              <div className="py-10">
+                <div
+                  className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+                >
+                  <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+                    <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                    <span dangerouslySetInnerHTML={{ __html: card.content.head }} />
+                    </span>{" "}
+                    {card.content.desc}
+                  </p>
+
+                  <Image
+                    src={card.content.img_src}
+                    alt="Macbook mockup from Aceternity UI"
+                    height="500"
+                    width="500"
+                    className="md:w-1/2 w-full mx-auto aspect-video object-cover mt-5 rounded-lg"
+                  />
+                </div>
+              </div>
             </motion.div>
           </div>
         )}

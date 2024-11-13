@@ -1,8 +1,9 @@
 "use client";
 import React from 'react'
-import { AppleCardsCarousel } from './cards';
+import CardsCarousel from './cards';
 import { Spotlight } from './ui/Spotlight';
 import Image from 'next/image';
+import images from '@/constants/Images.json';
 
 export default function Home() {
     return (
@@ -27,11 +28,11 @@ export default function Home() {
                     </div>
                 </div>
                 <div>
-                    <Image src={'/images/home/order.svg'} width={500} height={500} alt="Khurak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl' />
+                    <Image src={images.right_to_welcome} width={500} height={500} alt="Khurak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl' />
                 </div>
             </div>
             <div>
-                <AppleCardsCarousel />
+                <CardsCarousel />
             </div>
             <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"

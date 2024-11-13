@@ -84,7 +84,7 @@ export const InfiniteMovingCards = ({
                 ref={scrollerRef}
                 className={cn(
                     " flex min-w-full shrink-0 gap-4 w-max flex-nowrap",
-                    start && "animate-scroll ",
+                    start && "animate-scroll py-4",
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
@@ -93,19 +93,15 @@ export const InfiniteMovingCards = ({
                         className="w-[170px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[450px]"
                         key={item.title}
                     >
-                        {/* <blockquote> */}
-                            {/* <div className='relative'> */}
-                                <div className="bg-gray-100 h-full dark:bg-gray-700 dark:text-white p-4 md:p-8 rounded-2xl flex flex-col gap-3 md:gap-6 relative justify-between">
-                                    <div className='font-bold text-sm md:text-lg'>{item.title}</div>
-                                    <div className='text-xs md:text-base' >{item.content}</div>
-                                    <div className='flex items-center gap-2'>
-                                        <div className='h-6 w-6 md:h-12 md:w-12 rounded-full' style={{ backgroundColor: item.avatarColor }}></div>
-                                        <div className='text-sm'>{item.reviewer}</div>
-                                    </div>
-                                </div>
-                                <div className="absolute right-4 bottom-5 flex flex-row text-sm gap-1 font-bold"><span>{item.stars}</span><FaStar size={17} color='green' /></div>
-                            {/* </div> */}
-                        {/* </blockquote> */}
+                        <div className="bg-gray-100 h-full dark:bg-gray-700 dark:text-white p-4 md:p-8 rounded-2xl flex flex-col gap-3 md:gap-6 relative justify-between">
+                            <div className='font-bold text-sm md:text-lg'>{item.title}</div>
+                            <div className='text-xs md:text-base' >{item.content}</div>
+                            <div className='flex items-center gap-2'>
+                                <div className='h-6 w-6 md:h-12 md:w-12 rounded-full' style={{ backgroundColor: item.avatarColor }}></div>
+                                <div className='text-sm'>{item.reviewer}</div>
+                            </div>
+                        </div>
+                        <div className="absolute right-4 bottom-5 flex flex-row text-sm gap-1 font-bold"><span>{item.stars}</span><FaStar size={17} color='green' /></div>
                     </li>
                 ))}
             </ul>
