@@ -61,11 +61,19 @@ export default function Review() {
             <div className='w-[94%]'>
                 <div className='bg-gradient-to-br from-green-500 to-teal-600 dark:from-green-700 dark:to-green-800 w-full mx-auto rounded-2xl flex justify-center py-3 md:py-8 overflow-hidden md:flex-row flex-col'>
                     <div className='flex flex-col items-center justify-center text-3xl font-semibold w-full md:w-2/5'>
-                        <div className='flex flex-col items-start text-2xl md:text-5xl font-bold md:font-semibold py-3 md:py-0 md:pl-0 text-neutral-800 dark:text-gray-100 z-10'>
-                            <div><span className='text-indigo-900 dark:text-green-400'>Khurak</span></div>
-                            <div>Received <span className='text-indigo-900 dark:text-green-400'>4.8/5</span></div>
-                            <div>Starts in over</div>
-                            <div><span className='text-indigo-900 dark:text-green-400'>10,000+</span> Reviews</div>
+                        <div className='flex flex-col items-start text-xl md:text-5xl font-bold md:font-semibold py-3 md:py-0 md:pl-0 text-neutral-800 dark:text-gray-100 z-10'>
+                            <div className="hidden md:block">
+                                <div><span className='text-indigo-900 dark:text-green-400'>Khurak</span></div>
+                                <div>Received <span className='text-indigo-900 dark:text-green-400'>4.8/5</span></div>
+                                <div>Starts in over</div>
+                                <div><span className='text-indigo-900 dark:text-green-400'>10,000+</span> Reviews</div>
+                            </div>
+                            <div className="block md:hidden text-center">
+                                <span className='text-indigo-900 dark:text-green-400'>Khurak </span>
+                                Received <span className='text-indigo-900 dark:text-green-400'>4.8/5 </span>
+                                Starts in over
+                                <span className='text-indigo-900 dark:text-green-400'> 10,000+</span> Reviews
+                            </div>
                         </div>
                     </div>
 

@@ -27,6 +27,7 @@ type Card = {
   title: string;
   category: string;
   content: {
+    title: string,
     head: string;
     desc: string;
     img_src: string;
@@ -75,9 +76,10 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   };
 
   const handleCardClose = (index: number) => {
+    if(isMobile()) return;
     if (carouselRef.current) {
-      const cardWidth = isMobile() ? 230 : 384; // (md:w-96)
-      const gap = isMobile() ? 4 : 8;
+      const cardWidth = isMobile() ? 232 : 295;
+      const gap = isMobile() ? 4 : 5;
       const scrollPosition = (cardWidth + gap) * (index + 1);
       carouselRef.current.scrollTo({
         left: scrollPosition,
@@ -137,7 +139,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-        <div className="flex justify-end gap-2 mr-10">
+        <div className="hidden md:flex justify-end gap-2 mr-10">
           <button
             className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
@@ -234,7 +236,7 @@ export const Card = ({
                 layoutId={layout ? `title-${card.title}` : undefined}
                 className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
               >
-                {card.title}
+                <span dangerouslySetInnerHTML={{ __html: card.content.title }} />
               </motion.p>
               <div className="py-10">
                 <div
@@ -242,7 +244,7 @@ export const Card = ({
                 >
                   <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
                     <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                    <span dangerouslySetInnerHTML={{ __html: card.content.head }} />
+                      {card.content.head}
                     </span>{" "}
                     {card.content.desc}
                   </p>
