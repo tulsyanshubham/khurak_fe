@@ -14,38 +14,18 @@ import {
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Image, { ImageProps } from "next/image";
+import Image from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
-interface CarouselProps {
-  items: JSX.Element[];
-  initialScroll?: number;
-}
-
-type Card = {
-  src: string;
-  title: string;
-  category: string;
-  content: {
-    title: string,
-    head: string;
-    desc: string;
-    img_src: string;
-  };
-};
-
-export const CarouselContext = createContext<{
-  onCardClose: (index: number) => void;
-  currentIndex: number;
-}>({
-  onCardClose: () => { },
+const CarouselContext = createContext({
+  onCardClose: () => {},
   currentIndex: 0,
 });
 
-export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
-  const carouselRef = React.useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = React.useState(false);
-  const [canScrollRight, setCanScrollRight] = React.useState(true);
+export const Carousel = ({ items, initialScroll = 0 }) => {
+  const carouselRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -75,8 +55,8 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     }
   };
 
-  const handleCardClose = (index: number) => {
-    if(isMobile()) return;
+  const handleCardClose = (index) => {
+    if (isMobile()) return;
     if (carouselRef.current) {
       const cardWidth = isMobile() ? 232 : 295;
       const gap = isMobile() ? 4 : 5;
@@ -94,9 +74,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   };
 
   return (
-    <CarouselContext.Provider
-      value={{ onCardClose: handleCardClose, currentIndex }}
-    >
+    <CarouselContext.Provider value={{ onCardClose: handleCardClose, currentIndex }}>
       <div className="relative w-full">
         <div
           className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-30 scroll-smooth [scrollbar-width:none]"
@@ -112,7 +90,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           <div
             className={cn(
               "flex flex-row justify-start gap-3 pl-3",
-              "max-w-fit mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
+              "max-w-fit mx-auto"
             )}
           >
             {items.map((item, index) => (
@@ -160,17 +138,9 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   );
 };
 
-export const Card = ({
-  card,
-  index,
-  layout = false,
-}: {
-  card: Card;
-  index: number;
-  layout?: boolean;
-}) => {
+export const Card = ({ card, index, layout = false }) => {
   const [open, setOpen] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
   const { onCardClose } = useContext(CarouselContext);
 
   const handleClose = useCallback(() => {
@@ -179,7 +149,7 @@ export const Card = ({
   }, [index, onCardClose]);
 
   useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
+    function onKeyDown(event) {
       if (event.key === "Escape") {
         handleClose();
       }
@@ -239,9 +209,7 @@ export const Card = ({
                 <span dangerouslySetInnerHTML={{ __html: card.content.title }} />
               </motion.p>
               <div className="py-10">
-                <div
-                  className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-                >
+                <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
                   <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
                     <span className="font-bold text-neutral-700 dark:text-neutral-200">
                       {card.content.head}
@@ -284,40 +252,24 @@ export const Card = ({
         </div>
         <BlurImage
           src={card.src}
-          alt={card.title}
-          fill
-          className="object-cover absolute z-10 inset-0"
+          alt={card.alt}
+          width="5000"
+          height="5000"
+          className="object-cover h-full w-full"
         />
       </motion.button>
     </>
   );
 };
 
-export const BlurImage = ({
-  height,
-  width,
-  src,
-  className,
-  alt,
-  ...rest
-}: ImageProps) => {
-  const [isLoading, setLoading] = useState(true);
+const BlurImage = (props) => {
   return (
     <Image
+      {...props}
       className={cn(
-        "transition duration-300",
-        isLoading ? "blur-sm" : "blur-0",
-        className
+        "duration-700 ease-in-out group-hover:opacity-75",
+        props.className
       )}
-      onLoad={() => setLoading(false)}
-      src={src}
-      width={width}
-      height={height}
-      loading="lazy"
-      decoding="async"
-      blurDataURL={typeof src === "string" ? src : undefined}
-      alt={alt ? alt : "Background of a beautiful view"}
-      {...rest}
     />
   );
 };

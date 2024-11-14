@@ -1,16 +1,15 @@
-"use client";
 import Image from 'next/image';
 import React, { useState } from 'react';
 import images from '@/constants/Images.json';
 
-const BMICalculator: React.FC = () => {
-  const [weight, setWeight] = useState<number>(70); // Default weight
-  const [height, setHeight] = useState<number>(1.75); // Default height (in meters)
+const BMICalculator = () => {
+  const [weight, setWeight] = useState(70); // Default weight
+  const [height, setHeight] = useState(1.75); // Default height (in meters)
   const [unit, setUnit] = useState('metric');
-  const [bmi, setBmi] = useState<number | null>(null);
+  const [bmi, setBmi] = useState(null);
 
   const calculateBMI = () => {
-    let bmiValue: number;
+    let bmiValue;
 
     if (unit === 'metric') {
       // Metric BMI calculation (kg/m²)
@@ -28,11 +27,7 @@ const BMICalculator: React.FC = () => {
   };
 
   return (
-    // <div className='overflow-hidden'>
     <div className='relative mb-20 mt-10'>
-      {/* <div className="absolute z-0 -top-16 left-9 right-0 mx-auto">
-        <Image src="/images/home/bmi_bg.svg" alt="" className="w-[95vw] rotate-6 dark:opacity-80" />
-      </div> */}
       <h1 className="text-3xl md:text-4xl font-bold text-center relative text-green-700 dark:text-green-500 mb-8 z-10">
         Assess Your Health Now
       </h1>
@@ -143,9 +138,7 @@ const BMICalculator: React.FC = () => {
         </div>
       </div>
     </div>
-    // </div>
   );
 };
 
 export default BMICalculator;
-

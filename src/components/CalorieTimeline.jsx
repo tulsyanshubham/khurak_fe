@@ -8,16 +8,9 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import data from "@/constants/timeline.json";
 
-// interface timelineType {
-//   title: string;
-//   subTitle: string;
-//   content: string;
-//   images: string[];
-// }
-
 export default function CalorieTimeline() {
-  const ref = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const ref = useRef(null);
+  const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
@@ -108,4 +101,4 @@ export default function CalorieTimeline() {
       </div>
     </div>
   );
-};
+}
