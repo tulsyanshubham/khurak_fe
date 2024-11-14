@@ -1,11 +1,15 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import images from '@/constants/Images.json'
 import data from '@/constants/footer_data.json'
 
 export default function Footer() {
-    const year = "2024";
+    const [year, setYear] = useState(2024);
+
+    useEffect(() => {
+        setYear(new Date().getFullYear());
+    }, []);
     const imgClass = 'invert-[.75] hover:invert w-8 sm:w-10 md:w-12 dark:invert-[.25] dark:hover:invert-0';
 
     return (
