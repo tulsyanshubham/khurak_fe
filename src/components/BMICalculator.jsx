@@ -38,7 +38,7 @@ const BMICalculator = () => {
               Select Unit
             </label>
             <select
-              className="w-full p-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 dark:bg-gray-700"
+              className="w-full p-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 dark:bg-background"
               value={unit}
               onChange={(e) => {
                 setUnit(e.target.value);
