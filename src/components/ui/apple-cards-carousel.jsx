@@ -252,24 +252,34 @@ export const Card = ({ card, index, layout = false }) => {
         </div>
         <BlurImage
           src={card.src}
-          alt={card.alt}
-          width="5000"
-          height="5000"
-          className="object-cover h-full w-full"
+          alt={card.title}
+          fill
+          className="object-cover absolute z-10 inset-0"
         />
       </motion.button>
     </>
   );
 };
 
-const BlurImage = (props) => {
+const BlurImage = ({ height, width, src, className, alt, ...rest }) => {
+  const [isLoading, setLoading] = useState(true);
+
   return (
     <Image
-      {...props}
       className={cn(
-        "duration-700 ease-in-out group-hover:opacity-75",
-        props.className
+        "transition duration-300",
+        isLoading ? "blur-sm" : "blur-0",
+        className
       )}
+      onLoad={() => setLoading(false)}
+      src={src}
+      width={width}
+      height={height}
+      loading="lazy"
+      decoding="async"
+      blurDataURL={typeof src === "string" ? src : undefined}
+      alt={alt ? alt : "Background of a beautiful view"}
+      {...rest}
     />
   );
 };
