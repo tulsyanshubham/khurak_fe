@@ -4,7 +4,7 @@ import { createContext, useContext, useState } from "react";
 const defaultTheme = "light";
 const ThemeContext = createContext({
   theme: defaultTheme,
-  setTheme: () => {},
+  setTheme: () => { },
 });
 
 export const ThemeProvider = ({ children }) => {

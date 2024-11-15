@@ -6,7 +6,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import data from "@/constants/timeline.json";
+import { timelineData } from "@/constants/timeline";
 
 export default function CalorieTimeline() {
   const ref = useRef(null);
@@ -43,7 +43,7 @@ export default function CalorieTimeline() {
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {data.map((item, index) => (
+        {timelineData.map((item, index) => (
           <div
             key={index}
             className="flex justify-start pt-10 md:pt-40 md:gap-10"

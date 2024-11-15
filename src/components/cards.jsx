@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { Carousel, Card } from "./ui/apple-cards-carousel";
-import data from "@/constants/cards_carousel.json";
+import { carouselData } from "@/constants/cards_carousel";
 
 export default function CardsCarousel() {
-  const cards = data.map((card, index) => (
+  const cards = carouselData.map((card, index) => (
     <Card key={card.src} card={card} index={index} />
   ));
 

@@ -259,22 +259,22 @@ export const Card = ({ card, index, layout = false }) => {
           />
         </div>
         {/* <div className="hidden md:block absolute h-full top-0 inset-x-0"> */}
-          <DirectionAwareHover imageUrl={card.src} className="h-full inset-x-0 hidden md:block absolute top-0" >
-            <div className="relative px-4 py-10">
-              <motion.p
-                layoutId={layout ? `category-${card.category}` : undefined}
-                className="text-white text-xs md:text-sm font-medium font-sans text-left"
-              >
-                {card.category}
-              </motion.p>
-              <motion.p
-                layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-white text-lg md:text-xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
-              >
-                {card.title}
-              </motion.p>
-            </div>
-          </DirectionAwareHover>
+        <DirectionAwareHover imageUrl={card.src} className="h-full inset-x-0 hidden md:block absolute top-0" >
+          <div className="relative px-4 py-10">
+            <motion.p
+              layoutId={layout ? `category-${card.category}` : undefined}
+              className="text-white text-xs md:text-sm font-medium font-sans text-left"
+            >
+              {card.category}
+            </motion.p>
+            <motion.p
+              layoutId={layout ? `title-${card.title}` : undefined}
+              className="text-white text-lg md:text-xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+            >
+              {card.title}
+            </motion.p>
+          </div>
+        </DirectionAwareHover>
         {/* </div> */}
       </motion.button>
     </>

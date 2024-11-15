@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import images from '@/constants/Images.json';
+import { assets } from '@/constants/assets';
 
 const BMICalculator = () => {
   const [weight, setWeight] = useState(70); // Default weight
@@ -43,10 +43,10 @@ const BMICalculator = () => {
                 value={unit}
                 onChange={(e) => {
                   setUnit(e.target.value);
-                  if (e.target.value === "metric"){
+                  if (e.target.value === "metric") {
                     setWeight(70);
                     setHeight(1.75);
-                  } else{
+                  } else {
                     setWeight(154);
                     setHeight(70);
                   }
@@ -158,7 +158,7 @@ const BMICalculator = () => {
           </div>
 
           <div className='w-fit md:block hidden'>
-            <Image src={images.bmi} alt="BMI" width={500} height={500} className='w-[40vw] max-w-[383px] dark:brightness-110' />
+            <Image src={assets.bmi} alt="BMI" width={500} height={500} className='w-[40vw] max-w-[383px] dark:brightness-110' />
           </div>
         </div>
       </div>

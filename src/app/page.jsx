@@ -12,7 +12,7 @@ export default function Page() {
 
   const { theme } = useTheme();
   useEffect(() => {
-    if(theme === 'dark')
+    if (theme === 'dark')
       document.body.classList.add("dark");
     else
       document.body.classList.remove('dark');

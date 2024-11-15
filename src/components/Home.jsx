@@ -3,7 +3,7 @@ import React from 'react'
 import CardsCarousel from './cards';
 import { Spotlight } from './ui/Spotlight';
 import Image from 'next/image';
-import images from '@/constants/Images.json';
+import { assets } from '@/constants/assets';
 
 export default function Home() {
     return (
@@ -29,17 +29,17 @@ export default function Home() {
                         </div>
                     </div>
                     <div>
-                        <Image src={images.right_to_welcome} width={500} height={500} alt="Khurak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' />
+                        <Image src={assets.right_to_welcome} width={500} height={500} alt="Khurak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' />
                     </div>
                 </div>
                 <div className='w-full'>
                     <CardsCarousel />
                 </div>
             </div>
-                <Spotlight
-                    className="-top-40 left-0 md:left-60 md:-top-20"
-                    fill="green"
-                />
+            <Spotlight
+                className="-top-40 left-0 md:left-60 md:-top-20"
+                fill="green"
+            />
         </div>
     )
 }

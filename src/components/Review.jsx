@@ -9,7 +9,7 @@ const reviewsData = [
         content: "Khurak has completely transformed my meal choices. The healthy options are not only delicious but also quick to order. I love how easy it is to find nutritious meals!",
         reviewer: "Tina",
         avatarColor: "#de716d",
-        src:"/images/carousel/1.jpeg",
+        src: "/images/carousel/1.jpeg",
         stars: 5, // 5-star rating
     },
     {
@@ -17,7 +17,7 @@ const reviewsData = [
         content: "I am impressed by the range of healthy dishes available. Khurak makes it easy to maintain a balanced diet without sacrificing taste.",
         reviewer: "Rakesh",
         avatarColor: "#f2eb5e",
-        src:"/images/carousel/2.jpeg",
+        src: "/images/carousel/2.jpeg",
         stars: 4, // 4-star rating
     },
     {
@@ -25,7 +25,7 @@ const reviewsData = [
         content: "Ordering from Khurak is super convenient! The platform is user-friendly, and my meals arrive fresh and on time.",
         reviewer: "Rahul",
         avatarColor: "#7a1a5f",
-        src:"/images/carousel/3.jpeg",
+        src: "/images/carousel/3.jpeg",
         stars: 4.5, // 5-star rating
     },
     {
@@ -33,7 +33,7 @@ const reviewsData = [
         content: "I was looking for healthy meal options, and Khurak delivers! I appreciate the focus on nutrition and quality ingredients.",
         reviewer: "Saini",
         avatarColor: "#bad79d",
-        src:"/images/carousel/4.jpeg",
+        src: "/images/carousel/4.jpeg",
         stars: 3.5, // 4-star rating
     },
     {
@@ -41,7 +41,7 @@ const reviewsData = [
         content: "Khurak has become my go-to for ordering meals. The flavors are incredible, and I feel good knowing I'm eating healthily!",
         reviewer: "Shila",
         avatarColor: "#d8925c",
-        src:"/images/carousel/5.jpeg",
+        src: "/images/carousel/5.jpeg",
         stars: 5, // 5-star rating
     },
     {
@@ -49,7 +49,7 @@ const reviewsData = [
         content: "With Khurak, I can whip up a healthy meal in minutes! The variety and freshness of the ingredients are top-notch. Highly recommend it!",
         reviewer: "Anuraag",
         avatarColor: "#7362f2",
-        src:"/images/carousel/6.jpeg",
+        src: "/images/carousel/6.jpeg",
         stars: 4.5, // 5-star rating
     },
 ];
