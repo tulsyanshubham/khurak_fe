@@ -9,7 +9,7 @@ export default function CardsCarousel() {
   ));
 
   return (
-    <div className="w-screen h-full">
+    <div className="w-full h-full">
       <Carousel items={cards} />
     </div>
   );

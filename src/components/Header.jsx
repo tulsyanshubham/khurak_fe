@@ -33,9 +33,9 @@ export default function Header() {
 
 
   return (
-    <div>
+    <div className={`w-full flex justify-center ${isScrolled ? 'bg-background/90 fixed top-0 z-50 shadow-lg border-b' : 'absolute'}`}>
       <div
-        className={`py-3 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300 z-50 w-full ${isScrolled ? 'bg-background/90 fixed top-0 z-50 shadow-lg border-b' : 'absolute'}`}>
+        className={`py-3 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300 z-50 w-full max-w-7xl`}>
         <Link href="/">
           <div id="logo" className="font-bold text-base md:text-lg">
             KHURAK

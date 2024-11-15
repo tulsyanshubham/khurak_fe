@@ -149,7 +149,7 @@ export const AnimatedTestimonials = ({
                                     delay: 0.02 * testimonials[active].content.split(" ").length,
                                 }}
                                 className="inline-block mt-3 text-xl">
-                                <p className="flex items-center justify-center gap-2">
+                                <span className="flex items-center justify-center gap-2">
                                     <span className="flex">
                                         {Array.from({ length: Math.floor(testimonials[active].stars) }, (_, index) => (
                                             <FaStar key={index} color="orange" />
@@ -160,7 +160,7 @@ export const AnimatedTestimonials = ({
 
                                     </span>
                                         {testimonials[active].stars}
-                                </p>
+                                </span>
                             </motion.span>
                         </motion.p>
                     </motion.div>

@@ -16,9 +16,10 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import { DirectionAwareHover } from "./direction-aware-hover";
 
 const CarouselContext = createContext({
-  onCardClose: () => {},
+  onCardClose: () => { },
   currentIndex: 0,
 });
 
@@ -45,20 +46,20 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: -220, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: 220, behavior: "smooth" });
     }
   };
 
   const handleCardClose = (index) => {
     if (isMobile()) return;
     if (carouselRef.current) {
-      const cardWidth = isMobile() ? 232 : 295;
+      const cardWidth = isMobile() ? 232 : 215;
       const gap = isMobile() ? 4 : 5;
       const scrollPosition = (cardWidth + gap) * (index + 1);
       carouselRef.current.scrollTo({
@@ -72,7 +73,6 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
   const isMobile = () => {
     return window && window.innerWidth < 768;
   };
-
   return (
     <CarouselContext.Provider value={{ onCardClose: handleCardClose, currentIndex }}>
       <div className="relative w-full">
@@ -83,7 +83,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
         >
           <div
             className={cn(
-              "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
+              "absolute right-0  z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l"
             )}
           ></div>
 
@@ -233,29 +233,49 @@ export const Card = ({ card, index, layout = false }) => {
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[30rem] md:w-72 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-52 w-32 md:h-[18rem] md:w-52 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
-        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="relative z-40 p-8">
-          <motion.p
-            layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left"
-          >
-            {card.category}
-          </motion.p>
-          <motion.p
-            layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
-          >
-            {card.title}
-          </motion.p>
+        <div className="block md:hidden">
+          <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-black/50 to-transparent z-30 pointer-events-none" />
+          <div className="relative z-40 p-4">
+            <motion.p
+              layoutId={layout ? `category-${card.category}` : undefined}
+              className="text-white text-xs md:text-base font-medium font-sans text-left"
+            >
+              {card.category}
+            </motion.p>
+            <motion.p
+              layoutId={layout ? `title-${card.title}` : undefined}
+              className="text-white text-sm md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+            >
+              {card.title}
+            </motion.p>
+          </div>
+          <BlurImage
+            src={card.src}
+            alt={card.title}
+            fill
+            className="object-cover absolute z-10 inset-0"
+          />
         </div>
-        <BlurImage
-          src={card.src}
-          alt={card.title}
-          fill
-          className="object-cover absolute z-10 inset-0"
-        />
+        {/* <div className="hidden md:block absolute h-full top-0 inset-x-0"> */}
+          <DirectionAwareHover imageUrl={card.src} className="h-full inset-x-0 hidden md:block absolute top-0" >
+            <div className="relative px-4 py-10">
+              <motion.p
+                layoutId={layout ? `category-${card.category}` : undefined}
+                className="text-white text-xs md:text-sm font-medium font-sans text-left"
+              >
+                {card.category}
+              </motion.p>
+              <motion.p
+                layoutId={layout ? `title-${card.title}` : undefined}
+                className="text-white text-lg md:text-xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+              >
+                {card.title}
+              </motion.p>
+            </div>
+          </DirectionAwareHover>
+        {/* </div> */}
       </motion.button>
     </>
   );

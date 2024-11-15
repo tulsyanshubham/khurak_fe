@@ -70,7 +70,7 @@ export default function Review() {
                         </div>
                     </div>
 
-                    <div className='flex w-full filter drop-shadow-[0_0_10rem_#38807c] dark:drop-shadow-[0_0_10rem_#479d43] '>
+                    <div className='flex w-full filter drop-shadow-[0_0_10rem_#38807c] dark:drop-shadow-[0_0_10rem_#479d43]'>
                         <div className='hidden md:flex w-full items-center justify-center'>
                             <AnimatedTestimonials testimonials={reviewsData} />
                         </div>
