@@ -117,7 +117,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
             ))}
           </div>
         </div>
-        <div className="hidden md:flex justify-end gap-2 mr-10">
+        <div className="hidden lg:flex justify-end gap-2 mr-10">
           <button
             className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
@@ -235,18 +235,18 @@ export const Card = ({ card, index, layout = false }) => {
         onClick={handleOpen}
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-52 w-32 md:h-[18rem] md:w-52 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
-        <div className="block md:hidden">
+        <div className="block lg:hidden">
           <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-black/50 to-transparent z-30 pointer-events-none" />
           <div className="relative z-40 p-4">
             <motion.p
               layoutId={layout ? `category-${card.category}` : undefined}
-              className="text-white text-xs md:text-base font-medium font-sans text-left"
+              className="text-white text-xs md:text-sm font-medium font-sans text-left"
             >
               {card.category}
             </motion.p>
             <motion.p
               layoutId={layout ? `title-${card.title}` : undefined}
-              className="text-white text-sm md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+              className="text-white text-sm md:text-xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
             >
               {card.title}
             </motion.p>
@@ -259,7 +259,7 @@ export const Card = ({ card, index, layout = false }) => {
           />
         </div>
         {/* <div className="hidden md:block absolute h-full top-0 inset-x-0"> */}
-        <DirectionAwareHover imageUrl={card.src} className="h-full inset-x-0 hidden md:block absolute top-0" >
+        <DirectionAwareHover imageUrl={card.src} className="h-full inset-x-0 hidden lg:block absolute top-0" >
           <div className="relative px-4 py-10">
             <motion.p
               layoutId={layout ? `category-${card.category}` : undefined}
