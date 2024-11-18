@@ -26,7 +26,7 @@ export default function CalorieTimeline() {
 
   return (
     <div
-      className="w-full font-sans md:px-10 relative pt-20 md:pt-0"
+      className="w-full font-sans md:px-10 relative pt-20 md:pt-0 mb-5"
       ref={containerRef}
     >
       <div className="absolute top-0 px-auto flex flex-col items-center justify-center w-full md:w-[96vw] overflow-hidden py-6 md:py-8">
