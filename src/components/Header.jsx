@@ -38,7 +38,7 @@ export default function Header() {
         className={`py-3 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300 z-50 w-full max-w-7xl`}>
         <Link href="/">
           <div id="logo" className="font-bold text-base md:text-lg">
-            KHUAAK
+            KHURAAK
           </div>
         </Link>
         <div className='flex items-center justify-center gap-3'>
