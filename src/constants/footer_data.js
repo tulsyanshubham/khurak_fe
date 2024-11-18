@@ -3,7 +3,7 @@ export const contactInfo = {
     email: "abcd1234@gmail.com",
     social: {
         instagram: "https://www.instagram.com/",
-        twitter: "https://twitter.com/?lang=en",
+        twitter: "https://twitter.com/",
         youtube: "https://www.youtube.com/",
         facebook: "https://www.facebook.com/",
         linkedin: "https://in.linkedin.com/"

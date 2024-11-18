@@ -1,12 +1,8 @@
 "use client";
-import {
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { timelineData } from "@/constants/timeline";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function CalorieTimeline() {
   const ref = useRef(null);
@@ -19,7 +15,7 @@ export default function CalorieTimeline() {
       setHeight(rect.height);
     }
   }, [ref]);
-
+  
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 10%", "end 50%"],
@@ -101,4 +97,4 @@ export default function CalorieTimeline() {
       </div>
     </div>
   );
-}
+};

@@ -19,7 +19,7 @@ export default function Footer() {
         <div className='flex flex-col items-center justify-center w-screen border-t-2 mt-2 bg-green-50 dark:bg-footergDarkBg dark:text-white'>
             <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-3 py-2">
                 <div className='flex items-center justify-evenly w-full flex-wrap py-7 gap-5 md:gap-10 dark:text-gray-100'>
-                    <div className='text-4xl sm:text-5xl text-green-800 dark:text-white'>KHURAK </div>
+                    <div className='text-4xl sm:text-5xl text-green-800 dark:text-white'>KHUAAK </div>
                     <div className='flex flex-col gap-2'>
                         <div className='flex font-medium text-2xl sm:text-3xl md:text-4xl md:text-start justify-center md:justify-start'>Contact Us</div>
                         <a href={`tel:${contactInfo.phone}`} className='flex gap-1 text-base sm:text-lg justify-center md:justify-start' >
@@ -51,7 +51,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className='bg-green-800 dark:bg-gray-100 w-3/4 md:w-1/2 h-[1.5px] rounded-full'></div>
-                <div className='text-center text-sm sm:text-base md:text-lg'>Copyright &copy; {year} [<span className='text-green-700 dark:text-green-500 font-bold'>KHURAK</span>]. All rights reserved.</div>
+                <div className='text-center text-sm sm:text-base md:text-lg'>Copyright &copy; {year} [<span className='text-green-700 dark:text-green-500 font-bold'>KHUAAK</span>]. All rights reserved.</div>
             </div>
         </div>
     )

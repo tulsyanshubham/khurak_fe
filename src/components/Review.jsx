@@ -6,7 +6,7 @@ import { AnimatedTestimonials } from './ui/animated-testimonials';
 const reviewsData = [
     {
         title: "Delicious and Healthy",
-        content: "Khurak has completely transformed my meal choices. The healthy options are not only delicious but also quick to order. I love how easy it is to find nutritious meals!",
+        content: "Khuraak has completely transformed my meal choices. The healthy options are not only delicious but also quick to order. I love how easy it is to find nutritious meals!",
         reviewer: "Tina",
         avatarColor: "#de716d",
         src: "/images/carousel/1.jpeg",
@@ -14,7 +14,7 @@ const reviewsData = [
     },
     {
         title: "Amazing Variety",
-        content: "I am impressed by the range of healthy dishes available. Khurak makes it easy to maintain a balanced diet without sacrificing taste.",
+        content: "I am impressed by the range of healthy dishes available. Khuraak makes it easy to maintain a balanced diet without sacrificing taste.",
         reviewer: "Rakesh",
         avatarColor: "#f2eb5e",
         src: "/images/carousel/2.jpeg",
@@ -22,7 +22,7 @@ const reviewsData = [
     },
     {
         title: "Easy and Convenient",
-        content: "Ordering from Khurak is super convenient! The platform is user-friendly, and my meals arrive fresh and on time.",
+        content: "Ordering from Khuraak is super convenient! The platform is user-friendly, and my meals arrive fresh and on time.",
         reviewer: "Rahul",
         avatarColor: "#7a1a5f",
         src: "/images/carousel/3.jpeg",
@@ -30,7 +30,7 @@ const reviewsData = [
     },
     {
         title: "A Healthy Choice",
-        content: "I was looking for healthy meal options, and Khurak delivers! I appreciate the focus on nutrition and quality ingredients.",
+        content: "I was looking for healthy meal options, and Khuraak delivers! I appreciate the focus on nutrition and quality ingredients.",
         reviewer: "Saini",
         avatarColor: "#bad79d",
         src: "/images/carousel/4.jpeg",
@@ -38,7 +38,7 @@ const reviewsData = [
     },
     {
         title: "My Go-To for Healthy Eating",
-        content: "Khurak has become my go-to for ordering meals. The flavors are incredible, and I feel good knowing I'm eating healthily!",
+        content: "Khuraak has become my go-to for ordering meals. The flavors are incredible, and I feel good knowing I'm eating healthily!",
         reviewer: "Shila",
         avatarColor: "#d8925c",
         src: "/images/carousel/5.jpeg",
@@ -46,7 +46,7 @@ const reviewsData = [
     },
     {
         title: "Life-Saver!",
-        content: "With Khurak, I can whip up a healthy meal in minutes! The variety and freshness of the ingredients are top-notch. Highly recommend it!",
+        content: "With Khuraak, I can whip up a healthy meal in minutes! The variety and freshness of the ingredients are top-notch. Highly recommend it!",
         reviewer: "Anuraag",
         avatarColor: "#7362f2",
         src: "/images/carousel/6.jpeg",
@@ -62,7 +62,7 @@ export default function Review() {
                     <div className='flex flex-col items-center justify-center text-3xl font-semibold w-full'>
                         <div className='flex flex-col items-start text-xl md:text-4xl font-bold md:font-semibold py-3 md:py-0 md:pl-0 text-neutral-800 dark:text-gray-100 z-10'>
                             <div className="text-center px-6">
-                                <span className='text-indigo-900 dark:text-green-400'>Khurak </span>
+                                <span className='text-indigo-900 dark:text-green-400'>Khuraak </span>
                                 Received <span className='text-indigo-900 dark:text-green-400'>4.8/5 </span>
                                 Starts in over
                                 <span className='text-indigo-900 dark:text-green-400'> 10,000+</span> Reviews

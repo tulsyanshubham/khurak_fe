@@ -2,7 +2,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
-  title: "Khurak",
+  title: "Khuraak",
   description: "something i dont know",
 };
 

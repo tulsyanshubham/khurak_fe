@@ -11,7 +11,7 @@ export default function Home() {
             <div className='flex flex-col items-center justify-center flex-wrap relative pt-32 w-full max-w-7xl antialiased'>
                 <div className='flex flex-wrap justify-evenly items-center w-full mb-10'>
                     <div className="flex flex-col justify-center items-center text-center z-10 px-1 md:px-0">
-                        <h1 className="text-4xl md:text-5xl font-bold text-green-700">Welcome to Khurak</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold text-green-700">Welcome to Khuraak</h1>
                         <h2 className="text-2xl md:text-3xl font-semibold mt-2">Your Hub for Healthy Eating</h2>
                         <h2 className="text-2xl md:text-3xl font-semibold">With Fresh Meals.</h2>
 
@@ -24,12 +24,12 @@ export default function Home() {
                                 Explore Meal Plans
                             </button>
                             <button className="border border-green-600 text-green-600 hover:bg-green-50 dark:hover:bg-background/95 font-semibold py-2 px-6 rounded-md">
-                                Try Khurak App
+                                Try Khuraak App
                             </button>
                         </div>
                     </div>
                     <div>
-                        <Image src={assets.right_to_welcome} width={500} height={500} alt="Khurak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' />
+                        <Image src={assets.right_to_welcome} width={500} height={500} alt="Khuraak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' />
                     </div>
                 </div>
                 <div className='w-full'>
