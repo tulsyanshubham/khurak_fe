@@ -16,7 +16,7 @@ export default function Footer() {
     const imgClass = "invert-[.75] hover:invert w-8 sm:w-10 md:w-12 dark:invert-[.25] dark:hover:invert-0";
 
     return (
-        <div className='flex flex-col items-center justify-center w-screen border-t-2 mt-2 bg-green-50 dark:bg-footergDarkBg dark:text-white'>
+        <div className='flex flex-col items-center justify-center w-full border-t-2 mt-2 bg-green-50 dark:bg-footergDarkBg dark:text-white'>
             <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-3 py-2">
                 <div className='flex items-center justify-evenly w-full flex-wrap py-7 gap-5 md:gap-10 dark:text-gray-100'>
                     <div className='text-4xl sm:text-5xl text-green-800 dark:text-white'>KHURAAK </div>

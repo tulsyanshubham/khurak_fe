@@ -27,7 +27,7 @@ const BMICalculator = () => {
   };
 
   return (
-    <div className='w-screen flex items-center justify-center'>
+    <div className='w-full flex items-center justify-center'>
       <div className='relative mb-20 mt-10 w-full max-w-7xl'>
         <h1 className="text-3xl md:text-4xl font-bold text-center relative text-green-700 dark:text-green-500 mb-8 z-10">
           Assess Your Health Now

@@ -23,7 +23,7 @@ export default function Page() {
 
   return (
     // <div className={`${theme} bg-background text-foreground`}>
-    <div className='overflow-x-hidden'>
+    <div >
       <Header />
       <Home />
       <Review />
