@@ -10,7 +10,7 @@ export const newsData = [
                     finest seasonal ingredients to ensure every bite is packed with
                     nutrition and flavor. At Khuraak, we believe in promoting wellness
                     through food that delights your taste buds while nourishing your
-                    body. <br /> <br />Whether you're looking for a quick lunch option or a
+                    body. <br /> <br />Whether you&rsquo;re looking for a quick lunch option or a
                     wholesome addition to your meal, our salads are the perfect choice for
                     a healthy lifestyle.
                 </p>)
@@ -27,7 +27,7 @@ export const newsData = [
                 (<p>Fuel your day with our protein-packed meals, designed to keep you
                     energized and satisfied. From hearty quinoa bowls to grilled chicken
                     platters, every dish at Khuraak is prepared to provide the perfect
-                    balance of taste and nutrition. <br /> <br />Whether you're hitting the
+                    balance of taste and nutrition. <br /> <br />Whether you&rsquo;re hitting the
                     gym or powering through a busy workday, our protein-rich meals are the
                     ideal choice for staying active and healthy.
                 </p>)
@@ -45,7 +45,7 @@ export const newsData = [
                     from freshly sourced fruits and vegetables. At Khuraak, we create
                     drinks that not only taste great but also provide essential vitamins
                     and minerals to keep you feeling your best. <br /> <br />From tropical
-                    blends to green detox options, there's a smoothie or juice for every
+                    blends to green detox options, there&rsquo;s a smoothie or juice for every
                     mood and occasion.
                 </p>)
             );
