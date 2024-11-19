@@ -61,9 +61,9 @@ export default function NewsData({ data }) {
                                     duration: 0.05,
                                 },
                             }}
-                            className="flex md:hidden absolute bottom-2 right-2 lg:hidden items-center justify-center bg-gray-700 rounded-xl h-14 w-[97%] text-white z-40"
+                            className="flex md:hidden absolute bottom-3 right-2 lg:hidden items-center justify-center bg-gray-700 rounded-xl h-14 w-[96%] text-white z-40"
                             onClick={() => setActive(null)}>
-                            CLOSE
+                            <span className="text-lg">CLOSE</span>
                         </motion.button>
                         <motion.div layoutId={`image-${active.title}-${id}`} className="relative">
                             <Image

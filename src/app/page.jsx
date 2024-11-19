@@ -25,13 +25,13 @@ export default function Page() {
   return (
     // <div className={`${theme} bg-background text-foreground`}>
     <div >
-      <Header />
+      {/* <Header />
       <Home />
       <Review />
-      <CalorieTimeline />
+      <CalorieTimeline /> */}
       <News />
-      <BMICalculator />
-      <Footer />
+      {/* <BMICalculator />
+      <Footer /> */}
     </div>
   )
 }
