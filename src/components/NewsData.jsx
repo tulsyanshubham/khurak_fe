@@ -3,8 +3,9 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import { cn } from "@/lib/utils";
 
-export default function NewsData({data}) {
+export default function NewsData({ data }) {
     const [active, setActive] = useState(null);
     const ref = useRef(null);
     const id = useId();
@@ -123,8 +124,8 @@ export default function NewsData({data}) {
                     key={`card-${card.title}-${id}`}
                     onClick={() => setActive(card)}
                     className="px-4 py-2 md:p-4 flex md:flex-col flex-row justify-between items-center hover:drop-shadow-2xl rounded-xl cursor-pointer">
-                    <div className="flex md:hidden gap-4 md:flex-col flex-row px-2 overflow-x-hidden">
-                        <motion.div layoutId={`image-${card.title}-${id}`}>
+                    <div className="flex md:hidden gap-4 md:flex-col flex-row px-2 opacity-100">
+                        <motion.div layoutId={`image-${card.title}-${id}`} className="!opacity-100">
                             <Image
                                 width={100}
                                 height={100}
@@ -132,40 +133,50 @@ export default function NewsData({data}) {
                                 alt={card.title}
                                 className="md:h-40 md:w-40 aspect-square h-14 w-14 rounded-lg object-cover object-top" />
                         </motion.div>
-                        <div className="">
+                        <div className="!opacity-100">
                             <motion.h3
                                 layoutId={`title-${card.title}-${id}`}
-                                className="font-medium text-neutral-800 dark:text-neutral-200 md:text-center text-left text-xl">
+                                className="font-medium text-neutral-800 dark:text-neutral-200 md:text-center text-left text-xl !opacity-100">
                                 {card.title}
                             </motion.h3>
                             <motion.p
                                 layoutId={`description-${card.description}-${id}`}
-                                className="text-neutral-600 dark:text-neutral-400 md:text-center text-left">
+                                className="text-neutral-600 dark:text-neutral-400 md:text-center text-left !opacity-100">
                                 {card.description}
                             </motion.p>
                         </div>
                     </div>
-                    <div className="md:flex hidden gap-4 md:flex-col flex-row relative w-40 h-40 overflow-hidden">
-                        <motion.div layoutId={`image-${card.title}-${id}`} className="absolute">
-                            <Image
-                                width={100}
-                                height={100}
-                                src={card.src}
-                                alt={card.title}
-                                className="w-40 h-40 aspect-square object-cover rounded-lg" />
-                        </motion.div>
-                        <div className="absolute h-full rounded-lg top-0 inset-x-0 bg-gradient-to-b from-black/50 via-black/50 to-transparent z-10 pointer-events-none" />
-                        <div className="z-10 relative h-full flex flex-col gap-3 py-2 px-3">
-                            <motion.h3
-                                layoutId={`title-${card.title}-${id}`}
-                                className="text-neutral-50 text-left text-lg">
-                                {card.title}
-                            </motion.h3>
-                            <motion.p
-                                layoutId={`description-${card.description}-${id}`}
-                                className="text-neutral-200 text-left text-sm">
-                                {card.description}
-                            </motion.p>
+                    <div className="md:block hidden max-w-xs w-64 group/card">
+                        <div
+                            className={cn(
+                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4", `bg-cover`
+                            )}
+                            style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${card.src})`}}
+                        >
+                            <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
+                            <div className="flex flex-row items-center space-x-4 z-10">
+                                <Image
+                                    height="100"
+                                    width="100"
+                                    alt="Avatar"
+                                    src={card.avatar}
+                                    className="h-10 w-10 rounded-full border-2 object-cover"
+                                />
+                                <div className="flex flex-col">
+                                    <p className="font-normal text-base text-gray-50 relative z-10">
+                                        {card.name}
+                                    </p>
+                                    {/* <p className="text-sm text-gray-400">2 min read</p> */}
+                                </div>
+                            </div>
+                            <div className="text content">
+                                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                    {card.title}
+                                </h1>
+                                <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
+                                    {card.description}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </motion.div>
