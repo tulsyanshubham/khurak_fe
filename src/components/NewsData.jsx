@@ -41,31 +41,31 @@ export default function NewsData({ data }) {
         </AnimatePresence>
         <AnimatePresence>
             {active && typeof active === "object" ? (
-                <div className="fixed inset-0  grid place-items-center z-[100]">
-                    <motion.button
-                        key={`button-${active.title}-${id}`}
-                        layout
-                        initial={{
-                            opacity: 0,
-                        }}
-                        animate={{
-                            opacity: 1,
-                        }}
-                        exit={{
-                            opacity: 0,
-                            transition: {
-                                duration: 0.05,
-                            },
-                        }}
-                        className="flex absolute bottom-2 right-2 lg:hidden items-center justify-center bg-gray-700 rounded-xl h-14 w-[96vw] text-white z-40"
-                        onClick={() => setActive(null)}>
-                        CLOSE
-                    </motion.button>
+                <div className="fixed inset-0 grid place-items-center z-[100]">
                     <motion.div
                         layoutId={`card-${active.title}-${id}`}
                         ref={ref}
-                        className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden">
-                        <motion.div layoutId={`image-${active.title}-${id}`}>
+                        className="relative w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden pb-6">
+                        <motion.button
+                            key={`button-${active.title}-${id}`}
+                            layout
+                            initial={{
+                                opacity: 0,
+                            }}
+                            animate={{
+                                opacity: 1,
+                            }}
+                            exit={{
+                                opacity: 0,
+                                transition: {
+                                    duration: 0.05,
+                                },
+                            }}
+                            className="flex md:hidden absolute bottom-2 right-2 lg:hidden items-center justify-center bg-gray-700 rounded-xl h-14 w-[97%] text-white z-40"
+                            onClick={() => setActive(null)}>
+                            CLOSE
+                        </motion.button>
+                        <motion.div layoutId={`image-${active.title}-${id}`} className="relative">
                             <Image
                                 priority
                                 width={200}
@@ -75,7 +75,7 @@ export default function NewsData({ data }) {
                                 className="w-full h-70 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top" />
                         </motion.div>
 
-                        <div>
+                        <div className="relative">
                             <div className="flex justify-between items-start p-4">
                                 <div className="">
                                     <motion.h3
@@ -151,7 +151,7 @@ export default function NewsData({ data }) {
                             className={cn(
                                 " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4", `bg-cover`
                             )}
-                            style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${card.src})`}}
+                            style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${card.src})` }}
                         >
                             <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
                             <div className="flex flex-row items-center space-x-4 z-10">
