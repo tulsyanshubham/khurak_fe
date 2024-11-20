@@ -9,6 +9,7 @@ import CalorieTimeline from '@/components/CalorieTimeline'
 import { useTheme } from '@/components/theme-provider'
 import Blog from '@/components/Blog';
 import WhyChooseUs from '@/components/WhyChooseUs';
+// import Location from '@/components/Location';
 
 export default function Page() {
 
@@ -34,6 +35,7 @@ export default function Page() {
       <WhyChooseUs />
       <BMICalculator />
       <Footer />
+      {/* <Location /> */}
     </div>
   )
 }

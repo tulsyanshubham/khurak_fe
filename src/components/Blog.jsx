@@ -11,7 +11,7 @@ export default function Blog() {
                         <span className='font-semibold text-2xl md:text-4xl text-center'>Khuraak Insights</span>
                         <span className='text-base md:text-2xl text-indigo-900 dark:text-green-400 text-center'>Your Go-To Blog for Fresh Healthy Living Tips & Updates</span>
                     </div>
-                    <BlogData data={blogData} />
+                    <BlogData page={"home"} data={blogData} />
                 </div>
             </div>
         </div>

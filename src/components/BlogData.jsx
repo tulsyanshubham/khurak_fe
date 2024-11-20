@@ -4,9 +4,11 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { cn } from "@/lib/utils";
+import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
-export default function NewsData({ data }) {
+export default function BlogData({ data, page }) {
     const [active, setActive] = useState(null);
+    const [sliceEnd, setSliceEnd] = useState(0);
     const ref = useRef(null);
     const id = useId();
 
@@ -15,6 +17,11 @@ export default function NewsData({ data }) {
             if (event.key === "Escape") {
                 setActive(false);
             }
+        }
+        if (page === "home") {
+            setSliceEnd(3);
+        } else if (page === "blog") {
+            setSliceEnd(data.length);
         }
 
         if (active && typeof active === "object") {
@@ -117,71 +124,155 @@ export default function NewsData({ data }) {
                 </div>
             ) : null}
         </AnimatePresence>
-        <ul className="max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:gap-2 lg:gap-16 2xl:gap-20 md:items-center justify-center">
-            {data.slice(0,3).map((card, index) => (
-                <motion.div
-                    layoutId={`card-${card.title}-${id}`}
-                    key={`card-${card.title}-${id}`}
-                    onClick={() => setActive(card)}
-                    className="px-4 py-2 md:p-4 flex md:flex-col flex-row justify-between items-center hover:drop-shadow-2xl rounded-xl cursor-pointer">
-                    <div className="flex md:hidden gap-4 md:flex-col flex-row px-2 opacity-100">
-                        <motion.div layoutId={`image-${card.title}-${id}`} className="!opacity-100">
-                            <Image
-                                width={100}
-                                height={100}
-                                src={card.src}
-                                alt={card.title}
-                                className="md:h-40 md:w-40 aspect-square h-14 w-14 rounded-lg object-cover object-top" />
-                        </motion.div>
-                        <div className="!opacity-100">
-                            <motion.h3
-                                layoutId={`title-${card.title}-${id}`}
-                                className="font-medium text-neutral-800 dark:text-neutral-200 md:text-center text-left text-xl !opacity-100">
-                                {card.title}
-                            </motion.h3>
-                            <motion.p
-                                layoutId={`description-${card.description}-${id}`}
-                                className="text-neutral-600 dark:text-neutral-400 md:text-center text-left !opacity-100">
-                                {card.description}
-                            </motion.p>
-                        </div>
-                    </div>
-                    <div className="md:block hidden max-w-xs w-64 group/card">
-                        <div
-                            className={cn(
-                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4", `bg-cover`
-                            )}
-                            style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${card.src})` }}
-                        >
-                            <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
-                            <div className="flex flex-row items-center space-x-4 z-10">
+        {page === "home" && (
+            <ul className="max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:gap-2 lg:gap-16 2xl:gap-20 md:items-center justify-center">
+                {data.slice(0, sliceEnd).map((card, index) => (
+                    <motion.div
+                        layoutId={`card-${card.title}-${id}`}
+                        key={`card-${card.title}-${id}`}
+                        onClick={() => setActive(card)}
+                        className="px-4 py-2 md:p-4 flex md:flex-col flex-row justify-between items-center hover:drop-shadow-2xl rounded-xl cursor-pointer">
+                        <div className="flex md:hidden gap-4 md:flex-col flex-row px-2 opacity-100">
+                            <motion.div layoutId={`image-${card.title}-${id}`} className="!opacity-100">
                                 <Image
-                                    height="100"
-                                    width="100"
-                                    alt="Avatar"
-                                    src={card.avatar}
-                                    className="h-10 w-10 rounded-full border-2 object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <p className="font-normal text-base text-gray-50 relative z-10">
-                                        {card.name}
+                                    width={100}
+                                    height={100}
+                                    src={card.src}
+                                    alt={card.title}
+                                    className="md:h-40 md:w-40 aspect-square h-14 w-14 rounded-lg object-cover object-top" />
+                            </motion.div>
+                            <div className="!opacity-100">
+                                <motion.h3
+                                    layoutId={`title-${card.title}-${id}`}
+                                    className="font-medium text-neutral-800 dark:text-neutral-200 md:text-center text-left text-xl !opacity-100">
+                                    {card.title}
+                                </motion.h3>
+                                <motion.p
+                                    layoutId={`description-${card.description}-${id}`}
+                                    className="text-neutral-600 dark:text-neutral-400 md:text-center text-left !opacity-100">
+                                    {card.description}
+                                </motion.p>
+                            </div>
+                        </div>
+                        <div className="md:block hidden max-w-xs w-64 group/card">
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4", `bg-cover`
+                                )}
+                                style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${card.src})` }}
+                            >
+                                <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height="100"
+                                        width="100"
+                                        alt="Avatar"
+                                        src={card.avatar}
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-normal text-base text-gray-50 relative z-10">
+                                            {card.name}
+                                        </p>
+                                        {/* <p className="text-sm text-gray-400">2 min read</p> */}
+                                    </div>
+                                </div>
+                                <div className="text content">
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        {card.title}
+                                    </h1>
+                                    <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
+                                        {card.description}
                                     </p>
-                                    {/* <p className="text-sm text-gray-400">2 min read</p> */}
                                 </div>
                             </div>
-                            <div className="text content">
-                                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                    {card.title}
-                                </h1>
-                                <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
-                                    {card.description}
-                                </p>
-                            </div>
                         </div>
-                    </div>
-                </motion.div>
-            ))}
-        </ul>
+                    </motion.div>
+                ))}
+            </ul>
+        )}
+        {page === "blog" && (
+            <div>
+                <div
+                    className={cn(
+                        "hidden md:grid max-w-7xl mx-auto md:auto-rows-[18rem] grid-cols-1 md:grid-cols-5 gap-4",
+                    )}>
+                    {data.map((card, i) => (
+                        <motion.div
+                            className={cn(
+                                "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 !cursor-pointer !opacity-100", `${i === 1 || i === 4 || i === 6 || i === 9 ? "md:col-span-2" : ""}`
+                            )}
+                            layoutId={`card-${card.title}-${id}`}
+                            key={`card-${card.title}-${id}`}
+                            onClick={() => setActive(card)}
+                            >
+                            <Image
+                                src={card.src}
+                                alt={card.title}
+                                width={400}
+                                height={400}
+                                className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
+                            />
+                            <div className="group-hover/bento:translate-x-2 transition duration-200">
+                                <div className="flex items-center justify-start">
+                                    <Image
+                                        height="100"
+                                        width="100"
+                                        alt="Avatar"
+                                        src={card.avatar}
+                                        className="h-7 w-7 rounded-full border-2 object-cover"
+                                    />
+                                    <span
+                                        className="font-sans font-normal text-neutral-600 text-sm dark:text-neutral-300">
+                                        {card.name}
+                                    </span>
+                                </div>
+                                <div
+                                    className="font-sans text-lg font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
+                                    {card.title}
+                                </div>
+                                <div
+                                    className="font-sans font-normal text-neutral-600 text-sm dark:text-neutral-300">
+                                    {card.description}
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+                <ul className="md:hidden max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:gap-2 lg:gap-16 2xl:gap-20 md:items-center justify-center">
+                    {data.slice(0, sliceEnd).map((card, index) => (
+                        <motion.div
+                            layoutId={`card-${card.title}-${id}`}
+                            key={`card-${card.title}-${id}`}
+                            onClick={() => setActive(card)}
+                            className="px-4 py-2 md:p-4 flex md:flex-col flex-row justify-between items-center hover:drop-shadow-2xl rounded-xl cursor-pointer">
+                            <div className="flex gap-4 md:flex-col flex-row px-2 opacity-100">
+                                <motion.div layoutId={`image-${card.title}-${id}`} className="!opacity-100">
+                                    <Image
+                                        width={100}
+                                        height={100}
+                                        src={card.src}
+                                        alt={card.title}
+                                        className="md:h-40 md:w-40 aspect-square h-14 w-14 rounded-lg object-cover object-top" />
+                                </motion.div>
+                                <div className="!opacity-100">
+                                    <motion.h3
+                                        layoutId={`title-${card.title}-${id}`}
+                                        className="font-medium text-neutral-800 dark:text-neutral-200 md:text-center text-left text-xl !opacity-100">
+                                        {card.title}
+                                    </motion.h3>
+                                    <motion.p
+                                        layoutId={`description-${card.description}-${id}`}
+                                        className="text-neutral-600 dark:text-neutral-400 md:text-center text-left !opacity-100">
+                                        {card.description}
+                                    </motion.p>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </ul>
+            </ div>
+        )}
     </>);
 }
 
