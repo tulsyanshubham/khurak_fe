@@ -111,7 +111,7 @@ export default function BlogData({ data, page }) {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
-                                    className="text-neutral-600 text-sm md:text-sm lg:text-base h-[34vh] md:h-fit px-3 pb-3 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] leading-relaxed"
+                                    className="text-neutral-600 text-sm md:text-sm lg:text-base h-[34vh] md:h-fit px-3 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] leading-relaxed"
                                 >
                                     {typeof active.content === "function"
                                         ? active.content()
@@ -195,17 +195,17 @@ export default function BlogData({ data, page }) {
             <div>
                 <div
                     className={cn(
-                        "hidden md:grid max-w-7xl mx-auto md:auto-rows-[18rem] grid-cols-1 md:grid-cols-5 gap-4",
+                        "hidden md:grid max-w-7xl mx-auto md:auto-rows-[18rem] grid-cols-1 md:grid-cols-5 gap-2",
                     )}>
                     {data.map((card, i) => (
                         <motion.div
-                            className={cn(
-                                "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 !cursor-pointer !opacity-100", `${i === 1 || i === 4 || i === 6 || i === 9 ? "md:col-span-2" : ""}`
-                            )}
+                            className={
+                                `row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 !cursor-pointer !opacity-100 ${i === 1 || i === 4 || i === 6 || i === 9 ? "md:col-span-2" : ""}`
+                            }
                             layoutId={`card-${card.title}-${id}`}
                             key={`card-${card.title}-${id}`}
                             onClick={() => setActive(card)}
-                            >
+                        >
                             <Image
                                 src={card.src}
                                 alt={card.title}
