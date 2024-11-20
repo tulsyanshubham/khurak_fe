@@ -8,6 +8,7 @@ import BMICalculator from '@/components/BMICalculator'
 import CalorieTimeline from '@/components/CalorieTimeline'
 import { useTheme } from '@/components/theme-provider'
 import News from '@/components/News';
+import WhyChooseUs from '@/components/WhyChooseUs';
 
 export default function Page() {
 
@@ -30,6 +31,7 @@ export default function Page() {
       <Review />
       <CalorieTimeline />
       <News />
+      <WhyChooseUs />
       <BMICalculator />
       <Footer />
     </div>
