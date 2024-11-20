@@ -1,4 +1,4 @@
-export const newsData = [
+export const blogData = [
     {
         description: "Healthy Salads",
         title: "Fresh and Nutritious",
@@ -21,7 +21,7 @@ export const newsData = [
     },
     {
         description: "Protein-Rich Meals",
-        title: "Power Your Day",
+        title: "Power Your Day Now",
         src: "/images/carousel/2.jpeg",
         ctaLink: "/",
         avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
@@ -76,43 +76,43 @@ export const newsData = [
             );
         },
     },
-    // {
-    //     description: "Guilt-Free Snacks",
-    //     title: "Healthy Indulgence",
-    //     src: "/images/carousel/5.jpeg",
-    //     ctaLink: "/",
-    //     avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
-    //     name: "Sarah Davis",
-    //     content: () => {
-    //         return (
-    //             (<p>Satisfy your cravings with our guilt-free snacks, prepared with
-    //                 wholesome ingredients to keep you fueled throughout the day. At
-    //                 Khuraak, we offer a variety of snacks that are low in calories but
-    //                 high in flavor and nutrition. <br /> <br />From baked chips to protein
-    //                 bars, find your favorite healthy indulgence and enjoy snacking without
-    //                 the guilt.
-    //             </p>)
-    //         );
-    //     },
-    // },
-    // {
-    //     description: "Low-Calorie Desserts",
-    //     title: "Sweet and Healthy",
-    //     src: "/images/carousel/6.jpeg",
-    //     ctaLink: "/",
-    //     avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
-    //     name: "David Wilson",
-    //     content: () => {
-    //         return (
-    //             (<p>Indulge your sweet tooth without compromising on your health goals 
-    //                 with our low-calorie desserts. At Khuraak, we craft desserts using 
-    //                 natural sweeteners and wholesome ingredients to deliver the perfect 
-    //                 balance of flavor and nutrition. <br /> <br />From creamy yogurt 
-    //                 parfaits to rich dark chocolate delights, our guilt-free desserts 
-    //                 are designed to satisfy your cravings while keeping you on track with 
-    //                 your healthy lifestyle.
-    //             </p>)
-    //         );
-    //     },
-    // },    
+    {
+        description: "Guilt-Free Snacks",
+        title: "Healthy Indulgence",
+        src: "/images/carousel/5.jpeg",
+        ctaLink: "/",
+        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        name: "Sarah Davis",
+        content: () => {
+            return (
+                (<p>Satisfy your cravings with our guilt-free snacks, prepared with
+                    wholesome ingredients to keep you fueled throughout the day. At
+                    Khuraak, we offer a variety of snacks that are low in calories but
+                    high in flavor and nutrition. <br /> <br />From baked chips to protein
+                    bars, find your favorite healthy indulgence and enjoy snacking without
+                    the guilt.
+                </p>)
+            );
+        },
+    },
+    {
+        description: "Low-Calorie Desserts",
+        title: "Sweet and Healthy",
+        src: "/images/carousel/6.jpeg",
+        ctaLink: "/",
+        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        name: "David Wilson",
+        content: () => {
+            return (
+                (<p>Indulge your sweet tooth without compromising on your health goals 
+                    with our low-calorie desserts. At Khuraak, we craft desserts using 
+                    natural sweeteners and wholesome ingredients to deliver the perfect 
+                    balance of flavor and nutrition. <br /> <br />From creamy yogurt 
+                    parfaits to rich dark chocolate delights, our guilt-free desserts 
+                    are designed to satisfy your cravings while keeping you on track with 
+                    your healthy lifestyle.
+                </p>)
+            );
+        },
+    },    
 ];

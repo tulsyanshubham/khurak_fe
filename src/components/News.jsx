@@ -1,6 +1,6 @@
 import React from 'react'
 import NewsData from './NewsData'
-import { newsData } from '@/constants/news'
+import { blogData } from '@/constants/blog'
 
 export default function News() {
     return (
@@ -11,7 +11,7 @@ export default function News() {
                         <span className='font-semibold text-2xl md:text-4xl '>What&rsquo;s New at Khuraak</span>
                         <span className='text-lg md:text-2xl text-indigo-900 dark:text-green-400'>News and Updates</span>
                     </div>
-                    <NewsData data={newsData} />
+                    <NewsData data={blogData} />
                 </div>
             </div>
         </div>

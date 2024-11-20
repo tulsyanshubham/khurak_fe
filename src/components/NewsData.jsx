@@ -75,7 +75,7 @@ export default function NewsData({ data }) {
                                 className="w-full h-70 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top" />
                         </motion.div>
 
-                        <div className="relative">
+                        <div className="relative overflow-y-auto">
                             <div className="flex justify-between items-start p-4">
                                 <div className="">
                                     <motion.h3
@@ -98,7 +98,7 @@ export default function NewsData({ data }) {
                                     View
                                 </motion.a>
                             </div>
-                            <div className="pt-4 relative px-4 pb-16">
+                            <div className="relative px-4 py-4">
                                 <motion.div
                                     layout
                                     initial={{ opacity: 0 }}
@@ -117,8 +117,8 @@ export default function NewsData({ data }) {
                 </div>
             ) : null}
         </AnimatePresence>
-        <ul className="max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:items-center justify-center">
-            {data.map((card, index) => (
+        <ul className="max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:gap-2 lg:gap-16 2xl:gap-20 md:items-center justify-center">
+            {data.slice(0,3).map((card, index) => (
                 <motion.div
                     layoutId={`card-${card.title}-${id}`}
                     key={`card-${card.title}-${id}`}
