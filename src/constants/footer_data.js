@@ -6,6 +6,7 @@ export const contactInfo = {
         twitter: "https://twitter.com/",
         youtube: "https://www.youtube.com/",
         facebook: "https://www.facebook.com/",
-        linkedin: "https://in.linkedin.com/"
+        linkedin: "https://in.linkedin.com/",
+        pinterest: "https://www.pinterest.com/",
     }
 };
