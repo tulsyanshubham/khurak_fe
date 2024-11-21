@@ -34,10 +34,10 @@ export default function WhyChooseUs() {
                                 expandIcon={<ExpandMoreIcon className='dark:text-white' />}
                                 aria-controls="panel1bh-content"
                                 id="panel1bh-header"
-                                className={`overflow-hidden ${index === 0 ? '!rounded-t-[3px]' : '!rounded-t-lg'}
+                                className={`overflow-hidden !rounded-t-lg
                                     ${expanded === index ? '' : index !== reasonsToChooseKhuraak.length - 1 ? '!rounded-b-lg' : '!rounded-b-[3px]'}`}
                             >
-                                <Typography sx={{ flexShrink: 0 }} className='w-[17%] md:w-[12%] pr-1 md:pr-3'>
+                                <Typography sx={{ flexShrink: 0 }} className='w-[17%] md:w-[12%] mr-3 md:mr-3'>
                                     <Image
                                         src={reason.icon}
                                         alt={reason.title}
@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
                                     {reason.title}
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails className={`bg-green-50 dark:bg-neutral-800 dark:text-gray-100 px-7 py-3 ${index !== reasonsToChooseKhuraak.length - 1 ? 'rounded-b-lg' : ''}`}>
+                            <AccordionDetails className='bg-green-50 dark:bg-neutral-800 dark:text-gray-100 px-7 py-3 !rounded-b-lg'>
                                 <Typography className='text-sm md:text-base'>
                                     {reason.description}
                                 </Typography>
