@@ -79,7 +79,7 @@ export default function BlogData({ data, page }) {
                                 height={200}
                                 src={active.src}
                                 alt={active.title}
-                                className="w-full h-70 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top" />
+                                className="w-full h-72 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-center" />
                         </motion.div>
 
                         <div className="relative overflow-y-auto">
@@ -157,7 +157,7 @@ export default function BlogData({ data, page }) {
                         <div className="md:block hidden max-w-xs w-64 group/card">
                             <div
                                 className={cn(
-                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4", `bg-cover`
+                                    "cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4", `bg-cover`
                                 )}
                                 style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${card.src})` }}
                             >
@@ -191,7 +191,7 @@ export default function BlogData({ data, page }) {
                 ))}
             </ul>
         )}
-        {page === "blog" && (
+        {page === "blogs" && (
             <div>
                 <div
                     className={cn(
@@ -204,7 +204,10 @@ export default function BlogData({ data, page }) {
                             }
                             layoutId={`card-${card.title}-${id}`}
                             key={`card-${card.title}-${id}`}
-                            onClick={() => setActive(card)}
+                            onClick={() => {
+                                console.log(card.title)
+                                setActive(card)
+                            }}
                         >
                             <Image
                                 src={card.src}

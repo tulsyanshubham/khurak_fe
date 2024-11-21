@@ -11,7 +11,7 @@ export default function Page() {
           <span className='font-semibold text-2xl md:text-4xl text-center'>Khuraak Insights</span>
           <span className='text-base md:text-2xl text-green-600 dark:text-green-400 text-center'>Discover Healthy Living Tips, Nutritious Recipes, and Wellness Inspiration</span>
         </div>
-        <BlogData page={"blog"} data={blogData} />
+        <BlogData page={"blogs"} data={blogData} />
       </div>
     </div>
   )
