@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { socialData } from "@/constants/social";
-import SocialData from "./socialData";
+import SocialData from "./SocialData";
 
 export default function Social() {
     return (
