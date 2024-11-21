@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { contactInfo } from "@/constants/footer_data";
-import SocialData from "./socialData";
+import SocialData from "./SocialData";
 
 const socialData = [
     {
