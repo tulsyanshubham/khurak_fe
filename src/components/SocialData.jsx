@@ -2,11 +2,12 @@ import React from 'react'
 import { WobbleCard } from './ui/wobble-card'
 import Image from 'next/image'
 import Link from 'next/link'
+import { socialData } from '@/constants/social'
 
 export default function SocialData({ data }) {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full px-9 xl:px-0">
-            {data.map(
+            {socialData.map(
                 (
                     {
                         containerClass,

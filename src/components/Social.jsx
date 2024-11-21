@@ -15,8 +15,8 @@ export default function Social() {
                         Stay updated, share your stories, and join the Khuraak community across your favorite platforms!
                     </span>
                 </div>
-                <SocialData data={socialData} />
             </div>
+            <SocialData data={socialData} />
         </div>
     );
 }
