@@ -4,11 +4,9 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { cn } from "@/lib/utils";
-import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
 export default function BlogData({ data, page }) {
     const [active, setActive] = useState(null);
-    const [sliceEnd, setSliceEnd] = useState(0);
     const ref = useRef(null);
     const id = useId();
 
@@ -17,11 +15,6 @@ export default function BlogData({ data, page }) {
             if (event.key === "Escape") {
                 setActive(false);
             }
-        }
-        if (page === "home") {
-            setSliceEnd(3);
-        } else if (page === "blog") {
-            setSliceEnd(data.length);
         }
 
         if (active && typeof active === "object") {
@@ -126,7 +119,7 @@ export default function BlogData({ data, page }) {
         </AnimatePresence>
         {page === "home" && (
             <ul className="max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:gap-2 lg:gap-16 2xl:gap-20 md:items-center justify-center">
-                {data.slice(0, sliceEnd).map((card, index) => (
+                {data.slice(0, 3).map((card, index) => (
                     <motion.div
                         layoutId={`card-${card.title}-${id}`}
                         key={`card-${card.title}-${id}`}
@@ -200,7 +193,7 @@ export default function BlogData({ data, page }) {
                     {data.map((card, i) => (
                         <motion.div
                             className={
-                                `row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 !cursor-pointer !z-10 ${i === 1 || i === 4 || i === 6 || i === 9 ? "md:col-span-2" : ""}`
+                                `row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 !cursor-pointer !z-10 !opacity-100 ${i === 1 || i === 4 || i === 6 || i === 9 ? "md:col-span-2" : ""}`
                             }
                             layoutId={`card-${card.title}-${id}`}
                             key={`card-${card.title}-${id}`}
@@ -242,8 +235,8 @@ export default function BlogData({ data, page }) {
                         </motion.div>
                     ))}
                 </div>
-                <ul className="md:hidden max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:gap-2 lg:gap-16 2xl:gap-20 md:items-center justify-center">
-                    {data.slice(0, sliceEnd).map((card, index) => (
+                <div className="flex md:hidden max-w-7xl w-full gap-4 flex-col justify-center">
+                    {data.map((card, index) => (
                         <motion.div
                             layoutId={`card-${card.title}-${id}`}
                             key={`card-${card.title}-${id}`}
@@ -273,7 +266,7 @@ export default function BlogData({ data, page }) {
                             </div>
                         </motion.div>
                     ))}
-                </ul>
+                </div>
             </ div>
         )}
     </>);
