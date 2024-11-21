@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
                         Nourish Your Body, Delight Your Taste Buds, Embrace Wellness
                     </span>
                 </div>
-                <div className='md:w-[70%] w-[95%]'>
+                <div className='md:w-[70%] w-[90%]'>
                     {reasonsToChooseKhuraak.map((reason, index) => (
                         <Accordion expanded={expanded === index} key={reason.title} onChange={handleChange(index)}
                             sx={{ "&:before": { content: "none" } }} className='rounded-lg border bg-transparent border-green-800 my-1'>

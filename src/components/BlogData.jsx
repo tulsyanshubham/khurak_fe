@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 
 export default function BlogData({ data, page }) {
     const [active, setActive] = useState(null);
+    const [pageName, setPageName] = useState(page);
     const ref = useRef(null);
     const id = useId();
 
@@ -26,6 +27,10 @@ export default function BlogData({ data, page }) {
         window.addEventListener("keydown", onKeyDown);
         return () => window.removeEventListener("keydown", onKeyDown);
     }, [active]);
+
+    useEffect(() => {
+        setPageName(page);
+    }, [page]);
 
     useOutsideClick(ref, () => setActive(null));
 
@@ -117,7 +122,7 @@ export default function BlogData({ data, page }) {
                 </div>
             ) : null}
         </AnimatePresence>
-        {page === "home" && (
+        {pageName === "home" && (
             <ul className="max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:gap-2 lg:gap-16 2xl:gap-20 md:items-center justify-center">
                 {data.slice(0, 3).map((card, index) => (
                     <motion.div
@@ -184,7 +189,7 @@ export default function BlogData({ data, page }) {
                 ))}
             </ul>
         )}
-        {page === "blogs" && (
+        {pageName === "blogs" && (
             <div>
                 <div
                     className={cn(

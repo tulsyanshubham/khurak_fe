@@ -1,6 +1,7 @@
 import React from 'react'
 import BlogData from './BlogData'
 import { blogData } from '@/constants/blog'
+import Link from 'next/link'
 
 export default function Blog() {
     return (
@@ -12,6 +13,11 @@ export default function Blog() {
                         <span className='text-base md:text-2xl text-indigo-900 dark:text-green-400 text-center'>Your Go-To Blog for Fresh Healthy Living Tips & Updates</span>
                     </div>
                     <BlogData page={"home"} data={blogData} />
+                    <div className='flex items-center justify-end w-full px-7'>
+                        <Link href="/blogs" className='text-right text-lg font-semibold text-indigo-900'>
+                            Explore more {'>'}
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
