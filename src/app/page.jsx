@@ -10,7 +10,7 @@ import { useTheme } from '@/components/theme-provider'
 import Blog from '@/components/Blog';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Social from '@/components/Social';
-// import Location from '@/components/Location';
+import Location from '@/components/Location';
 
 export default function Page() {
 
