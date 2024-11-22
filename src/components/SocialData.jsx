@@ -2,6 +2,7 @@ import React from 'react'
 import { WobbleCard } from './ui/wobble-card'
 import Image from 'next/image'
 import Link from 'next/link'
+import { contactInfo } from '@/constants/footer_data';
 
 const socialData = [
     {
