@@ -23,7 +23,7 @@ export default function Home() {
                         </BoxReveal>
 
                         <BoxReveal boxColor={"green"} duration={0.5}>
-                            <p className="text-bold mt-4 max-w-lg">
+                            <p className="text-bold mt-4 max-w-lg px-1">
                                 Easily order wholesome meals tailored to your unique lifestyle, featuring fresh, nutritious ingredients that promote well-being, and enjoy a healthier, happier you with every delicious bite.
                             </p>
                         </BoxReveal>
