@@ -14,7 +14,7 @@ export default function Blog() {
                     </div>
                     <BlogData page={"home"} data={blogData} />
                     <div className='flex items-center justify-end w-full px-7'>
-                        <Link href="/blogs" target="_blank" className="bg-black/20 border-2 border-black no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm font-semibold leading-6 inline-block mt-2">
+                        <Link href="/blogs" className="bg-black/20 border-2 border-black no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm font-semibold leading-6 inline-block mt-2">
                             <span className="absolute inset-0 overflow-hidden rounded-full">
                                 <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                             </span>
