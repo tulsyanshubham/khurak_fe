@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
                 <div className='md:w-[70%] w-[90%]'>
                     {reasonsToChooseKhuraak.map((reason, index) => (
                         <Accordion expanded={expanded === index} key={reason.title} onChange={handleChange(index)}
-                            sx={{ "&:before": { content: "none" } }} className='!rounded-lg border !bg-transparent !border-green-800 my-1'>
+                            sx={{ "&:before": { content: "none" } }} className='!rounded-lg border !bg-transparent !border-green-800 my-[6px]'>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon className='dark:text-white' />}
                                 aria-controls="panel1bh-content"

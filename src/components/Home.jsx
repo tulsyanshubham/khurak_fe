@@ -4,6 +4,7 @@ import CardsCarousel from './cards';
 import { Spotlight } from './ui/Spotlight';
 import Image from 'next/image';
 import { assets } from '@/constants/assets';
+import { BoxReveal } from './ui/box-reveal';
 
 export default function Home() {
     return (
@@ -11,21 +12,33 @@ export default function Home() {
             <div className='flex flex-col items-center justify-center flex-wrap relative pt-32 w-full max-w-7xl antialiased'>
                 <div className='flex flex-wrap justify-evenly items-center w-full mb-10'>
                     <div className="flex flex-col justify-center items-center text-center z-10 px-1 md:px-0">
-                        <h1 className="text-4xl md:text-5xl font-bold text-green-700">Welcome to Khuraak</h1>
-                        <h2 className="text-2xl md:text-3xl font-semibold mt-2">Your Hub for Healthy Eating</h2>
-                        <h2 className="text-2xl md:text-3xl font-semibold">With Fresh Meals.</h2>
+                        <BoxReveal boxColor={"green"} duration={0.5}>
+                            <h1 className="text-4xl md:text-5xl font-bold text-green-700">Welcome to Khuraak</h1>
+                        </BoxReveal>
+                        <BoxReveal boxColor={"green"} duration={0.5}>
+                            <h2 className="text-2xl md:text-3xl font-semibold mt-2">Your Hub for Healthy Eating</h2>
+                        </BoxReveal>
+                        <BoxReveal boxColor={"green"} duration={0.5}>
+                            <h2 className="text-2xl md:text-3xl font-semibold">With Fresh Meals.</h2>
+                        </BoxReveal>
 
-                        <p className="text-bold mt-4 max-w-lg">
-                            Easily order wholesome meals tailored to your unique lifestyle, featuring fresh, nutritious ingredients that promote well-being, and enjoy a healthier, happier you with every delicious bite.
-                        </p>
+                        <BoxReveal boxColor={"green"} duration={0.5}>
+                            <p className="text-bold mt-4 max-w-lg">
+                                Easily order wholesome meals tailored to your unique lifestyle, featuring fresh, nutritious ingredients that promote well-being, and enjoy a healthier, happier you with every delicious bite.
+                            </p>
+                        </BoxReveal>
 
                         <div className="flex flex-col md:flex-row gap-4 mt-6">
+                        <BoxReveal boxColor={"green"} duration={0.5}>
                             <button className="bg-green-600 hover:brightness-95 text-white font-semibold py-2 px-6 rounded-md">
                                 Explore Meal Plans
                             </button>
+                        </BoxReveal>
+                        <BoxReveal boxColor={"green"} duration={0.5}>
                             <button className="border border-green-600 text-green-600 hover:bg-green-50 dark:hover:bg-background/95 font-semibold py-2 px-6 rounded-md">
                                 Try Khuraak App
                             </button>
+                        </BoxReveal>
                         </div>
                     </div>
                     <div>
