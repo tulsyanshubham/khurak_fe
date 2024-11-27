@@ -3,74 +3,12 @@ import { WobbleCard } from './ui/wobble-card'
 import Image from 'next/image'
 import Link from 'next/link'
 import { contactInfo } from '@/constants/footer_data';
-
-const socialData = [
-    {
-        containerClass: "col-span-1 lg:col-span-2 h-full bg-pink-600 dark:bg-pink-800 min-h-[500px] lg:min-h-[300px]",
-        heading: "Follow Khuraak on Instagram",
-        description: "Stay updated with our latest healthy recipes and vibrant food photography. Join our community of food lovers!",
-        imageSrc: "/images/social/instagram_light.jpg",
-        imageAlt: "Instagram preview",
-        imageClassName: "absolute lg:-right-[22%] top-10 object-contain rounded-2xl",
-        gradiantClass: "bg-gradient-to-br from-orange-200 to-pink-300 dark:from-orange-600 dark:to-pink-800",
-        link: contactInfo.social.instagram,
-    },
-    {
-        containerClass: "col-span-1 bg-teal-700 dark:bg-teal-900 min-h-[300px] xl:min-h-[300px]",
-        heading: "Connect with Khuraak on LinkedIn",
-        description: "Discover how Khuraak is revolutionizing healthy eating. Learn about our mission, vision, and growth opportunities.",
-        imageSrc: "",
-        imageAlt: "LinkedIn preview",
-        imageClassName: "absolute -right-6 lg:-right-[15%] -bottom-10 object-contain rounded-xl",
-        gradiantClass: "bg-gradient-to-br from-teal-200 to-blue-300 dark:from-teal-600 dark:to-blue-800",
-        link: contactInfo.social.linkedin,
-    },
-    {
-        containerClass: "col-span-1 bg-rose-700 dark:bg-rose-900 min-h-[300px]",
-        heading: "Explore Khuraak on Pinterest",
-        description: "Discover a treasure trove of beautifully curated healthy recipes and meal-planning ideas to inspire your cooking journey.",
-        imageSrc: "",
-        imageAlt: "Pinterest preview",
-        imageClassName: "absolute -right-8 lg:-right-[20%] -bottom-10 object-contain rounded-xl",
-        gradiantClass: "bg-gradient-to-br from-rose-300 to-red-400 dark:from-rose-700 dark:to-red-800",
-        link: contactInfo.social.pinterest,
-    },
-    {
-        containerClass: "col-span-1 bg-blue-700 dark:bg-blue-900 lg:col-span-2 min-h-[300px]",
-        heading: "Like Khuraak on Facebook",
-        description: "Connect with our vibrant community, share your favorite recipes, and join discussions about mindful eating.",
-        imageSrc: "/images/social/facebook.jpg",
-        imageAlt: "Facebook preview",
-        imageClassName: "absolute -right-6 md:-right-[20%] lg:-right-[12%] top-10 object-contain rounded-lg",
-        gradiantClass: "bg-gradient-to-br from-cyan-200 to-sky-300 dark:from-cyan-600 dark:to-sky-800",
-        link: contactInfo.social.facebook,
-    },
-    {
-        containerClass: "col-span-1 lg:col-span-2 bg-red-700 dark:bg-red-900 min-h-[500px] lg:min-h-[300px]",
-        heading: "Subscribe to Khuraak on YouTube",
-        description: "Watch step-by-step tutorials for delicious healthy meals and tips for maintaining a balanced diet.",
-        imageSrc: "/images/social/youtube_light.jpg",
-        imageAlt: "YouTube preview",
-        imageClassName: "absolute -right-4 lg:-right-[12%] filter drop-shadow-xl top-10 object-contain rounded-2xl",
-        gradiantClass: "bg-gradient-to-br from-yellow-200 to-red-300 dark:from-yellow-600 dark:to-red-800",
-        link: contactInfo.social.youtube,
-    },
-    {
-        containerClass: "col-span-1 min-h-[300px] bg-purple-500 dark:bg-purple-900",
-        heading: "Follow Khuraak on X (Twitter)",
-        description: "Get quick updates, healthy tips, and join trending conversations about clean eating and a balanced lifestyle.",
-        imageSrc: "",
-        imageAlt: "X preview",
-        imageClassName: "absolute -right-10 filter contrast-125 -bottom-10 object-contain rounded-xl",
-        gradiantClass: "bg-gradient-to-br from-purple-200 to-indigo-300 dark:from-purple-700 dark:to-indigo-800",
-        link: contactInfo.social.twitter,
-    },
-];
+import { cn } from '@/lib/utils';
 
 export default function SocialData({ data }) {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full px-9 xl:px-0">
-            {socialData.map(
+            {data.map(
                 (
                     {
                         containerClass,
@@ -85,7 +23,7 @@ export default function SocialData({ data }) {
                 ) => (
                     <WobbleCard
                         key={index}
-                        containerClassName={`${containerClass}`}
+                        containerClassName={cn(containerClass)}
                         className="lg:h-72 h-52"
                     >
                         <div className="max-w-xs">
@@ -102,7 +40,7 @@ export default function SocialData({ data }) {
                                 width={500}
                                 height={500}
                                 alt={imageAlt}
-                                className={`${imageClassName} left-2/3 lg:left-1/2`}
+                                className={cn("left-2/3 lg:left-1/2",imageClassName)}
                             />
                         )}
                         <Link href={link} target="_blank" className="bg-black/20 border-2 border-black no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block mt-2">
