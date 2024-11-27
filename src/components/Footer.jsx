@@ -60,7 +60,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className='dark:bg-ktheme-800 bg-gray-100 w-3/4 md:w-1/2 h-[1.5px] rounded-full'></div>
-                <div className='text-center text-sm sm:text-base md:text-lg'>Copyright &copy; {year} [<span className='text-ktheme-600 dark:text-ktheme-500 font-bold'>KHURAAK</span>]. All rights reserved.</div>
+                <div className='text-center text-sm sm:text-base md:text-lg'>Copyright &copy; {year} [<span className='text-ktheme-600 dark:text-ktheme-500 font-bold'>खुRAAK</span>]. All rights reserved.</div>
             </div>
         </div>
     )

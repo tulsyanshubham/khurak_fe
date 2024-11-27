@@ -33,7 +33,7 @@ export default function CalorieTimeline() {
         <span className="text-2xl font-semibold md:text-4xl">
           Calorie Consumption Guide
         </span>
-        <span className="text-lg md:text-2xl text-ktheme-500">
+        <span className="text-lg md:text-2xl text-ktheme-600 dark:text-ktheme-300">
           A Step-by-Step Approach
         </span>
       </div>

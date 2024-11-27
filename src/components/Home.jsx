@@ -12,8 +12,8 @@ export default function Home() {
             <div className='flex flex-col items-center justify-center flex-wrap relative pt-32 w-full max-w-7xl antialiased'>
                 <div className='flex flex-wrap justify-evenly items-center w-full mb-10'>
                     <div className="flex flex-col justify-center items-center text-center z-10 px-1 md:px-0">
-                        <BoxReveal boxColor={"#eec14d"} duration={0.5}>
-                            <h1 className="text-4xl md:text-5xl font-bold text-ktheme-500">Welcome to Khuraak</h1>
+                        <BoxReveal boxColor={"#eec14d"} duration={0.5} flag={false}>
+                            <h1 className="text-4xl md:text-5xl font-bold text-ktheme-500">Welcome to खुRaak</h1>
                         </BoxReveal>
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
                             <h2 className="text-2xl md:text-3xl font-semibold mt-2">Your Hub for Healthy Eating</h2>

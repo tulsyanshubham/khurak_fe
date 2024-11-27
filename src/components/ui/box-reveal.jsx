@@ -7,6 +7,7 @@ export const BoxReveal = ({
     width = "fit-content",
     boxColor,
     duration,
+    flag = true,
 }) => {
     const mainControls = useAnimation();
     const slideControls = useAnimation();
@@ -25,7 +26,7 @@ export const BoxReveal = ({
     }, [isInView, mainControls, slideControls]);
 
     return (
-        <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+        <div ref={ref} style={{ position: "relative", width, overflow: `${flag ? "hidden" : "visible"}` }}>
             <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 75 },

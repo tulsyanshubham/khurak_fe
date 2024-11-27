@@ -3,7 +3,7 @@ import { contactInfo } from "./footer_data";
 export const socialData = [
     {
         containerClass: "col-span-1 lg:col-span-2 h-full bg-pink-600 dark:bg-pink-800 min-h-[500px] lg:min-h-[300px]",
-        heading: "Follow Khuraak on Instagram",
+        heading: "Follow खुRaak on Instagram",
         description: "Stay updated with our latest healthy recipes and vibrant food photography. Join our community of food lovers!",
         imageSrc: "/images/social/instagram_light.jpg",
         imageAlt: "Instagram preview",
@@ -13,8 +13,8 @@ export const socialData = [
     },
     {
         containerClass: "col-span-1 bg-teal-700 dark:bg-teal-900 min-h-[300px] xl:min-h-[300px]",
-        heading: "Connect with Khuraak on LinkedIn",
-        description: "Discover how Khuraak is revolutionizing healthy eating. Learn about our mission, vision, and growth opportunities.",
+        heading: "Connect with खुRaak on LinkedIn",
+        description: "Discover how खुRaak is revolutionizing healthy eating. Learn about our mission, vision, and growth opportunities.",
         imageSrc: "",
         imageAlt: "LinkedIn preview",
         imageClassName: "absolute -right-6 lg:-right-[15%] -bottom-10 object-contain rounded-xl",
@@ -23,7 +23,7 @@ export const socialData = [
     },
     {
         containerClass: "col-span-1 bg-rose-700 dark:bg-rose-900 min-h-[300px]",
-        heading: "Explore Khuraak on Pinterest",
+        heading: "Explore खुRaak on Pinterest",
         description: "Discover a treasure trove of beautifully curated healthy recipes and meal-planning ideas to inspire your cooking journey.",
         imageSrc: "",
         imageAlt: "Pinterest preview",
@@ -33,7 +33,7 @@ export const socialData = [
     },
     {
         containerClass: "col-span-1 bg-blue-700 dark:bg-blue-900 lg:col-span-2 min-h-[300px]",
-        heading: "Like Khuraak on Facebook",
+        heading: "Like खुRaak on Facebook",
         description: "Connect with our vibrant community, share your favorite recipes, and join discussions about mindful eating.",
         imageSrc: "/images/social/facebook.jpg",
         imageAlt: "Facebook preview",
@@ -43,7 +43,7 @@ export const socialData = [
     },
     {
         containerClass: "col-span-1 lg:col-span-2 bg-red-700 dark:bg-red-900 min-h-[500px] lg:min-h-[300px]",
-        heading: "Subscribe to Khuraak on YouTube",
+        heading: "Subscribe to खुRaak on YouTube",
         description: "Watch step-by-step tutorials for delicious healthy meals and tips for maintaining a balanced diet.",
         imageSrc: "/images/social/youtube_light.jpg",
         imageAlt: "YouTube preview",
@@ -53,7 +53,7 @@ export const socialData = [
     },
     {
         containerClass: "col-span-1 min-h-[300px] bg-purple-500 dark:bg-purple-900",
-        heading: "Follow Khuraak on X (Twitter)",
+        heading: "Follow खुRaak on X (Twitter)",
         description: "Get quick updates, healthy tips, and join trending conversations about clean eating and a balanced lifestyle.",
         imageSrc: "",
         imageAlt: "X preview",

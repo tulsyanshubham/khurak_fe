@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
             <div className='max-w-7xl flex flex-col items-center justify-center py-5'>
                 <div className='flex flex-col gap-2 items-center justify-center py-5 px-2'>
                     <span className='text-2xl md:text-4xl text-center font-semibold'>
-                        Why Choose Khuraak 🤔
+                        Why Choose खुRaak 🤔
                     </span>
                     <span className='text-base md:text-lg text-ktheme-600 text-center'>
                         Nourish Your Body, Delight Your Taste Buds, Embrace Wellness
