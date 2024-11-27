@@ -88,6 +88,17 @@ const config = {
 				},
 				navbg: "#0d2512",
 				footergDarkBg: "#19381f",
+				ktheme: {
+					100: "#fcf3db",
+					200: "#f8e6b8",
+					300: "#f5da94",
+					400: "#f1cd71",
+					500: "#eec14d",
+					600: "#be9a3e",
+					700: "#8f742e",
+					800: "#5f4d1f",
+					900: "#30270f"
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

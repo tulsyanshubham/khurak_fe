@@ -152,7 +152,7 @@ export default function BlogData({ data, page }) {
                                 </motion.p>
                             </div>
                         </div>
-                        <div className="md:block hidden max-w-xs w-64 group/card">
+                        <div className="md:block hidden max-w-xs w-64 group/card drop-shadow-[0_0_12rem_#f5da94] dark:drop-shadow-[0_0_12rem_#be9a3e]">
                             <div
                                 className={cn(
                                     "cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4", `bg-cover`

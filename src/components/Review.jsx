@@ -58,19 +58,19 @@ export default function Review() {
     return (
         <div className='w-full overflow-x-hidden flex justify-center py-5 over'>
             <div className='w-[94%]'>
-                <div className='bg-gradient-to-br from-green-500 to-teal-600 dark:from-green-700 dark:to-green-800 w-full mx-auto rounded-2xl flex justify-center py-3 md:pt-14 overflow-hidden flex-col'>
+                <div className='bg-gradient-to-br from-ktheme-100 to-ktheme-400 dark:from-ktheme-300/20 dark:to-ktheme-800/100 w-full mx-auto rounded-2xl flex justify-center py-3 md:pt-14 overflow-hidden flex-col'>
                     <div className='flex flex-col items-center justify-center text-3xl font-semibold w-full'>
                         <div className='flex flex-col items-start text-xl md:text-4xl font-bold md:font-semibold py-3 md:py-0 md:pl-0 text-neutral-800 dark:text-gray-100 z-10'>
                             <div className="text-center px-6">
-                                <span className='text-indigo-900 dark:text-green-400'>Khuraak </span>
-                                Received <span className='text-indigo-900 dark:text-green-400'>4.8/5 </span>
+                                <span className='text-indigo-900 dark:text-ktheme-400'>Khuraak </span>
+                                Received <span className='text-indigo-900 dark:text-ktheme-400'>4.8/5 </span>
                                 Starts in over
-                                <span className='text-indigo-900 dark:text-green-400'> 10,000+</span> Reviews
+                                <span className='text-indigo-900 dark:text-ktheme-400'> 10,000+</span> Reviews
                             </div>
                         </div>
                     </div>
 
-                    <div className='flex w-full filter drop-shadow-[0_0_10rem_#38807c] dark:drop-shadow-[0_0_10rem_#479d43]'>
+                    <div className='flex w-full filter drop-shadow-[0_0_10rem_#f5da94] dark:drop-shadow-[0_0_10rem_#be9a3e]'>
                         <div className='hidden md:flex w-full items-center justify-center'>
                             <AnimatedTestimonials testimonials={reviewsData} />
                         </div>

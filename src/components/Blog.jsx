@@ -6,11 +6,11 @@ import Link from 'next/link'
 export default function Blog() {
     return (
         <div className='w-full flex items-center justify-center'>
-            <div className='bg-gradient-to-br from-green-500 to-teal-600 dark:from-green-700 dark:to-green-800 rounded-lg w-[92vw] flex items-center justify-center'>
+            <div className='bg-gradient-to-br from-ktheme-100 to-ktheme-400 dark:from-ktheme-300/20 dark:to-ktheme-800/100 rounded-lg w-[92vw] flex items-center justify-center'>
                 <div className='w-full max-w-7xl flex flex-col items-center justify-center py-10 gap-6'>
                     <div className='px-3 flex flex-col items-center justify-center text-neutral-800 dark:text-gray-100'>
                         <span className='font-semibold text-2xl md:text-4xl text-center'>Khuraak Insights</span>
-                        <span className='text-base md:text-2xl text-indigo-900 dark:text-green-400 text-center'>Your Go-To Blog for Fresh Healthy Living Tips & Updates</span>
+                        <span className='text-base md:text-2xl text-indigo-900 dark:text-ktheme-400 text-center'>Your Go-To Blog for Fresh Healthy Living Tips & Updates</span>
                     </div>
                     <BlogData page={"home"} data={blogData} />
                     <div className='flex items-center justify-end w-full px-7'>
@@ -38,7 +38,7 @@ export default function Blog() {
                                     />
                                 </svg>
                             </div>
-                            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+                            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-yellow-400/0 via-yellow-400/90 to-yellow-400/0 transition-opacity duration-500 group-hover:opacity-40" />
                         </Link>
                     </div>
                 </div>

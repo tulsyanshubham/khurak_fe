@@ -1,4 +1,6 @@
 export const assets = {
+    logo: "/images/logo/logo.webp",
+    logo_dark: "/images/logo/logo_dark.webp",
     right_to_welcome: "/images/home/order.svg",
     bmi: "/images/home/bmi.svg",
     icons: {

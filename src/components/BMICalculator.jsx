@@ -36,18 +36,18 @@ const BMICalculator = () => {
           <span className='text-2xl md:text-4xl text-center font-semibold'>
             Assess Your Health Now! 🩺
           </span>
-          <span className='text-base md:text-lg text-green-600 text-center'>
+          <span className='text-base md:text-lg text-ktheme-600 text-center'>
             Discover your BMI and take the first step towards a healthier you.
           </span>
         </div>
         <div className="flex w-full items-center justify-evenly relative z-10">
           <div className="w-[80vw] md:w-2/5 lg:w-1/4">
             <div className="mb-4">
-              <label className="block mb-2 text-sm font-medium text-green-700 dark:text-green-400">
+              <label className="block mb-2 text-sm font-medium text-ktheme-700 dark:text-ktheme-400">
                 Select Unit
               </label>
               <select
-                className="w-full p-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 dark:bg-background"
+                className="w-full p-2 border border-ktheme-300 dark:border-ktheme-600 rounded-md focus:ring-ktheme-600 focus:border-ktheme-700 dark:bg-background"
                 value={unit}
                 onChange={(e) => {
                   setUnit(e.target.value);
@@ -71,7 +71,7 @@ const BMICalculator = () => {
             </div>
 
             <div className="mb-4 z-10">
-              <label className="block mb-2 text-sm font-medium text-green-700 dark:text-green-400">
+              <label className="block mb-2 text-sm font-medium text-ktheme-700 dark:text-ktheme-400">
                 Weight ({unit === 'metric' ? 'kg' : unit === 'imperial' ? 'lbs' : 'kg'}):
                 <input
                   type="number"
@@ -88,8 +88,7 @@ const BMICalculator = () => {
                     if (value > maxWeight) setWeight(maxWeight);
                     resetBMI();
                   }}
-                  className="w-1/5 md:w-1/5 ml-2 px-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 bg-transparent"
-                />
+                  className="w-1/5 md:w-1/5 ml-2 px-2 border border-ktheme-300 dark:border-ktheme-600 rounded-md focus:ring-ktheme-600 focus:border-ktheme-700 bg-transparent"/>
               </label>
               <input
                 type="range"
@@ -100,12 +99,12 @@ const BMICalculator = () => {
                   setWeight(Number(e.target.value));
                   resetBMI();
                 }}
-                className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"
+                className="w-full h-2 bg-ktheme-200 rounded-lg appearance-none cursor-pointer accent-ktheme-600"
               />
             </div>
 
             <div className="mb-4 z-10">
-              <label className="block mb-2 text-sm font-medium text-green-700 dark:text-green-400">
+              <label className="block mb-2 text-sm font-medium text-ktheme-700 dark:text-ktheme-400">
                 Height ({unit === 'metric' ? 'meters' : unit === 'imperial' ? 'inches' : 'inches'}):
                 <input
                   type="number"
@@ -123,7 +122,7 @@ const BMICalculator = () => {
                     if (value > maxHeight) setHeight(maxHeight);
                     resetBMI();
                   }}
-                  className="w-1/5 md:w-1/5 ml-2 px-2 border border-green-300 dark:border-green-600 rounded-md focus:ring-green-600 focus:border-green-700 bg-transparent"
+                  className="w-1/5 md:w-1/5 ml-2 px-2 border border-ktheme-300 dark:border-ktheme-600 rounded-md focus:ring-ktheme-600 focus:border-ktheme-700 bg-transparent"
                 />
               </label>
               <input
@@ -136,20 +135,20 @@ const BMICalculator = () => {
                   setHeight(Number(e.target.value));
                   resetBMI();
                 }}
-                className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"
+                className="w-full h-2 bg-ktheme-200 rounded-lg appearance-none cursor-pointer accent-ktheme-600"
               />
             </div>
 
             {bmi === null ? (
               <button
-                className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
+                className="w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-700 transition"
                 onClick={calculateBMI}
               >
                 Calculate BMI
               </button>
             ) : (
               <div className="mt-6 text-center">
-                <p className="text-lg font-semibold text-green-600 dark:text-green-400 pb-1">
+                <p className="text-lg font-semibold text-ktheme-600 dark:text-ktheme-400 pb-1">
                   BMI: {bmi.toFixed(2)}
                   <span className="ml-2">
                     {bmi < 18.5 ? (
