@@ -11,19 +11,17 @@ export default function SocialData({ data }) {
             {data.map(
                 (
                     {
-                        containerClass,
                         heading,
                         description,
                         imageSrc,
                         imageAlt,
-                        imageClassName,
                         link,
                     },
                     index
                 ) => (
                     <WobbleCard
                         key={index}
-                        containerClassName={cn(`${containerClass}`)}
+                        containerClassName={cn(`${styleData[index].containerClass}`)}
                         className="lg:h-72 h-52"
                     >
                         <div className="max-w-xs">
@@ -40,7 +38,7 @@ export default function SocialData({ data }) {
                                 width={500}
                                 height={500}
                                 alt={imageAlt}
-                                className={cn(`left-2/3 lg:left-1/2 ${imageClassName}`)}
+                                className={cn(`left-2/3 lg:left-1/2 ${styleData[index].imageClassName}`)}
                             />
                         )}
                         <Link href={link} target="_blank" className="bg-black/20 border-2 border-black no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block mt-2">
@@ -75,3 +73,30 @@ export default function SocialData({ data }) {
         </div>
     )
 }
+
+const styleData = [
+    {
+        containerClass: "col-span-1 lg:col-span-2 h-full bg-pink-600 dark:bg-pink-800 min-h-[500px] lg:min-h-[300px]",
+        imageClassName: "absolute lg:-right-[22%] top-10 object-contain rounded-2xl",
+    },
+    {
+        containerClass: "col-span-1 bg-teal-700 dark:bg-teal-900 min-h-[300px] xl:min-h-[300px]",
+        imageClassName: "absolute -right-6 lg:-right-[15%] -bottom-10 object-contain rounded-xl",
+    },
+    {
+        containerClass: "col-span-1 bg-rose-700 dark:bg-rose-900 min-h-[300px]",
+        imageClassName: "absolute -right-8 lg:-right-[20%] -bottom-10 object-contain rounded-xl",
+    },
+    {
+        containerClass: "col-span-1 bg-blue-700 dark:bg-blue-900 lg:col-span-2 min-h-[300px]",
+        imageClassName: "absolute -right-6 md:-right-[20%] lg:-right-[12%] top-10 object-contain rounded-lg",
+    },
+    {
+        containerClass: "col-span-1 lg:col-span-2 bg-red-700 dark:bg-red-900 min-h-[500px] lg:min-h-[300px]",
+        imageClassName: "absolute -right-4 lg:-right-[12%] filter drop-shadow-xl top-10 object-contain rounded-2xl",
+    },
+    {
+        containerClass: "col-span-1 min-h-[300px] bg-purple-500 dark:bg-purple-900",
+        imageClassName: "absolute -right-10 filter contrast-125 -bottom-10 object-contain rounded-xl",
+    },
+];
