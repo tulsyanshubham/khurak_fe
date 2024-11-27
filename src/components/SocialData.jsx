@@ -23,7 +23,7 @@ export default function SocialData({ data }) {
                 ) => (
                     <WobbleCard
                         key={index}
-                        containerClassName={cn(containerClass)}
+                        containerClassName={cn(`${containerClass}`)}
                         className="lg:h-72 h-52"
                     >
                         <div className="max-w-xs">
@@ -40,7 +40,7 @@ export default function SocialData({ data }) {
                                 width={500}
                                 height={500}
                                 alt={imageAlt}
-                                className={cn("left-2/3 lg:left-1/2",imageClassName)}
+                                className={cn(`left-2/3 lg:left-1/2 ${imageClassName}`)}
                             />
                         )}
                         <Link href={link} target="_blank" className="bg-black/20 border-2 border-black no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block mt-2">

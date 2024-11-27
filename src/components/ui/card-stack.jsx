@@ -37,7 +37,7 @@ export const CardStack = ({
         return (
           (<motion.div
             key={card.heading}
-            className={cn("absolute dark:bg-black bg-white h-72 w-72 md:h-56 sm:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between",card.gradiantClass)}
+            className={cn(`absolute dark:bg-black bg-white h-72 w-72 md:h-56 sm:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between ${card.gradiantClass}`)}
             style={{
               transformOrigin: "top center",
             }}
