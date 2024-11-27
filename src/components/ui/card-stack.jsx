@@ -47,7 +47,7 @@ export const CardStack = ({
               zIndex: cards.length - index, //  decrease z-index for the cards that are behind
             }}>
             <div className="flex flex-col gap-2">
-              <div className="font-medium text-xl text-green-700 dark:text-neutral-200">
+              <div className="font-medium text-xl text-ktheme-800 dark:text-neutral-200">
                 {card.heading}
               </div>
               <div className="font-normal text-lg text-neutral-700 dark:text-neutral-200">
@@ -80,7 +80,7 @@ export const CardStack = ({
                     />
                   </svg>
                 </div>
-                <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+                <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-yellow-400/0 via-yellow-400/90 to-yellow-400/0 transition-opacity duration-500 group-hover:opacity-40" />
               </Link>
             </div>
           </motion.div>)
