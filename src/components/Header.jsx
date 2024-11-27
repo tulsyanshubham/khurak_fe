@@ -44,7 +44,7 @@ export default function Header() {
             alt="logo"
             width={150}
             height={50}
-            className='w-20'
+            className='w-16 md:w-20'
           />
         </Link>
         <div className='flex items-center justify-center gap-3'>
