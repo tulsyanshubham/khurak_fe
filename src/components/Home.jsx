@@ -33,7 +33,8 @@ export default function Home() {
                         <div className="flex flex-col md:flex-row gap-4 mt-6">
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
                             <button className="bg-ktheme-500 hover:brightness-95 text-gray-800 font-semibold py-2 px-6 rounded-md">
-                                Explore Meal Plans
+                                {/* Explore Meal Plans */}
+                                Know nore about us
                             </button>
                         </BoxReveal>
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
@@ -53,7 +54,7 @@ export default function Home() {
             </div>
             <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"
-                fill="ktheme"
+                fill="#eec14d"
             />
         </div>
     )

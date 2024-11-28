@@ -31,12 +31,12 @@ export default function Page() {
     <div >
       <Header />
       <Home />
-      <Review />
-      <CalorieTimeline />
       <Blog />
+      <BMICalculator />
+      <CalorieTimeline />
+      <Review />
       <WhyChooseUs />
       <Social />
-      <BMICalculator />
       <Footer />
       {/* <Location /> */}
       {/* <LMap /> */}
