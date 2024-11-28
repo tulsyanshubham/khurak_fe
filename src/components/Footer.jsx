@@ -19,7 +19,7 @@ export default function Footer() {
     const imgClass = "dark:invert-[.75] dark:hover:invert w-7 sm:w-9 md:w-11 invert-[.25] hover:invert-0";
 
     return (
-        <div className='flex flex-col items-center justify-center w-full border-t-2 mt-2 bg-black dark:bg-white text-white dark:text-gray-800'>
+        <div className='flex flex-col items-center justify-center w-full border-t-2 mt-8 bg-black dark:bg-white text-white dark:text-gray-800'>
             <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-3 py-2">
                 <div className='flex items-center justify-evenly w-full flex-col sm:flex-row py-1 gap-3 md:gap-10'>
                     <Image
@@ -60,7 +60,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className='dark:bg-ktheme-800 bg-gray-100 w-3/4 md:w-1/2 h-[1.5px] rounded-full'></div>
-                <div className='text-center text-sm sm:text-base md:text-lg'>Copyright &copy; {year} [<span className='text-ktheme-600 dark:text-ktheme-500 font-bold'>खुRAAK</span>]. All rights reserved.</div>
+                <div className='text-center text-sm sm:text-base md:text-lg'>Copyright &copy; {year} [<span className='text-ktheme-500 dark:text-ktheme-500 font-bold'>खुRAAK</span>]. All rights reserved.</div>
             </div>
         </div>
     )

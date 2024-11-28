@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { assets } from '@/constants/assets';
 import { BoxReveal } from './ui/box-reveal';
 import { useTheme } from './theme-provider';
+import Link from 'next/link';
+import Lottie from "lottie-react";
 
 export default function Home() {
     const { theme } = useTheme();
@@ -32,10 +34,10 @@ export default function Home() {
 
                         <div className="flex flex-col md:flex-row gap-4 mt-6">
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
-                            <button className="bg-ktheme-500 hover:brightness-95 text-gray-800 font-semibold py-2 px-6 rounded-md">
+                            <Link href={'/about_us'} className="block bg-ktheme-500 hover:brightness-95 text-gray-800 font-semibold py-2 px-6 rounded-md">
                                 {/* Explore Meal Plans */}
                                 Know nore about us
-                            </button>
+                            </Link>
                         </BoxReveal>
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
                             <button className="border border-ktheme-500 text-ktheme-500 hover:bg-ktheme-50 dark:hover:bg-background/95 font-semibold py-2 px-6 rounded-md">
@@ -54,7 +56,7 @@ export default function Home() {
             </div>
             <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"
-                fill="#eec14d"
+                fill="#ffde00"
             />
         </div>
     )

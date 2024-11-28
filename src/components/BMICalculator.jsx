@@ -47,7 +47,7 @@ const BMICalculator = () => {
                 Select Unit
               </label>
               <select
-                className="w-full p-2 border border-ktheme-300 dark:border-ktheme-600 rounded-md focus:ring-ktheme-600 focus:border-ktheme-700 dark:bg-background"
+                className="w-full p-2 border border-ktheme-500 dark:border-ktheme-600 rounded-md focus:ring-ktheme-600 focus:border-ktheme-700 dark:bg-background"
                 value={unit}
                 onChange={(e) => {
                   setUnit(e.target.value);
@@ -99,7 +99,7 @@ const BMICalculator = () => {
                   setWeight(Number(e.target.value));
                   resetBMI();
                 }}
-                className="w-full h-2 bg-ktheme-200 rounded-lg appearance-none cursor-pointer accent-ktheme-600"
+                className="w-full h-2 bg-ktheme-200 rounded-lg appearance-none cursor-pointer accent-ktheme-700"
               />
             </div>
 
@@ -135,13 +135,13 @@ const BMICalculator = () => {
                   setHeight(Number(e.target.value));
                   resetBMI();
                 }}
-                className="w-full h-2 bg-ktheme-200 rounded-lg appearance-none cursor-pointer accent-ktheme-600"
+                className="w-full h-2 bg-ktheme-200 rounded-lg appearance-none cursor-pointer accent-ktheme-700"
               />
             </div>
 
             {bmi === null ? (
               <button
-                className="w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-700 transition"
+                className="w-full bg-ktheme-500 text-white py-2 rounded-md hover:brightness-95 transition"
                 onClick={calculateBMI}
               >
                 Calculate BMI

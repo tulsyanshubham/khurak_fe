@@ -33,7 +33,7 @@ export default function CalorieTimeline() {
         <span className="text-2xl font-semibold md:text-4xl">
           Calorie Consumption Guide
         </span>
-        <span className="text-lg md:text-2xl text-ktheme-600 dark:text-ktheme-300">
+        <span className="text-lg md:text-2xl text-ktheme-500 dark:text-ktheme-300">
           A Step-by-Step Approach
         </span>
       </div>
@@ -48,7 +48,7 @@ export default function CalorieTimeline() {
               <div className="h-10 absolute left-0 md:left-3 w-10 rounded-full bg-background flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-400 dark:bg-neutral-600 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-2xl md:pl-20 md:text-4xl lg:text-5xl font-bold text-yellow-500 dark:text-neutral-300 ">
+              <h3 className="hidden md:block text-2xl md:pl-20 md:text-4xl lg:text-5xl font-bold text-ktheme-500 dark:text-neutral-300 ">
                 {item.title}
               </h3>
             </div>

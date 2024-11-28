@@ -13,7 +13,7 @@ export default function Social() {
                     <span className='text-2xl md:text-4xl text-center font-semibold'>
                         Connect with us on Social Media 🌍
                     </span>
-                    <span className='text-base md:text-lg text-ktheme-600 text-center'>
+                    <span className='text-base md:text-lg text-ktheme-500 text-center'>
                         Stay updated, share your stories, and join the Khuraak community across your favorite platforms!
                     </span>
                 </div>
