@@ -16,18 +16,18 @@ export default function Footer() {
         }
     }, []);
 
-    const imgClass = "dark:invert-[.75] dark:hover:invert w-8 sm:w-10 md:w-12 invert-[.25] hover:invert-0";
+    const imgClass = "dark:invert-[.75] dark:hover:invert w-7 sm:w-9 md:w-11 invert-[.25] hover:invert-0";
 
     return (
         <div className='flex flex-col items-center justify-center w-full border-t-2 mt-2 bg-black dark:bg-white text-white dark:text-gray-800'>
             <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-3 py-2">
-                <div className='flex items-center justify-evenly w-full flex-wrap py-7 gap-5 md:gap-10'>
+                <div className='flex items-center justify-evenly w-full flex-col sm:flex-row py-1 gap-3 md:gap-10'>
                     <Image
                         src={theme === "light" ? assets.logo_dark : assets.logo}
                         alt='logo'
                         width={150}
                         height={50}
-                        className='w-52'
+                        className='w-28 sm:w-36 md:w-52'
                     />
                     {/* <div className='flex flex-col gap-2'>
                         <div className='flex font-medium text-2xl sm:text-3xl md:text-4xl md:text-start justify-center md:justify-start'>Contact Us</div>
@@ -39,7 +39,7 @@ export default function Footer() {
                         </a>
                     </div> */}
                     <div>
-                        <div className='font-medium text-2xl sm:text-3xl md:text-4xl pb-2 text-center md:text-start'>Follow Us</div>
+                        <div className='font-medium text-xl sm:text-2xl md:text-4xl pb-2 text-center md:text-start'>Follow Us</div>
                         <div className='flex items-center justify-start gap-2'>
                             <a href={contactInfo.social.instagram} target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">
                                 <Image width={500} height={500} src={assets.icons.instagram} alt='Instagram' className={imgClass} />
