@@ -58,7 +58,7 @@ export default function Review() {
     return (
         <div className='w-full overflow-x-hidden flex justify-center py-5 over'>
             <div className='w-[94%]'>
-                <div className='bg-gradient-to-br from-ktheme-100 to-ktheme-400 dark:from-ktheme-300/20 dark:to-ktheme-800/100 w-full mx-auto rounded-2xl flex justify-center py-3 md:pt-14 overflow-hidden flex-col'>
+                <div className='bg-gradient-to-r from-[#ffc8010d] to-[#ffc8004d] dark:from-gary-100 dark:to-gray-900 w-full mx-auto rounded-2xl flex justify-center py-3 md:pt-14 overflow-hidden flex-col'>
                     <div className='flex flex-col items-center justify-center text-3xl font-semibold w-full'>
                         <div className='flex flex-col items-start text-xl md:text-4xl font-bold md:font-semibold py-3 md:py-0 md:pl-0 text-neutral-800 dark:text-gray-100 z-10'>
                             <div className="text-center px-6">

@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 export default function Blog() {
     return (
-        <div className='w-full flex items-center justify-center'>
-            <div className='bg-gradient-to-br from-ktheme-100 to-ktheme-400 dark:from-ktheme-300/20 dark:to-ktheme-800/100 rounded-lg w-[92vw] flex items-center justify-center overflow-hidden'>
+        <div className='w-full flex items-center justify-center pt-3'>
+            <div className='bg-gradient-to-r from-[#ffc8010d] to-[#ffc8004d] dark:from-gary-100 dark:to-gray-900 rounded-lg w-[92vw] flex items-center justify-center overflow-hidden'>
                 <div className='w-full max-w-7xl flex flex-col items-center justify-center py-10 gap-6'>
                     <div className='px-3 flex flex-col items-center justify-center text-neutral-800 dark:text-gray-100'>
                         <span className='font-semibold text-2xl md:text-4xl text-center'>खुRaak Insights</span>
