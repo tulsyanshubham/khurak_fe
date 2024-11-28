@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Blog{
+  id Int @id @default(autoincrement())
+  title String @unique
+  description String
+  content String
+  src String
+  ctaLink String
+  avatar String
+  name String
+}
+
+// on scheme change run: npx prisma generate
