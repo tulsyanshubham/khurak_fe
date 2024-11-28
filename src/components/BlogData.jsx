@@ -34,6 +34,8 @@ export default function BlogData({ data, page }) {
 
     useOutsideClick(ref, () => setActive(null));
 
+    const spanArr = [1, 4, 6, 9, 12, 15, 17, 20, 23, 26, 28, 30];
+
     return (<>
         <AnimatePresence>
             {active && typeof active === "object" && (
@@ -198,7 +200,7 @@ export default function BlogData({ data, page }) {
                     {data.map((card, i) => (
                         <motion.div
                             className={
-                                `row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 !cursor-pointer !z-10 !opacity-100 ${i === 1 || i === 4 || i === 6 || i === 9 ? "md:col-span-2" : ""}`
+                                `row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 !cursor-pointer !z-10 !opacity-100 ${spanArr.includes(i) ? "md:col-span-2" : ""}`
                             }
                             layoutId={`card-${card.title}-${id}`}
                             key={`card-${card.title}-${id}`}
