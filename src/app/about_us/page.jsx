@@ -24,11 +24,9 @@ export default function Page() {
     return (
         <div className='w-full flex flex-col items-center'>
             <Header darkFlag={true} />
-            <div className='w-full max-w-7xl flex flex-col items-center justify-center'>
                 <SlideShow />
                 <WhoWeAre />
                 <OurStory />
-            </div>
             <Footer />
         </div>
     )

@@ -13,12 +13,12 @@ export default function OurStory() {
           </div>
           <div className='w-16 h-1 bg-black dark:bg-white rounded-full' />
           <div className='text-base md:text-lg lg:text-xl text-center px-0 lg:px-16 cursive'>
-            खुRaak is a platform that aims to inspire people to eat healthy and live a healthier lifestyle. We believe that a healthy lifestyle is not just about eating the right food, but also about eating the right food at the right time. Our mission is to make it easy for people to eat healthy by providing them with fresh, nutritious meals that are tailored to their unique lifestyle.
+            {assets.about_us.story.text}
           </div>
         </div>
         <div>
           <Image
-            src={assets.about_us.story}
+            src={assets.about_us.story.image}
             alt='Our Story'
             width={500}
             height={500}

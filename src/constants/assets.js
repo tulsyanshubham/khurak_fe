@@ -36,6 +36,9 @@ export const assets = {
                 src: "/images/aboutus/main3.jpg",
             }
         ],
-        story:"/images/aboutus/story.jpg",
+        story:{
+            image: "/images/aboutus/story.jpg",
+            text:"खुRaak is a platform that aims to inspire people to eat healthy and live a healthier lifestyle. We believe that a healthy lifestyle is not just about eating the right food, but also about eating the right food at the right time. Our mission is to make it easy for people to eat healthy by providing them with fresh, nutritious meals that are tailored to their unique lifestyle."
+        },
     }
 };
