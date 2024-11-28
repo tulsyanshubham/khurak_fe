@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { assets } from '@/constants/assets';
+import Lottie from "lottie-react";
+import bmi_animation from "@/../public/animation/bmi_right.json";
 
 const BMICalculator = () => {
   const [weight, setWeight] = useState(70); // Default weight
@@ -167,7 +169,8 @@ const BMICalculator = () => {
           </div>
 
           <div className='w-fit md:block hidden'>
-            <Image src={assets.bmi} alt="BMI" width={500} height={500} className='w-[40vw] max-w-[383px] dark:brightness-110' />
+            {/* <Image src={assets.bmi} alt="BMI" width={500} height={500} className='w-[40vw] max-w-[383px] dark:brightness-110' /> */}
+            <Lottie animationData={bmi_animation} loop={true} className='w-[40vw] max-w-[383px]' />
           </div>
         </div>
       </div>

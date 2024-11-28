@@ -7,6 +7,8 @@ import { assets } from '@/constants/assets';
 import { BoxReveal } from './ui/box-reveal';
 import { useTheme } from './theme-provider';
 import Link from 'next/link';
+import Lottie from "lottie-react";
+import girl_animation from "@/../public/animation/home_right.json";
 
 export default function Home() {
     const { theme } = useTheme();
@@ -46,7 +48,8 @@ export default function Home() {
                         </div>
                     </div>
                     <div>
-                        <Image src={theme === "light" ? assets.right_to_welcome : assets.right_to_welcome_dark} width={500} height={500} alt="Khuraak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' />
+                        {/* <Image src={theme === "light" ? assets.right_to_welcome : assets.right_to_welcome_dark} width={500} height={500} alt="Khuraak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' /> */}
+                        <Lottie animationData={girl_animation} loop={true} className='w-[65vw] mt-12 md:mt-0 md:w-[30vw] drop-shadow-xl max-w-[400px]' />
                     </div>
                 </div>
                 <div className='w-full'>
