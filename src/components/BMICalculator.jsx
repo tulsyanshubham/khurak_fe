@@ -33,7 +33,7 @@ const BMICalculator = () => {
 
   return (
     <div className='w-full flex items-center justify-center'>
-      <div className='relative mb-20 mt-10 w-full max-w-7xl'>
+      <div className='relative mb-5 mt-10 w-full max-w-7xl'>
         <div className='px-3 flex flex-col items-center justify-center text-neutral-800 dark:text-gray-100 gap-2 mb-8'>
           <span className='text-2xl md:text-4xl text-center font-semibold'>
             Assess Your Health Now! 🩺

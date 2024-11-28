@@ -21,14 +21,16 @@ export function SlideShow() {
                 }}
                 className="z-50 flex flex-col justify-center items-center gap-2">
                 <motion.p
-                    className="text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-4xl md:text-7xl font-bold text-white spread">
-                    NOURISHING LIVES
+                    className="text-center text-white text-4xl md:text-7xl spread font-extrabold">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                        NOURISHING LIVES
+                    </span>
                 </motion.p>
                 <motion.p
                     className="text-center text-white text-2xl md:text-3xl cursive">
                     <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                    Our Journey, Your Health
-                    </span> 
+                        Our Journey, Your Health
+                    </span>
                 </motion.p>
                 {/* <button
                     className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-2">
