@@ -37,7 +37,7 @@ export const CardStack = ({
         return (
           (<motion.div
             key={card.heading}
-            className={cn(`absolute dark:bg-black bg-white h-72 w-72 md:h-56 sm:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between ${styleData[index].gradiantClass}`)}
+            className={cn(`absolute dark:bg-black bg-white h-72 w-72 md:h-56 sm:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between ${styleData[card.key]}`)}
             style={{
               transformOrigin: "top center",
             }}
@@ -90,23 +90,11 @@ export const CardStack = ({
   )
 };
 
-const styleData = [
-  {
-      gradiantClass: "bg-gradient-to-br from-orange-200 to-pink-300 dark:from-orange-600 dark:to-pink-800",
-  },
-  {
-      gradiantClass: "bg-gradient-to-br from-teal-200 to-blue-300 dark:from-teal-600 dark:to-blue-800",
-  },
-  {
-      gradiantClass: "bg-gradient-to-br from-rose-300 to-red-400 dark:from-rose-700 dark:to-red-800",
-  },
-  {
-      gradiantClass: "bg-gradient-to-br from-cyan-200 to-sky-300 dark:from-cyan-600 dark:to-sky-800",
-  },
-  {
-      gradiantClass: "bg-gradient-to-br from-yellow-200 to-red-300 dark:from-yellow-600 dark:to-red-800",
-  },
-  {
-      gradiantClass: "bg-gradient-to-br from-purple-200 to-indigo-300 dark:from-purple-700 dark:to-indigo-800",
-  },
-];
+const styleData = {
+  1: "bg-gradient-to-br from-orange-200 to-pink-300 dark:from-orange-600 dark:to-pink-800",
+  2: "bg-gradient-to-br from-teal-200 to-blue-300 dark:from-teal-600 dark:to-blue-800",
+  3: "bg-gradient-to-br from-rose-300 to-red-400 dark:from-rose-700 dark:to-red-800",
+  4: "bg-gradient-to-br from-sky-200 to-blue-400 dark:from-sky-600 dark:to-blue-800",
+  5: "bg-gradient-to-br from-red-200 to-red-500 dark:from-red-600 dark:to-red-800",
+  6: "bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-800",
+};
