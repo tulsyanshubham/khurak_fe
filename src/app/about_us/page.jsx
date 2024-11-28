@@ -2,6 +2,7 @@
 import OurStory from '@/components/about-us/OurStory';
 import { SlideShow } from '@/components/about-us/SlideShow';
 import WhoWeAre from '@/components/about-us/WhoWeAre';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header'
 import { useTheme } from '@/components/theme-provider';
 import Image from 'next/image'
@@ -21,13 +22,14 @@ export default function Page() {
     }, [theme]);
 
     return (
-        <div className='w-full flex justify-center'>
+        <div className='w-full flex flex-col items-center'>
             <Header darkFlag={true} />
             <div className='w-full max-w-7xl flex flex-col items-center justify-center'>
                 <SlideShow />
                 <WhoWeAre />
                 <OurStory />
             </div>
+            <Footer />
         </div>
     )
 }

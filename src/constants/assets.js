@@ -1,9 +1,9 @@
 export const assets = {
     logo: "/images/logo/logo.webp",
     logo_dark: "/images/logo/logo_dark.webp",
-    right_to_welcome: "/images/animation/home_right.json",
-    right_to_welcome_dark: "/images/animation/home_right.json",
-    bmi: "/images/home/bmi.svg",
+    // right_to_welcome: "/images/animation/home_right.json",
+    // right_to_welcome_dark: "/images/animation/home_right.json",
+    // bmi: "/images/home/bmi.svg",
     icons: {
         call: "/images/icons/call.png",
         email: "/images/icons/email.png",
@@ -35,6 +35,7 @@ export const assets = {
                 description: "We believe in the power of healthy eating and are committed to providing you with the best quality food that is not only delicious but also nutritious. Our values are based on the belief that everyone deserves to eat well and live a healthy life.",
                 src: "/images/aboutus/main3.jpg",
             }
-        ]
+        ],
+        story:"/images/aboutus/story.jpg",
     }
 };

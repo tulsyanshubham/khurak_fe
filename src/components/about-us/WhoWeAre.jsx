@@ -22,7 +22,7 @@ const cards = [
 
 export default function WhoWeAre() {
     return (
-        <div className='w-full py-4'>
+        <div className='w-full mt-3 py-4 px-3 md:px-0'>
             <div className='flex flex-col gap-2 items-center justify-center py-5 px-2'>
                 <span className='text-2xl md:text-4xl text-center font-semibold'>
                     Who We Are 🤔
