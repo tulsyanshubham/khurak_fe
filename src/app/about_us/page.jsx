@@ -7,7 +7,7 @@ import { useTheme } from '@/components/theme-provider';
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 
-export default function page() {
+export default function Page() {
 
     const { theme } = useTheme();
     useEffect(() => {
