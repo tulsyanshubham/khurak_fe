@@ -7,7 +7,6 @@ import { assets } from '@/constants/assets';
 import { BoxReveal } from './ui/box-reveal';
 import { useTheme } from './theme-provider';
 import Link from 'next/link';
-import Lottie from "lottie-react";
 
 export default function Home() {
     const { theme } = useTheme();
