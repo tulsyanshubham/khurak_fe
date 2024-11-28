@@ -62,10 +62,10 @@ export default function Review() {
                     <div className='flex flex-col items-center justify-center text-3xl font-semibold w-full'>
                         <div className='flex flex-col items-start text-xl md:text-4xl font-bold md:font-semibold py-3 md:py-0 md:pl-0 text-neutral-800 dark:text-gray-100 z-10'>
                             <div className="text-center px-6">
-                                <span className='text-green-700 dark:text-green-400'>खुRaak </span>
-                                Received <span className='text-green-700 dark:text-green-400'>4.8/5 </span>
+                                <span className='text-ktheme-500 dark:text-ktheme-500'>खुRaak </span>
+                                Received <span className='text-ktheme-500 dark:text-ktheme-500'>4.8/5 </span>
                                 Starts in over
-                                <span className='text-green-700 dark:text-green-400'> 10,000+</span> Reviews
+                                <span className='text-ktheme-500 dark:text-ktheme-500'> 10,000+</span> Reviews
                             </div>
                         </div>
                     </div>
