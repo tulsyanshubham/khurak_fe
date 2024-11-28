@@ -97,7 +97,7 @@ const styleData = {
         imageClassName: "absolute -right-4 lg:-right-[12%] filter drop-shadow-xl top-10 object-contain rounded-2xl",
     },
     6: {
-        containerClass: "col-span-1 min-h-[300px] bg-purple-500 dark:bg-purple-900",
+        containerClass: "col-span-1 min-h-[300px] bg-gray-500 dark:bg-gray-900",
         imageClassName: "absolute -right-10 filter contrast-125 -bottom-10 object-contain rounded-xl",
     },
 };
