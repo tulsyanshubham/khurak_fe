@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities;@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Script&display=swap');
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -79,4 +80,16 @@ body {
     -webkit-appearance: none;
     margin: 0;
   }
+}
+
+.spread {
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cursive {
+  font-family: "League Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
