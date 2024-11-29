@@ -47,7 +47,7 @@ export async function POST(req) {
         content,
         src,
         ctaLink: ctaLink || "/",
-        avatar: avatar || "/",
+        avatar: avatar || "dummy",
         name: name || "Khuraak",
       },
     });
