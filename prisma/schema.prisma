@@ -14,8 +14,9 @@ model Blog{
   content String
   src String
   ctaLink String
-  avatar String
+  avatar Boolean
   name String
+  postedAt DateTime @default(now())
 }
 
 // on scheme change run: npx prisma generate

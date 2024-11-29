@@ -4,7 +4,7 @@ export const blogData = [
         title: "Fresh and Nutritious",
         src: "/images/carousel/8.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: true,
         name: "John Doe",
         content: () => {
             return (
@@ -24,7 +24,7 @@ export const blogData = [
         title: "Power Your Day Now",
         src: "/images/carousel/2.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: false,
         name: "Jane Smith",
         content: () => {
             return (
@@ -43,7 +43,7 @@ export const blogData = [
         title: "Refresh and Revitalize",
         src: "/images/carousel/3.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: true,
         name: "Emily Johnson",
         content: () => {
             return (
@@ -62,7 +62,7 @@ export const blogData = [
         title: "Wholesome Goodness",
         src: "/images/carousel/4.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: true,
         name: "Michael Brown",
         content: () => {
             return (
@@ -81,7 +81,7 @@ export const blogData = [
         title: "Healthy Indulgence",
         src: "/images/carousel/5.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: false,
         name: "Sarah Davis",
         content: () => {
             return (
@@ -100,7 +100,7 @@ export const blogData = [
         title: "Sweet and Healthy",
         src: "/images/carousel/6.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: false,
         name: "David Wilson",
         content: () => {
             return (
@@ -120,7 +120,7 @@ export const blogData = [
         title: "Boost Your Nutrition",
         src: "/images/carousel/7.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: true,
         name: "Anna Lee",
         content: () => {
             return (
@@ -139,7 +139,7 @@ export const blogData = [
         title: "Embrace a Greener Lifestyle",
         src: "/images/carousel/10.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: false,
         name: "Oliver King",
         content: () => {
             return (
@@ -158,7 +158,7 @@ export const blogData = [
         title: "Stay Healthy, Stay Strong",
         src: "/images/carousel/9.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: true,
         name: "Liam Parker",
         content: () => {
             return (
@@ -177,7 +177,7 @@ export const blogData = [
         title: "Taste the Freshness of Every Season",
         src: "/images/carousel/1.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: false,
         name: "Sophia Green",
         content: () => {
             return (
@@ -196,7 +196,7 @@ export const blogData = [
         title: "Convenience Without Compromise",
         src: "/images/carousel/11.jpeg",
         ctaLink: "/",
-        avatar: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+        avatar: false,
         name: "Ava Martinez",
         content: () => {
             return (

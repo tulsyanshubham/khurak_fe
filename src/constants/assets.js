@@ -4,6 +4,7 @@ export const assets = {
     // right_to_welcome: "/images/animation/home_right.json",
     // right_to_welcome_dark: "/images/animation/home_right.json",
     // bmi: "/images/home/bmi.svg",
+    avater: "/images/logo/avatar.png",
     icons: {
         call: "/images/icons/call.png",
         email: "/images/icons/email.png",

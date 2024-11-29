@@ -2,7 +2,9 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET(req) {
   try {
-    const blog = await prisma.blog.findMany();
+    const blog = await prisma.blog.findMany({
+      orderBy: { postedAt: "desc" },
+    });
     if (!blog || blog.length === 0) {
       return Response.json(
         { success: false, message: "No blogs found", data: null },
@@ -14,6 +16,7 @@ export async function GET(req) {
       { status: 200 }
     );
   } catch (error) {
+    // console.log(error.message)
     return Response.json(
       { success: false, message: "Failed to retrieve blogs", data: null },
       { status: 500 }

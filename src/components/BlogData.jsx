@@ -4,6 +4,8 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avater";
+import { assets } from "@/constants/assets";
 
 export default function BlogData({ data, page }) {
     const [active, setActive] = useState(null);
@@ -163,13 +165,20 @@ export default function BlogData({ data, page }) {
                             >
                                 <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
                                 <div className="flex flex-row items-center space-x-4 z-10">
-                                    <Image
+                                    {/* <Image
                                         height="100"
                                         width="100"
                                         alt="Avatar"
                                         src={card.avatar}
                                         className="h-10 w-10 rounded-full border-2 object-cover"
-                                    />
+                                    /> */}
+                                    <Avatar
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    >
+                                        {card.avatar && (<AvatarImage src={assets.avater} />)}
+                                        <AvatarFallback className="text-lg font-bold">{card.name[0]}</AvatarFallback>
+                                    </Avatar>
+
                                     <div className="flex flex-col">
                                         <p className="font-normal text-base text-gray-50 relative z-10">
                                             {card.name}
@@ -217,14 +226,20 @@ export default function BlogData({ data, page }) {
                                 className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
                             />
                             <div className="group-hover/bento:translate-x-2 transition duration-200">
-                                <div className="flex items-center justify-start">
-                                    <Image
+                                <div className="flex items-center justify-start gap-2">
+                                    {/* <Image
                                         height="100"
                                         width="100"
                                         alt="Avatar"
                                         src={card.avatar}
                                         className="h-7 w-7 rounded-full border-2 object-cover"
-                                    />
+                                    /> */}
+                                    <Avatar
+                                        className="h-7 w-7 rounded-full border-2 object-cover"
+                                    >
+                                        {card.avatar && (<AvatarImage src={assets.avater} />)}
+                                        <AvatarFallback className="text-lg font-bold">{card.name[0]}</AvatarFallback>
+                                    </Avatar>
                                     <span
                                         className="font-sans font-normal text-neutral-600 text-sm dark:text-neutral-300">
                                         {card.name}
