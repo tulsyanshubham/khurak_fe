@@ -6,25 +6,26 @@ import Review from '@/components/Review'
 import Footer from '@/components/Footer'
 import BMICalculator from '@/components/BMICalculator'
 import CalorieTimeline from '@/components/CalorieTimeline'
-import { useTheme } from '@/components/theme-provider'
 import Blog from '@/components/Blog';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Social from '@/components/Social';
+import { useAtom } from 'jotai';
+import { theme } from '@/hooks/Atoms';
 // import Location from '@/components/Location';
 // import LMap from '@/components/map';
 
 export default function Page() {
 
-  const { theme } = useTheme();
+  const [siteTheme] = useAtom(theme)
   useEffect(() => {
-    if (theme === 'dark')
+    if (siteTheme === 'dark')
       document.body.classList.add("dark");
     else
       document.body.classList.remove('dark');
     return () => {
-      document.body.classList.remove(theme);
+      document.body.classList.remove(siteTheme);
     }
-  }, [theme]);
+  }, [siteTheme]);
 
   return (
     // <div className={`${theme} bg-background text-foreground`}>

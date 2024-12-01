@@ -3,20 +3,21 @@ import React, { useEffect } from 'react'
 import { blogData } from '@/constants/blog'
 import BlogData from '@/components/BlogData';
 import Header from '@/components/Header';
-import { useTheme } from '@/components/theme-provider';
+import { useAtom } from 'jotai';
+import { theme } from '@/hooks/Atoms';
 
 export default function Page() {
 
-  const { theme } = useTheme();
+  const [siteTheme] = useAtom(theme)
   useEffect(() => {
-    if (theme === 'dark')
+    if (siteTheme === 'dark')
       document.body.classList.add("dark");
     else
       document.body.classList.remove('dark');
     return () => {
-      document.body.classList.remove(theme);
+      document.body.classList.remove(siteTheme);
     }
-  }, [theme]);
+  }, [siteTheme]);
 
   return (
     <div className='w-full flex flex-col items-center'>

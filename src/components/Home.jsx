@@ -5,13 +5,14 @@ import { Spotlight } from './ui/Spotlight';
 import Image from 'next/image';
 import { assets } from '@/constants/assets';
 import { BoxReveal } from './ui/box-reveal';
-import { useTheme } from './theme-provider';
 import Link from 'next/link';
 import Lottie from "lottie-react";
 import girl_animation from "@/../public/animation/home_right.json";
+import { useAtom } from 'jotai';
+import { theme } from '@/hooks/Atoms';
 
 export default function Home() {
-    const { theme } = useTheme();
+    const [siteTheme] = useAtom(theme)
     return (
         <div className='flex items-center justify-center relative'>
             <div className='flex flex-col items-center justify-center flex-wrap relative pt-32 w-full max-w-7xl antialiased'>
@@ -48,7 +49,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div>
-                        {/* <Image src={theme === "light" ? assets.right_to_welcome : assets.right_to_welcome_dark} width={500} height={500} alt="Khuraak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' /> */}
+                        {/* <Image src={siteTheme === "light" ? assets.right_to_welcome : assets.right_to_welcome_dark} width={500} height={500} alt="Khuraak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' /> */}
                         <Lottie animationData={girl_animation} loop={true} className='w-[65vw] mt-12 md:mt-0 md:w-[30vw] drop-shadow-xl max-w-[400px]' />
                     </div>
                 </div>

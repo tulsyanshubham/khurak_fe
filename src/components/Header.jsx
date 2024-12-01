@@ -1,11 +1,12 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { useTheme } from './theme-provider';
 import { IoSunnyOutline } from "react-icons/io5";
 import { GoMoon } from "react-icons/go";
 import Link from 'next/link';
 import Image from 'next/image';
 import { assets } from '@/constants/assets';
+import { useAtom } from 'jotai';
+import { theme } from '@/hooks/Atoms';
 
 export default function Header({ darkFlag=false }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,10 +31,10 @@ export default function Header({ darkFlag=false }) {
     };
   }, []);
 
-  const { theme, setTheme } = useTheme();
-
+  const [siteTheme,setSiteTheme] = useAtom(theme)
+  
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setSiteTheme(siteTheme === 'dark' ? 'light' : 'dark');
   };
 
 
@@ -43,7 +44,7 @@ export default function Header({ darkFlag=false }) {
         className={`py-3 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300 z-50 w-full max-w-7xl`}>
         <Link href="/">
           <Image
-            src={theme === "light" ? themeState ? assets.logo_dark : assets.logo : assets.logo_dark}
+            src={siteTheme === "light" ? themeState ? assets.logo_dark : assets.logo : assets.logo_dark}
             alt="logo"
             width={150}
             height={50}
@@ -55,7 +56,7 @@ export default function Header({ darkFlag=false }) {
             Join Us
           </button>
           <button onClick={toggleTheme}>
-            {theme === "light" ? <GoMoon size={30} className={themeState ? "text-white" : "text-black"} /> : <IoSunnyOutline size={30} color="white" />}
+            {siteTheme === "light" ? <GoMoon size={30} className={themeState ? "text-white" : "text-black"} /> : <IoSunnyOutline size={30} color="white" />}
           </button>
         </div>
       </div>
