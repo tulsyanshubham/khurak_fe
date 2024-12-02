@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <div className='flex items-center justify-center relative'>
             <div className='flex flex-col items-center justify-center flex-wrap relative pt-32 w-full max-w-7xl antialiased'>
-                <div className='flex flex-wrap justify-evenly items-center w-full mb-10'>
+                <div className='flex flex-wrap justify-evenly items-center w-full'>
                     <div className="flex flex-col justify-center items-center text-center z-10 px-1 md:px-0 md:w-1/2 xl:w-fit">
                         <BoxReveal boxColor={"#eec14d"} duration={0.5} flag={false}>
                             <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-ktheme-500">Welcome to खुRaak</h1>
@@ -50,7 +50,7 @@ export default function Home() {
                     </div>
                     <div>
                         {/* <Image src={siteTheme === "light" ? assets.right_to_welcome : assets.right_to_welcome_dark} width={500} height={500} alt="Khuraak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' /> */}
-                        <Lottie animationData={girl_animation} loop={true} className='w-[70vw] mt-12 md:mt-0 md:w-[35vw] drop-shadow-xl max-w-[400px]' />
+                        <Lottie animationData={girl_animation} loop={true} className='w-[80vw] mt-2 md:mt-0 md:w-[35vw] drop-shadow-xl max-w-[400px]' />
                     </div>
                 </div>
                 <div className='w-full'>

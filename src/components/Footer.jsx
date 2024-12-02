@@ -28,7 +28,7 @@ export default function Footer() {
                         alt='logo'
                         width={150}
                         height={50}
-                        className='w-28 sm:w-36 md:w-52'
+                        className='w-20 sm:w-20 md:w-28'
                     />
                     {/* <div className='flex flex-col gap-2'>
                         <div className='flex font-medium text-2xl sm:text-3xl md:text-4xl md:text-start justify-center md:justify-start'>Contact Us</div>
@@ -39,9 +39,9 @@ export default function Footer() {
                             <Image width={500} height={500} src={assets.icons.email} alt='mail' className="invert-[.75] w-6 sm:w-7 dark:invert-[.25]" /><span>{contactInfo.email}</span>
                         </a>
                     </div> */}
-                    <div>
-                        <div className='font-medium text-xl sm:text-2xl md:text-4xl pb-2 text-center md:text-start'>Follow Us</div>
-                        <div className='flex items-center justify-start gap-2'>
+                    <div className='flex items-center justify-center gap-2'>
+                        <div className='font-medium text-xl sm:text-2xl md:text-4xl text-center md:text-start spread'>Follow us:</div>
+                        <div className='flex items-center justify-start gap-1'>
                             <a href={contactInfo.social.instagram} target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">
                                 <Image width={500} height={500} src={assets.icons.instagram} alt='Instagram' className={imgClass} />
                             </a>

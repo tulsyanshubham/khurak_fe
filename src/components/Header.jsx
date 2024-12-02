@@ -41,14 +41,14 @@ export default function Header({ darkFlag=false }) {
   return (
     <div className={`w-full flex justify-center ${isScrolled ? 'bg-white dark:bg-background/90 fixed top-0 z-50 shadow-lg border-b' : 'absolute'}`}>
       <div
-        className={`py-3 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300 z-50 w-full max-w-7xl`}>
+        className={`py-2 md:py-1 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300 z-50 w-full max-w-7xl`}>
         <Link href="/">
           <Image
             src={siteTheme === "light" ? themeState ? assets.logo_dark : assets.logo : assets.logo_dark}
             alt="logo"
             width={150}
             height={50}
-            className='w-16 md:w-20'
+            className='w-20 md:w-24'
           />
         </Link>
         <div className='flex items-center justify-center gap-3'>
