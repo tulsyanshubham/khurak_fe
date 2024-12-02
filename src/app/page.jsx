@@ -12,6 +12,7 @@ import Social from '@/components/Social';
 import { useAtom } from 'jotai';
 import { theme } from '@/hooks/Atoms';
 import News from '@/components/News';
+import { FloatigVideo } from '@/components/FloatingVideo';
 // import Location from '@/components/Location';
 // import LMap from '@/components/map';
 
@@ -34,6 +35,7 @@ export default function Page() {
       <Header />
       <Home />
       <News />
+      <FloatigVideo />
       <Blog />
       <BMICalculator />
       <CalorieTimeline />
