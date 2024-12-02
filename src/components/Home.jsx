@@ -34,7 +34,7 @@ export default function Home() {
                             </p>
                         </BoxReveal>
 
-                        <div className="flex flex-col items-center justify-center md:flex-row gap-4 mt-6">
+                        <div className="flex flex-col items-center justify-center flex-wrap gap-4 mt-6 px-2">
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
                             <Link href={'/about_us'} className="block bg-ktheme-500 hover:brightness-95 text-gray-800 font-semibold py-2 px-6 rounded-md">
                                 {/* Explore Meal Plans */}
