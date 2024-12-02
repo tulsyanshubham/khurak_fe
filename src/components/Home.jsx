@@ -38,12 +38,12 @@ export default function Home() {
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
                             <Link href={'/about_us'} className="block bg-ktheme-500 hover:brightness-95 text-gray-800 font-semibold py-2 px-6 rounded-md">
                                 {/* Explore Meal Plans */}
-                                Know nore about us
+                                About Us
                             </Link>
                         </BoxReveal>
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
                             <button className="border border-ktheme-500 text-ktheme-500 hover:bg-ktheme-50 dark:hover:bg-background/95 font-semibold py-2 px-6 rounded-md">
-                                Try Khuraak App
+                                Order Now
                             </button>
                         </BoxReveal>
                         </div>
