@@ -17,19 +17,19 @@ export default function Home() {
         <div className='flex items-center justify-center relative'>
             <div className='flex flex-col items-center justify-center flex-wrap relative pt-32 w-full max-w-7xl antialiased'>
                 <div className='flex flex-wrap justify-evenly items-center w-full mb-10'>
-                    <div className="flex flex-col justify-center items-center text-center z-10 px-1 md:px-0">
+                    <div className="flex flex-col justify-center items-center text-center z-10 px-1 md:px-0 md:w-1/2 xl:w-fit">
                         <BoxReveal boxColor={"#eec14d"} duration={0.5} flag={false}>
-                            <h1 className="text-4xl md:text-5xl font-bold text-ktheme-500">Welcome to खुRaak</h1>
+                            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-ktheme-500">Welcome to खुRaak</h1>
                         </BoxReveal>
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
-                            <h2 className="text-2xl md:text-3xl font-semibold mt-2">Your Hub for Healthy Eating</h2>
+                            <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold mt-2">Your Hub for Healthy Eating</h2>
                         </BoxReveal>
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
-                            <h2 className="text-2xl md:text-3xl font-semibold">With Fresh Meals.</h2>
+                            <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold">With Fresh Meals.</h2>
                         </BoxReveal>
 
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
-                            <p className="text-bold mt-4 max-w-lg px-1">
+                            <p className="text-bold text-base mt-4 max-w-lg px-1">
                                 Easily order wholesome meals tailored to your unique lifestyle, featuring fresh, nutritious ingredients that promote well-being, and enjoy a healthier, happier you with every delicious bite.
                             </p>
                         </BoxReveal>
@@ -50,7 +50,7 @@ export default function Home() {
                     </div>
                     <div>
                         {/* <Image src={siteTheme === "light" ? assets.right_to_welcome : assets.right_to_welcome_dark} width={500} height={500} alt="Khuraak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' /> */}
-                        <Lottie animationData={girl_animation} loop={true} className='w-[65vw] mt-12 md:mt-0 md:w-[30vw] drop-shadow-xl max-w-[400px]' />
+                        <Lottie animationData={girl_animation} loop={true} className='w-[70vw] mt-12 md:mt-0 md:w-[35vw] drop-shadow-xl max-w-[400px]' />
                     </div>
                 </div>
                 <div className='w-full'>
