@@ -21,8 +21,8 @@ export default function Footer() {
 
     return (
         <div className='flex flex-col items-center justify-center w-full border-t-2 mt-8 bg-black dark:bg-white text-white dark:text-gray-800'>
-            <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-3 py-2">
-                <div className='flex items-center justify-evenly w-full flex-col sm:flex-row py-1 gap-3 md:gap-10'>
+            <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-2 py-2">
+                <div className='flex items-center justify-evenly w-full flex-col sm:flex-row gap-3 md:gap-10'>
                     <Image
                         src={siteTheme === "light" ? assets.logo_dark : assets.logo}
                         alt='logo'
