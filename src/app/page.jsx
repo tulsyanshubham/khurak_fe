@@ -11,6 +11,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import Social from '@/components/Social';
 import { useAtom } from 'jotai';
 import { theme } from '@/hooks/Atoms';
+import News from '@/components/News';
 // import Location from '@/components/Location';
 // import LMap from '@/components/map';
 
@@ -32,6 +33,7 @@ export default function Page() {
     <div >
       <Header />
       <Home />
+      <News />
       <Blog />
       <BMICalculator />
       <CalorieTimeline />
