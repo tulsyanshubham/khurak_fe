@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { WobbleCard } from './ui/wobble-card'
 import Image from 'next/image'
 import Link from 'next/link'
 import { contactInfo } from '@/constants/footer_data';
 import { cn } from '@/lib/utils';
+import { revealOptions } from '@/constants/scrollRevealOptions';
 
 export default function SocialData({ data }) {
+    const fromBottom = useRef(null)
+    useEffect(() => {
+        async function animate() {
+            const sr = (await import("scrollreveal")).default
+            if (fromBottom.current) {
+                sr(revealOptions).reveal(fromBottom.current,{ origin: 'bottom' })
+            }
+        }
+        animate()
+    }, [])
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto w-full px-9 xl:px-0">
+        <div ref={fromBottom} className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto w-full px-9 xl:px-0">
             {data.map(
                 (
                     {

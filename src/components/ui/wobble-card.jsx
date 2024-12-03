@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export const WobbleCard = ({
   children,
   containerClassName,
-  className
+  className,
 }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);

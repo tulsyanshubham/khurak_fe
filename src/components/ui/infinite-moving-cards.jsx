@@ -2,7 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaStarHalf } from "react-icons/fa";
+import { Avatar, AvatarFallback } from "./avater";
 
 export const InfiniteMovingCards = ({
   items,
@@ -69,7 +70,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden ",
+        "scroller relative z-20 mx-auto max-w-7xl w-[98%] overflow-hidden py-0 md:py-5 [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)] md:[mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]",
         className
       )}
     >
@@ -83,23 +84,35 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[170px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[450px]"
+            className="w-[170px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[300px]"
             key={`${item.title}${idx}`}
           >
-            <div className="bg-gray-100 h-full dark:bg-gray-700 dark:text-white p-4 md:p-8 rounded-2xl flex flex-col gap-3 md:gap-6 relative justify-between">
-              <div className="font-bold text-sm md:text-lg">{item.title}</div>
-              <div className="text-xs md:text-base">{item.content}</div>
-              <div className="flex items-center gap-2">
-                <div
-                  className="h-6 w-6 md:h-12 md:w-12 rounded-full"
-                  style={{ backgroundColor: item.avatarColor }}
-                ></div>
-                <div className="text-sm">{item.reviewer}</div>
+            <div className="bg-gray-100 h-full dark:bg-gray-900 dark:text-white p-4 md:p-6 rounded-2xl flex flex-col gap-2 md:gap-4 relative justify-between">
+              <div className="flex flex-col items-start justify-center gap-3">
+                <div className="font-bold text-sm md:text-lg">{item.title}</div>
+                <div>
+                  <span className="flex items-center justify-center gap-2">
+                    <span className="flex">
+                      {Array.from({ length: Math.floor(item.stars) }, (_, index) => (
+                        <FaStar className="w-4 md:w-5" key={index} color="orange" />
+                      ))}
+                      {item.stars % 1 >= 0.5 && (
+                        <FaStarHalf className="w-4 md:w-5" color="orange" />
+                      )}
+                    </span>
+                    <span className="text-sm md:text-base">
+                    {`${item.stars} / 5`}
+                    </span>
+                  </span>
+                </div>
+                <div className="text-xs md:text-sm">{item.content}</div>
               </div>
-            </div>
-            <div className="absolute right-4 bottom-5 flex flex-row text-sm gap-1 font-bold">
-              <span>{item.stars}</span>
-              <FaStar size={17} color="orange" />
+              <div className="flex items-center gap-2">
+                  <Avatar className="h-7 md:h-10 w-7 md:w-10 rounded-full border-2 object-cover" >
+                    <AvatarFallback className="text-md md:text-lg font-bold">{item.reviewer[0]}</AvatarFallback>
+                  </Avatar>
+                <div className="text-xs md:text-md">{item.reviewer}</div>
+              </div>
             </div>
           </li>
         ))}

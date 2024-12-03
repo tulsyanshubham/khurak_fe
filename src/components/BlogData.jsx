@@ -14,6 +14,7 @@ export default function BlogData({ data, page }) {
     const ref = useRef(null);
     const id = useId();
     const itemRefs = useRef([]);
+    const fromBottom = useRef(null);
 
     useEffect(() => {
         function onKeyDown(event) {
@@ -36,6 +37,9 @@ export default function BlogData({ data, page }) {
         async function animate() {
             const sr = (await import("scrollreveal")).default;
 
+            if (fromBottom.current) {
+                sr(revealOptions).reveal(fromBottom.current,{ origin: 'bottom' })
+            }
             itemRefs.current.forEach((itemRef) => {
                 if (itemRef) {
                     sr(revealOptions).reveal(itemRef, { origin: "bottom" });
@@ -142,13 +146,14 @@ export default function BlogData({ data, page }) {
             ) : null}
         </AnimatePresence>
         {pageName === "home" && (
-            <ul className="max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:gap-2 lg:gap-16 2xl:gap-20 md:items-center justify-center">
+            <ul className="max-w-7xl w-full gap-4 flex flex-col md:flex-row md:flex-wrap md:gap-2 lg:gap-16 2xl:gap-20 md:items-center justify-center"
+                ref={fromBottom}
+            >
                 {data.slice(0, 3).map((card, index) => (
                     <motion.div
                         layoutId={`card-${card.title}-${id}`}
                         key={`card-${card.title}-${id}`}
                         onClick={() => setActive(card)}
-                        ref={(el) => (itemRefs.current[index] = el)}
                         className="px-4 py-2 md:p-4 flex md:flex-col flex-row justify-between items-center hover:drop-shadow-2xl rounded-xl cursor-pointer">
                         <div className="flex md:hidden gap-4 md:flex-col flex-row px-2 opacity-100">
                             <motion.div layoutId={`image-${card.title}-${id}`} className="!opacity-100">
