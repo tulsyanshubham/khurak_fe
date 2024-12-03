@@ -39,13 +39,13 @@ export default function OurStory() {
             {assets.about_us.story.text}
           </div>
         </div>
-        <div ref={storyImg}>
+        <div ref={storyImg} >
           <Image
             src={assets.about_us.story.image}
             alt='Our Story'
             width={500}
             height={500}
-            className='w-[60vw] lg:w-[36vw] max-w-[600px] dark:brightness-110 rounded-3xl'
+            className='w-[90%] aspect-video lg:w-[36vw] max-w-[600px] dark:brightness-110 rounded-3xl mx-auto'
           />
         </div>
       </div>
