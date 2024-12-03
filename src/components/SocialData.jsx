@@ -29,7 +29,7 @@ export default function SocialData({ data }) {
                             <h2 className="text-left text-balance text-base md:text-xl lg:text-2xl font-semibold tracking-[-0.015em] text-white">
                                 {heading}
                             </h2>
-                            <p className="mt-4 text-left text-base/6 text-neutral-200">
+                            <p className="mt-4 text-left text-base/6 text-neutral-50">
                                 {description}
                             </p>
                         </div>
