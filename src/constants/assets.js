@@ -9,6 +9,7 @@ export const assets = {
         call: "/images/icons/call.png",
         email: "/images/icons/email.png",
         instagram: "/images/icons/instagram.png",
+        instagram_line: "/images/icons/instagram_line.png",
         linkedin: "/images/icons/linkedin.png",
         x: "/images/icons/x.png",
         facebook: "/images/icons/facebook.png",

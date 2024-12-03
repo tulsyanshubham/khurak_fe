@@ -1,10 +1,11 @@
 "use client";
+import { assets } from "@/constants/assets";
 import { revealOptions } from "@/constants/scrollRevealOptions";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { FaStar, FaStarHalf } from "react-icons/fa";
 
 export const AnimatedTestimonials = ({
     testimonials,
@@ -38,30 +39,38 @@ export const AnimatedTestimonials = ({
         setRotations(randomRotations);
     }, [testimonials]);
 
-    const fromLeft = useRef(null)
-    const fromRight = useRef(null)
+    const image = useRef(null)
+    const imageData = useRef(null)
     useEffect(() => {
         async function animate() {
             const sr = (await import("scrollreveal")).default
-            if (fromLeft.current) {
-                sr(revealOptions).reveal(fromLeft.current,{ origin: 'left' })
+            if (image.current) {
+                if (window.innerWidth > 768) {
+                    sr(revealOptions).reveal(image.current, { origin: 'left' })
+                } else {
+                    sr(revealOptions).reveal(image.current, { origin: 'bottom' })
+                }
             }
-            if (fromRight.current) {
-                sr(revealOptions).reveal(fromRight.current,{ origin: 'right' })
+            if (imageData.current) {
+                if (window.innerWidth > 768) {
+                    sr(revealOptions).reveal(imageData.current, { origin: 'right' })
+                } else {
+                    sr(revealOptions).reveal(imageData.current, { origin: 'bottom' })
+                }
             }
         }
         animate()
     }, [])
 
     return (
-        (<div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:pl-8 lg:px-12 py-20">
-            <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
-                <div>
-                    <div ref={fromLeft} className="relative h-80 w-full">
+        <div className="max-w-md md:max-w-4xl mx-auto antialiased font-sans px-4 md:pl-8 lg:px-12 py-5 md:pt-12 md:pb-10">
+            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-20">
+                <div className="pt-1 pb-10 md:py-5 px-10 md:px-0 md:h-full h-[40vh]">
+                    <div ref={image} className="relative h-full md:h-5/6 w-full drop-shadow-[0_0_5rem_#f5da94] dark:drop-shadow-[0_0_5rem_#be9a3e91]">
                         <AnimatePresence>
                             {testimonials.map((testimonial, index) => (
                                 <motion.div
-                                    key={testimonial.src}
+                                    key={testimonial.image}
                                     initial={{
                                         opacity: 0,
                                         scale: 0.9,
@@ -86,21 +95,22 @@ export const AnimatedTestimonials = ({
                                         duration: 0.4,
                                         ease: "easeInOut",
                                     }}
-                                    className="absolute inset-0 origin-bottom">
+                                    className="absolute inset-0 origin-bottom ">
                                     <Image
-                                        src={testimonial.src}
-                                        alt={testimonial.reviewer}
+                                        src={testimonial.image}
+                                        alt={testimonial.name}
                                         width={500}
                                         height={500}
                                         draggable={false}
-                                        className="h-full w-full rounded-3xl object-cover object-center" />
+                                        className="h-full w-full rounded-3xl object-cover object-center " />
                                 </motion.div>
                             ))}
                         </AnimatePresence>
                     </div>
                 </div>
-                <div ref={fromRight} className="flex justify-between flex-col py-4">
+                <div ref={imageData} className="flex justify-between flex-col py-0 md:py-4">
                     <motion.div
+                    className="text-center md:text-start"
                         key={active}
                         initial={{
                             y: 20,
@@ -119,12 +129,12 @@ export const AnimatedTestimonials = ({
                             ease: "easeInOut",
                         }}>
                         <h3 className="text-2xl font-bold dark:text-white text-black">
-                            {testimonials[active].reviewer}
+                            {testimonials[active].name}
                         </h3>
                         <p className="text-base text-gray-800 dark:text-neutral-100">
-                            {testimonials[active].title}
+                            {testimonials[active].heading}
                         </p>
-                        <motion.p className="text-lg text-gray-900 mt-8 dark:text-neutral-50">
+                        <motion.p className="text-sm md:text-lg text-gray-900 mt-4 md:mt-8 dark:text-neutral-50">
                             {testimonials[active].content.split(" ").map((word, index) => (
                                 <motion.span
                                     key={index}
@@ -139,7 +149,7 @@ export const AnimatedTestimonials = ({
                                         y: 0,
                                     }}
                                     transition={{
-                                        duration: 0.2,
+                                        duration: 0.01,
                                         ease: "easeInOut",
                                         delay: 0.02 * index,
                                     }}
@@ -166,36 +176,37 @@ export const AnimatedTestimonials = ({
                                     delay: 0.02 * testimonials[active].content.split(" ").length,
                                 }}
                                 className="inline-block mt-3 text-xl">
-                                <span className="flex items-center justify-center gap-2">
-                                    <span className="flex">
-                                        {Array.from({ length: Math.floor(testimonials[active].stars) }, (_, index) => (
-                                            <FaStar key={index} color="orange" />
-                                        ))}
-                                        {testimonials[active].stars % 1 >= 0.5 && (
-                                            <FaStarHalf color="orange" />
-                                        )}
+                                <Link href={testimonials[active].url} target="_blank" rel="noopener noreferrer">
+                                    <span className="px-3 py-1 rounded-full text-base text-center bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 flex items-center justify-center gap-1">
+                                        <Image
+                                            src={assets.icons.instagram_line}
+                                            height={25}
+                                            width={25}
+                                            className="inline-block"
+                                            alt="instagram" />
+                                        {`${testimonials[active].url.split("/")[3]}`}
                                     </span>
-                                    {testimonials[active].stars}
-                                </span>
+
+                                </Link>
                             </motion.span>
                         </motion.p>
                     </motion.div>
-                    <div className="flex gap-4 pt-12 md:pt-0">
+                    <div className="flex gap-4 pt-5 justify-center md:justify-start">
                         <button
                             onClick={handlePrev}
-                            className="h-9 w-9 rounded-full dark:bg-gray-100 bg-neutral-500 flex items-center justify-center group/button">
+                            className="h-12 md:h-9 w-12 md:w-9 rounded-full dark:bg-gray-100 bg-neutral-500 flex items-center justify-center group/button">
                             <IconArrowLeft
-                                className="h-5 w-5 dark:text-black text-neutral-100 group-hover/button:rotate-12 transition-transform duration-300" />
+                                className="h-7 md:h-5 w-7 md:w-5 dark:text-black text-neutral-100 group-hover/button:rotate-12 transition-transform duration-300" />
                         </button>
                         <button
                             onClick={handleNext}
-                            className="h-9 w-9 rounded-full dark:bg-gray-100 bg-neutral-500 flex items-center justify-center group/button">
+                            className="h-12 md:h-9 w-12 md:w-9 rounded-full dark:bg-gray-100 bg-neutral-500 flex items-center justify-center group/button">
                             <IconArrowRight
-                                className="h-5 w-5 dark:text-black text-neutral-100 group-hover/button:-rotate-12 transition-transform duration-300" />
+                                className="h-7 md:h-5 w-7 md:w-5 dark:text-black text-neutral-100 group-hover/button:-rotate-12 transition-transform duration-300" />
                         </button>
                     </div>
                 </div>
             </div>
-        </div>)
+        </div>
     );
 };

@@ -13,6 +13,7 @@ import { useAtom } from 'jotai';
 import { theme } from '@/hooks/Atoms';
 import News from '@/components/News';
 import { FloatigVideo } from '@/components/FloatingVideo';
+import Influencer from '@/components/Influencer';
 // import Location from '@/components/Location';
 // import LMap from '@/components/map';
 
@@ -37,11 +38,12 @@ export default function Page() {
       <News />
       <FloatigVideo />
       <Blog />
+      <Influencer />
+      <Review />
       <BMICalculator />
       <CalorieTimeline />
-      <Review />
-      <WhyChooseUs />
       <Social />
+      <WhyChooseUs />
       <Footer />
       {/* <Location /> */}
       {/* <LMap /> */}
