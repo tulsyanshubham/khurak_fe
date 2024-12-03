@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 
 export default function SocialData({ data }) {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full px-9 xl:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto w-full px-9 xl:px-0">
             {data.map(
                 (
                     {

@@ -39,8 +39,8 @@ export default function Page() {
       <Blog />
       <BMICalculator />
       <CalorieTimeline />
-      <Review />
       <WhyChooseUs />
+      <Review />
       <Social />
       <Footer />
       {/* <Location /> */}

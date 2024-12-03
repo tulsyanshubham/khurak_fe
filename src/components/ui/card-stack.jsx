@@ -10,7 +10,8 @@ let interval;
 export const CardStack = ({
   items,
   offset,
-  scaleFactor
+  scaleFactor,
+  ref
 }) => {
   const CARD_OFFSET = offset || 10;
   const SCALE_FACTOR = scaleFactor || 0.06;
@@ -32,7 +33,7 @@ export const CardStack = ({
   };
 
   return (
-    <div className="relative h-72 w-72 md:h-56 sm:w-96">
+    <div ref={ref} className="relative h-72 w-72 md:h-56 sm:w-96">
       {cards.map((card, index) => {
         return (
           (<motion.div
