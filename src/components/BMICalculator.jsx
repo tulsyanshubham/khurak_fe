@@ -45,7 +45,7 @@ const BMICalculator = () => {
         if (window.innerWidth > 768) {
           sr(revealOptions).reveal(calc.current, { origin: 'left' })
         } else {
-          sr(revealOptions).reveal(calc.current, { origin: 'top' })
+          sr(revealOptions).reveal(calc.current, { origin: 'bottom' })
         }
       }
       if (calcImage.current) {
