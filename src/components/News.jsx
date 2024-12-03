@@ -6,11 +6,15 @@ import { revealOptions } from "@/constants/scrollRevealOptions";
 
 export default function News() {
     const fromTop = useRef(null)
+    const fromBottom = useRef(null)
     useEffect(() => {
         async function animate() {
             const sr = (await import("scrollreveal")).default
             if (fromTop.current) {
                 sr(revealOptions).reveal(fromTop.current,{ origin: 'top' })
+            }
+            if (fromBottom.current) {
+                sr(revealOptions).reveal(fromBottom.current, { origin: 'bottom' })
             }
         }
         animate()
@@ -26,7 +30,7 @@ export default function News() {
                         Discover articles and updates shaping the future of healthy living with Khuraak!
                     </span>
                 </div>
-                <LayoutGrid cards={newsData} />
+                <LayoutGrid ref={fromBottom} cards={newsData} />
             </div>
         </div>)
     );

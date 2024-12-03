@@ -1,13 +1,13 @@
 "use client";;
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 // import { useOutsideClick } from "@/hooks/use-outside-click";
 import Link from "next/link";
-import { revealOptions } from "@/constants/scrollRevealOptions";
 
 export const LayoutGrid = ({
   cards,
+  ref
 }) => {
   // const ref = useRef(null);
   const [selected, setSelected] = useState(null);
@@ -36,25 +36,12 @@ export const LayoutGrid = ({
     setSelected(null);
   };
 
-  const itemRefs = useRef([]);
-  useEffect(() => {
-    async function animate() {
-      const sr = (await import("scrollreveal")).default
-      itemRefs.current.forEach((itemRef) => {
-        if (itemRef) {
-          sr(revealOptions).reveal(itemRef, { origin: "bottom" });
-        }
-      });
-    }
-    animate()
-  }, [])
-
   return (
     (<div
+    ref={ref}
       className="w-full h-full px-8 py-5 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-2 relative">
       {cards.map((card, i) => (
         <motion.div key={i} className={cn(layout[card.id], "")}
-          ref={(el) => (itemRefs.current[i] = el)}
         >
           <motion.div
             onClick={() => handleClick(card)}
