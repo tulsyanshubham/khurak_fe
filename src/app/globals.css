@@ -20,6 +20,7 @@ body {
     /* --background: 123 100% 99%; */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
+    --trackbackground: #d0cec8;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
@@ -48,6 +49,7 @@ body {
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
+    --trackbackground: #27261d;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 9%;
@@ -90,4 +92,25 @@ body {
 
 .cursive {
   font-family: "League Script", cursive;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--trackbackground);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
