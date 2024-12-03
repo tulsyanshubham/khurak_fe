@@ -1,13 +1,15 @@
-"use client";
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { timelineData } from "@/constants/timeline";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { revealOptions } from "@/constants/scrollRevealOptions";
 
 export default function CalorieTimeline() {
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
+  const fromTop = useRef(null);
+  const itemRefs = useRef([]);
 
   useEffect(() => {
     if (ref.current) {
@@ -15,7 +17,7 @@ export default function CalorieTimeline() {
       setHeight(rect.height);
     }
   }, [ref]);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 10%", "end 50%"],
@@ -24,12 +26,28 @@ export default function CalorieTimeline() {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  useEffect(() => {
+    async function animate() {
+      const sr = (await import("scrollreveal")).default;
+
+      if (fromTop.current) {
+        sr(revealOptions).reveal(fromTop.current, { origin: "top" });
+      }
+      itemRefs.current.forEach((itemRef) => {
+        if (itemRef) {
+          sr(revealOptions).reveal(itemRef, { origin: "bottom" });
+        }
+      });
+    }
+    animate();
+  }, []);
+
   return (
     <div
       className="w-full font-sans md:px-10 relative pt-20 md:pt-0 mb-5"
       ref={containerRef}
     >
-      <div className="absolute top-0 px-auto flex flex-col items-center justify-center w-full md:w-[96vw] overflow-hidden py-6 md:py-8">
+      <div ref={fromTop} className="absolute top-0 px-auto flex flex-col items-center justify-center w-full md:w-[96vw] overflow-hidden py-6 md:py-8">
         <span className="text-2xl font-semibold md:text-4xl">
           Calorie Consumption Guide
         </span>
@@ -53,7 +71,10 @@ export default function CalorieTimeline() {
               </h3>
             </div>
 
-            <div className="relative pl-11 pr-4 md:pl-4 w-full">
+            <div
+              ref={(el) => (itemRefs.current[index] = el)}
+              className="relative pl-11 pr-4 md:pl-4 w-full"
+            >
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
@@ -97,4 +118,4 @@ export default function CalorieTimeline() {
       </div>
     </div>
   );
-};
+}

@@ -6,7 +6,8 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 export const LayoutGrid = ({
-  cards
+  cards,
+  ref
 }) => {
   // const ref = useRef(null);
   const [selected, setSelected] = useState(null);
@@ -37,6 +38,7 @@ export const LayoutGrid = ({
 
   return (
     (<div
+    ref={ref}
       className="w-full h-full px-8 py-5 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-2 relative">
       {cards.map((card, i) => (
         <motion.div key={i} className={cn(layout[card.id], "")}

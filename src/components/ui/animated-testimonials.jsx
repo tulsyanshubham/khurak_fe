@@ -1,8 +1,9 @@
 "use client";
+import { revealOptions } from "@/constants/scrollRevealOptions";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaStar, FaStarHalf } from "react-icons/fa";
 
 export const AnimatedTestimonials = ({
@@ -37,11 +38,26 @@ export const AnimatedTestimonials = ({
         setRotations(randomRotations);
     }, [testimonials]);
 
+    const fromLeft = useRef(null)
+    const fromRight = useRef(null)
+    useEffect(() => {
+        async function animate() {
+            const sr = (await import("scrollreveal")).default
+            if (fromLeft.current) {
+                sr(revealOptions).reveal(fromLeft.current,{ origin: 'left' })
+            }
+            if (fromRight.current) {
+                sr(revealOptions).reveal(fromRight.current,{ origin: 'right' })
+            }
+        }
+        animate()
+    }, [])
+
     return (
         (<div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:pl-8 lg:px-12 py-20">
             <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
                 <div>
-                    <div className="relative h-80 w-full">
+                    <div ref={fromLeft} className="relative h-80 w-full">
                         <AnimatePresence>
                             {testimonials.map((testimonial, index) => (
                                 <motion.div
@@ -83,7 +99,7 @@ export const AnimatedTestimonials = ({
                         </AnimatePresence>
                     </div>
                 </div>
-                <div className="flex justify-between flex-col py-4">
+                <div ref={fromRight} className="flex justify-between flex-col py-4">
                     <motion.div
                         key={active}
                         initial={{

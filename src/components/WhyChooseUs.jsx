@@ -1,5 +1,4 @@
 "use client";
-import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -7,18 +6,37 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { reasonsToChooseKhuraak } from '@/constants/reasons'
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import { revealOptions } from '@/constants/scrollRevealOptions';
 
 export default function WhyChooseUs() {
-    const [expanded, setExpanded] = React.useState(0);
+    const [expanded, setExpanded] = useState(0);
 
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
 
+    const fromTop = useRef(null)
+    const itemRefs = useRef([]);
+    useEffect(() => {
+        async function animate() {
+            const sr = (await import("scrollreveal")).default
+            if (fromTop.current) {
+                sr(revealOptions).reveal(fromTop.current,{ origin: 'top' })
+            }
+            itemRefs.current.forEach((itemRef) => {
+                if (itemRef) {
+                  sr(revealOptions).reveal(itemRef, { origin: "bottom" });
+                }
+              });
+        }
+        animate()
+    }, [])
+
     return (
         <div className='h-full flex items-center justify-center'>
             <div className='max-w-7xl flex flex-col items-center justify-center py-5'>
-                <div className='flex flex-col gap-2 items-center justify-center py-5 px-2'>
+                <div ref={fromTop} className='flex flex-col gap-2 items-center justify-center py-5 px-2'>
                     <span className='text-2xl md:text-4xl text-center font-semibold'>
                         Why Choose खुRaak 🤔
                     </span>
@@ -29,6 +47,7 @@ export default function WhyChooseUs() {
                 <div className='md:w-[70%] w-[90%]'>
                     {reasonsToChooseKhuraak.map((reason, index) => (
                         <Accordion expanded={expanded === index} key={reason.title} onChange={handleChange(index)}
+                        ref={(el) => (itemRefs.current[index] = el)}
                             sx={{ "&:before": { content: "none" } }} className='!rounded-lg border !bg-transparent !border-ktheme-800 my-[6px]'>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon className='dark:text-white' />}

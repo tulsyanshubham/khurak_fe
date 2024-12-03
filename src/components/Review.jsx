@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { InfiniteMovingCards } from './ui/infinite-moving-cards';
 import { FaStar } from "react-icons/fa";
 import { AnimatedTestimonials } from './ui/animated-testimonials';
+import { revealOptions } from '@/constants/scrollRevealOptions';
 
 const reviewsData = [
     {
@@ -55,13 +56,27 @@ const reviewsData = [
 ];
 
 export default function Review() {
+    const fromTop = useRef(null)
+    const fromBottom = useRef(null)
+    useEffect(() => {
+        async function animate() {
+            const sr = (await import("scrollreveal")).default
+            if (fromTop.current) {
+                sr(revealOptions).reveal(fromTop.current,{ origin: 'top' })
+            }
+            if (fromBottom.current) {
+                sr(revealOptions).reveal(fromBottom.current,{ origin: 'bottom' })
+            }
+        }
+        animate()
+    }, [])
     return (
         <div className='w-full overflow-x-hidden flex justify-center py-5 over'>
             <div className='w-[94%]'>
                 <div className='bg-gradient-to-r from-[#ffc8010d] to-[#ffc8004d] dark:from-gary-100 dark:to-gray-900 w-full mx-auto rounded-2xl flex justify-center py-3 md:pt-14 overflow-hidden flex-col'>
                     <div className='flex flex-col items-center justify-center text-3xl font-semibold w-full'>
                         <div className='flex flex-col items-start text-xl md:text-4xl font-bold md:font-semibold py-3 md:py-0 md:pl-0 text-neutral-800 dark:text-gray-100 z-10'>
-                            <div className="text-center px-6">
+                            <div ref={fromTop} className="text-center px-6">
                                 <span className='text-ktheme-500 dark:text-ktheme-500'>खुRaak </span>
                                 Received <span className='text-ktheme-500 dark:text-ktheme-500'>4.8/5 </span>
                                 Starts in over
@@ -74,7 +89,7 @@ export default function Review() {
                         <div className='hidden md:flex w-full items-center justify-center'>
                             <AnimatedTestimonials testimonials={reviewsData} />
                         </div>
-                        <div className='block md:hidden'>
+                        <div ref={fromBottom} className='block md:hidden'>
                             <InfiniteMovingCards
                                 items={reviewsData}
                                 direction="left"

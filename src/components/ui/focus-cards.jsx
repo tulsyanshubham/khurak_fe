@@ -1,15 +1,18 @@
 "use client";;
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { revealOptions } from "@/constants/scrollRevealOptions";
 
 export const Card = React.memo(({
   card,
   index,
   hovered,
-  setHovered
+  setHovered,
+  ref
 }) => (
   <div
+    ref={ref}
     onMouseEnter={() => setHovered(index)}
     onMouseLeave={() => setHovered(null)}
     className={cn(
@@ -45,11 +48,25 @@ export function FocusCards({
 }) {
   const [hovered, setHovered] = useState(null);
 
+  const itemRefs = useRef([])
+  useEffect(() => {
+    async function animate() {
+      const sr = (await import("scrollreveal")).default
+      itemRefs.current.forEach((itemRef) => {
+        if (itemRef) {
+          sr(revealOptions).reveal(itemRef, { origin: "bottom" });
+        }
+      });
+    }
+    animate()
+  }, [])
+
   return (
     (<div
       className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full">
       {cards.map((card, index) => (
         <Card
+          ref={(el) => (itemRefs.current[index] = el)}
           key={card.title}
           card={card}
           index={index}

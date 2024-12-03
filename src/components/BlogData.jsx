@@ -6,12 +6,14 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avater";
 import { assets } from "@/constants/assets";
+import { revealOptions } from "@/constants/scrollRevealOptions";
 
 export default function BlogData({ data, page }) {
     const [active, setActive] = useState(null);
     const [pageName, setPageName] = useState(page);
     const ref = useRef(null);
     const id = useId();
+    const itemRefs = useRef([]);
 
     useEffect(() => {
         function onKeyDown(event) {
@@ -29,6 +31,19 @@ export default function BlogData({ data, page }) {
         window.addEventListener("keydown", onKeyDown);
         return () => window.removeEventListener("keydown", onKeyDown);
     }, [active]);
+
+    useEffect(() => {
+        async function animate() {
+            const sr = (await import("scrollreveal")).default;
+
+            itemRefs.current.forEach((itemRef) => {
+                if (itemRef) {
+                    sr(revealOptions).reveal(itemRef, { origin: "bottom" });
+                }
+            });
+        }
+        animate();
+    }, []);
 
     useEffect(() => {
         setPageName(page);
@@ -133,6 +148,7 @@ export default function BlogData({ data, page }) {
                         layoutId={`card-${card.title}-${id}`}
                         key={`card-${card.title}-${id}`}
                         onClick={() => setActive(card)}
+                        ref={(el) => (itemRefs.current[index] = el)}
                         className="px-4 py-2 md:p-4 flex md:flex-col flex-row justify-between items-center hover:drop-shadow-2xl rounded-xl cursor-pointer">
                         <div className="flex md:hidden gap-4 md:flex-col flex-row px-2 opacity-100">
                             <motion.div layoutId={`image-${card.title}-${id}`} className="!opacity-100">
@@ -260,6 +276,7 @@ export default function BlogData({ data, page }) {
                 <div className="flex md:hidden max-w-7xl w-full gap-4 flex-col justify-center">
                     {data.map((card, index) => (
                         <motion.div
+                            ref={(el) => (itemRefs.current[index] = el)}
                             layoutId={`card-${card.title}-${id}`}
                             key={`card-${card.title}-${id}`}
                             onClick={() => setActive(card)}

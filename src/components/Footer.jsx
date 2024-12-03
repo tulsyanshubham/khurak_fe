@@ -17,18 +17,18 @@ export default function Footer() {
         }
     }, []);
 
-    const imgClass = "dark:invert-[.75] dark:hover:invert w-7 sm:w-9 md:w-11 invert-[.25] hover:invert-0";
+    const imgClass = "dark:invert-[.75] dark:hover:invert w-7 sm:w-7 md:w-9 invert-[.25] hover:invert-0";
 
     return (
         <div className='flex flex-col items-center justify-center w-full border-t-2 mt-8 bg-black dark:bg-white text-white dark:text-gray-800'>
-            <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-2 py-2">
-                <div className='flex items-center justify-evenly w-full flex-col sm:flex-row gap-3 md:gap-10'>
+            <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-1 py-2">
+                <div className='flex items-center justify-evenly w-full flex-col sm:flex-row gap-1 md:gap-10'>
                     <Image
                         src={siteTheme === "light" ? assets.logo_dark : assets.logo}
                         alt='logo'
                         width={150}
                         height={50}
-                        className='w-20 sm:w-20 md:w-28'
+                        className='w-20 sm:w-20 md:w-24'
                     />
                     {/* <div className='flex flex-col gap-2'>
                         <div className='flex font-medium text-2xl sm:text-3xl md:text-4xl md:text-start justify-center md:justify-start'>Contact Us</div>
@@ -40,7 +40,7 @@ export default function Footer() {
                         </a>
                     </div> */}
                     <div className='flex items-center justify-center gap-2'>
-                        <div className='font-medium text-xl sm:text-2xl md:text-4xl text-center md:text-start spread'>Follow us:</div>
+                        <div className='font-medium text-xl sm:text-2xl md:text-3xl text-center md:text-start spread'>Follow us:</div>
                         <div className='flex items-center justify-start gap-1'>
                             <a href={contactInfo.social.instagram} target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">
                                 <Image width={500} height={500} src={assets.icons.instagram} alt='Instagram' className={imgClass} />
@@ -60,7 +60,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className='dark:bg-ktheme-800 bg-gray-100 w-3/4 md:w-1/2 h-[1.5px] rounded-full'></div>
+                <div className='dark:bg-ktheme-800 bg-gray-100 w-3/4 md:w-1/2 h-[1.5px] md:h-[2px] rounded-full'></div>
                 <div className='text-center text-sm sm:text-base md:text-lg'>Copyright &copy; {year} [<span className='text-ktheme-500 dark:text-ktheme-500 font-bold'>खुRAAK</span>]. All rights reserved.</div>
             </div>
         </div>

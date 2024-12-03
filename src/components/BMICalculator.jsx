@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { assets } from '@/constants/assets';
 import Lottie from "lottie-react";
 import bmi_animation from "@/../public/animation/bmi_right.json";
+import { revealOptions } from '@/constants/scrollRevealOptions';
 
 const BMICalculator = () => {
   const [weight, setWeight] = useState(70); // Default weight
@@ -31,10 +32,37 @@ const BMICalculator = () => {
     setBmi(null); // Resets BMI and shows the button again
   };
 
+  const fromTop = useRef(null)
+  const calc = useRef(null)
+  const calcImage = useRef(null)
+  useEffect(() => {
+    async function animate() {
+      const sr = (await import("scrollreveal")).default
+      if (fromTop.current) {
+        sr(revealOptions).reveal(fromTop.current, { origin: 'top' })
+      }
+      if (calc.current) {
+        if (window.innerWidth > 768) {
+          sr(revealOptions).reveal(calc.current, { origin: 'left' })
+        } else {
+          sr(revealOptions).reveal(calc.current, { origin: 'top' })
+        }
+      }
+      if (calcImage.current) {
+        if (window.innerWidth > 768) {
+          sr(revealOptions).reveal(calcImage.current, { origin: 'right' })
+        } else {
+          sr(revealOptions).reveal(calcImage.current, { origin: 'bottom' })
+        }
+      }
+    }
+    animate()
+  }, [])
+
   return (
     <div className='w-full flex items-center justify-center'>
       <div className='relative mb-5 mt-10 w-full max-w-7xl'>
-        <div className='px-3 flex flex-col items-center justify-center text-neutral-800 dark:text-gray-100 gap-2 mb-8'>
+        <div ref={fromTop} className='px-3 flex flex-col items-center justify-center text-neutral-800 dark:text-gray-100 gap-2 mb-8'>
           <span className='text-2xl md:text-4xl text-center font-semibold'>
             Assess Your Health Now! 🩺
           </span>
@@ -43,7 +71,7 @@ const BMICalculator = () => {
           </span>
         </div>
         <div className="flex w-full items-center justify-evenly relative z-10">
-          <div className="w-[80vw] md:w-2/5 lg:w-1/4">
+          <div ref={calc} className="w-[80vw] md:w-2/5 lg:w-1/4">
             <div className="mb-4">
               <label className="block mb-2 text-sm font-medium text-ktheme-700 dark:text-ktheme-400">
                 Select Unit
@@ -90,7 +118,7 @@ const BMICalculator = () => {
                     if (value > maxWeight) setWeight(maxWeight);
                     resetBMI();
                   }}
-                  className="w-1/5 md:w-1/5 ml-2 px-2 border border-ktheme-300 dark:border-ktheme-600 rounded-md focus:ring-ktheme-600 focus:border-ktheme-700 bg-transparent"/>
+                  className="w-1/5 md:w-1/5 ml-2 px-2 border border-ktheme-300 dark:border-ktheme-600 rounded-md focus:ring-ktheme-600 focus:border-ktheme-700 bg-transparent" />
               </label>
               <input
                 type="range"
@@ -168,7 +196,7 @@ const BMICalculator = () => {
             )}
           </div>
 
-          <div className='w-fit md:block hidden'>
+          <div ref={calcImage} className='w-fit md:block hidden'>
             {/* <Image src={assets.bmi} alt="BMI" width={500} height={500} className='w-[40vw] max-w-[383px] dark:brightness-110' /> */}
             <Lottie animationData={bmi_animation} loop={true} className='w-[40vw] max-w-[383px]' />
           </div>
