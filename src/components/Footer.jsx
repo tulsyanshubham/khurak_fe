@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { assets } from '@/constants/assets'
-import { contactInfo } from '@/constants/footer_data'
+import { contactInfo } from '@/constants/contacts'
 import { useAtom } from 'jotai';
 import { theme } from '@/hooks/Atoms';
 

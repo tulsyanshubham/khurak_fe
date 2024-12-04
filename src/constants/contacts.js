@@ -8,5 +8,9 @@ export const contactInfo = {
         facebook: "https://www.facebook.com/",
         linkedin: "https://in.linkedin.com/",
         pinterest: "https://www.pinterest.com/",
+    },
+    order: {
+        zomato: "https://www.zomato.com/",
+        swiggy: "https://www.swiggy.com/",
     }
 };

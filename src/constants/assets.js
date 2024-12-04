@@ -13,7 +13,9 @@ export const assets = {
         linkedin: "/images/icons/linkedin.png",
         x: "/images/icons/x.png",
         facebook: "/images/icons/facebook.png",
-        youtube: "/images/icons/youtube.png"
+        youtube: "/images/icons/youtube.png",
+        swiggy: "/images/icons/swiggy.png",
+        zomato: "/images/icons/zomato.png",
     },
     about_us: {
         main: [

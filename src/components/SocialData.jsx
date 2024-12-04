@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { WobbleCard } from './ui/wobble-card'
 import Image from 'next/image'
 import Link from 'next/link'
-import { contactInfo } from '@/constants/footer_data';
+import { contactInfo } from '@/constants/contacts';
 import { cn } from '@/lib/utils';
 import { revealOptions } from '@/constants/scrollRevealOptions';
 

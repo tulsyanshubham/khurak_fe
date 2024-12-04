@@ -28,7 +28,7 @@ export default function Blog() {
                         <span className='text-base md:text-2xl text-green-700 dark:text-ktheme-300 text-center'>Your Go-To Blog for Fresh Healthy Living Tips & Updates</span>
                     </div>
                     <BlogData page={"home"} data={blogData} />
-                    <div className='flex items-center justify-end w-full px-7'>
+                    {/* <div className='flex items-center justify-end w-full px-7'>
                         <Link ref={fromLeft} href="/blogs" className="bg-black/20 border-2 border-black no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm font-semibold leading-6 inline-block mt-2">
                             <span className="absolute inset-0 overflow-hidden rounded-full">
                                 <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -55,7 +55,7 @@ export default function Blog() {
                             </div>
                             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-yellow-400/0 via-yellow-400/90 to-yellow-400/0 transition-opacity duration-500 group-hover:opacity-40" />
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

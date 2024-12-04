@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { contactInfo } from "@/constants/footer_data";
+import { contactInfo } from "@/constants/contacts";
 import { cn } from "@/lib/utils";
 
 let interval;

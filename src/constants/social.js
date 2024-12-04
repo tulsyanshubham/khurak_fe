@@ -1,4 +1,4 @@
-import { contactInfo } from "./footer_data";
+import { contactInfo } from "./contacts";
 
 export const socialData = [
     {
