@@ -32,7 +32,7 @@ export default function Review() {
                                 Starts in over
                                 <span className='drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)] text-ktheme-500 dark:drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)] text-ktheme-500'> 10,000+</span> Reviews */}
                                 Here’s What Fuels Our Flavor
-                                <span className='drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)] text-ktheme-500 dark:text-ktheme-500'> Customer Love!❤️</span>
+                                <span className='text-green-700 dark:text-ktheme-500'> Customer Love!❤️</span>
                             </div>
                         </div>
                     </div>
