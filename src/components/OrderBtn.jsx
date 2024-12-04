@@ -97,11 +97,11 @@ export default function OrderBtn() {
 
                     <ModalFooter className="flex items-center justify-center gap-4">
                         <Link href={contactInfo.order.swiggy}
-                            className="px-8 py-2 text-base text-black bg-gradient-to-r from-orange-500 to-yellow-400 dark:from-orange-600 dark:to-yellow-500 border border-gray-300 rounded-lg">
+                            className="px-8 py-[6px] text-base text-black bg-gradient-to-r from-orange-500 to-yellow-400 dark:from-orange-600 dark:to-yellow-500 border rounded-xl">
                             Swiggy
                         </Link>
                         <Link href={contactInfo.order.zomato}
-                            className="px-8 py-2 text-base text-white bg-gradient-to-r from-red-500 to-red-700 dark:from-red-600 dark:to-red-800 border border-gray-300 rounded-lg">
+                            className="px-8 py-[6px] text-base text-white bg-gradient-to-r from-red-500 to-red-700 dark:from-red-600 dark:to-red-800 border rounded-xl">
                             Zomato
                         </Link>
                     </ModalFooter>
