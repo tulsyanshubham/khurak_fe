@@ -35,7 +35,7 @@ export default function Page() {
     <div >
       <Header />
       <Home />
-      {/* <News />
+      <News />
       <FloatigVideo />
       <Blog />
       <Influencer />
@@ -44,7 +44,7 @@ export default function Page() {
       <CalorieTimeline />
       <Social />
       <WhyChooseUs />
-      <Footer /> */}
+      <Footer />
       {/* <Location /> */}
       {/* <LMap /> */}
     </div>
