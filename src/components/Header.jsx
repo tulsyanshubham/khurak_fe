@@ -53,7 +53,7 @@ export default function Header({ darkFlag=false }) {
         </Link>
         <div className='flex items-center justify-center gap-3'>
           <button className="text-ktheme-500 dark:text-gray-700 dark:bg-ktheme-500 font-bold text-sm md:text-lg py-2 px-6 md:px-12 rounded-lg border-2 border-ktheme-500 dark:border-gray-800">
-            Join Us
+            <span className='drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)]'>Join Us</span>
           </button>
           <button onClick={toggleTheme}>
             {siteTheme === "light" ? <GoMoon size={30} className={themeState ? "text-white" : "text-black"} /> : <IoSunnyOutline size={30} color="white" />}

@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
                     <span className='text-2xl md:text-4xl text-center font-semibold'>
                         Why Choose खुRaak 🤔
                     </span>
-                    <span className='text-base md:text-lg text-ktheme-500 text-center'>
+                    <span className='text-base md:text-lg drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)] text-ktheme-500 text-center'>
                         Nourish Your Body, Delight Your Taste Buds, Embrace Wellness
                     </span>
                 </div>
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
                                         className='w-12 md:w-14 dark:filter dark:invert'
                                     />
                                 </Typography>
-                                <Typography className='font-semibold !text-lg md:!text-xl text-ktheme-500 dark:text-ktheme-400 flex items-center'>
+                                <Typography className='font-semibold !text-lg md:!text-xl drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)] text-ktheme-500 dark:text-ktheme-400 flex items-center'>
                                     {reason.title}
                                 </Typography>
                             </AccordionSummary>

@@ -15,11 +15,11 @@ export default function Home() {
     const [siteTheme] = useAtom(theme)
     return (
         <div className='flex items-center justify-center relative'>
-            <div className='flex flex-col items-center justify-center flex-wrap relative pt-32 w-full max-w-7xl antialiased'>
+            <div className='flex flex-col items-center justify-center flex-wrap relative pt-32 md:pt-28 w-full max-w-7xl antialiased'>
                 <div className='flex flex-wrap justify-evenly items-center w-full'>
                     <div className="flex flex-col justify-center items-center text-center z-10 px-1 md:px-0 md:w-1/2 xl:w-fit">
                         <BoxReveal boxColor={"#eec14d"} duration={0.5} flag={false}>
-                            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-ktheme-500">Welcome to खुRaak</h1>
+                            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)] text-ktheme-500">Welcome to खुRaak</h1>
                         </BoxReveal>
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
                             <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold mt-2">Your Hub for Healthy Eating</h2>
@@ -35,15 +35,14 @@ export default function Home() {
                         </BoxReveal>
 
                         <div className="flex items-center justify-center flex-wrap gap-4 mt-6 px-2">
-                        <BoxReveal boxColor={"#eec14d"} duration={0.5}>
+                        {/* <BoxReveal boxColor={"#eec14d"} duration={0.5}>
                             <Link href={'/about_us'} className="block bg-ktheme-500 hover:brightness-95 text-gray-800 font-semibold py-2 px-6 rounded-md">
-                                {/* Explore Meal Plans */}
                                 About Us
                             </Link>
-                        </BoxReveal>
+                        </BoxReveal> */}
                         <BoxReveal boxColor={"#eec14d"} duration={0.5}>
-                            <button className="border border-ktheme-500 text-ktheme-500 hover:bg-ktheme-50 dark:hover:bg-background/95 font-semibold py-2 px-6 rounded-md">
-                                Order Now
+                            <button className="border-2 border-ktheme-500 text-ktheme-500 hover:bg-ktheme-50 dark:hover:bg-background/95 font-semibold py-2 px-6 rounded-md">
+                                <span className='drop-shadow-[0_1px_0px_rgba(0,0,0,0.7)]'>Order Now</span>
                             </button>
                         </BoxReveal>
                         </div>

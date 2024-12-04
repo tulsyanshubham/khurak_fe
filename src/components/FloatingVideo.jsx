@@ -21,7 +21,7 @@ export function FloatigVideo() {
         <div className="w-full">
             <div className="max-w-7xl flex flex-col overflow-hidden mx-auto py-10 px-3">
                 <div className="flex flex-col items-center justify-center" ref={fromBottom}>
-                    <span className="text-2xl md:text-4xl font-semibold text-ktheme-500 dark:text-ktheme-500">
+                    <span className="text-2xl md:text-4xl font-semibold drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)] text-ktheme-500 dark:text-ktheme-500">
                         Why खुRaak
                     </span>
                     <span className="text-4xl md:text-6xl font-bold mt-1 pb-2 leading-none">

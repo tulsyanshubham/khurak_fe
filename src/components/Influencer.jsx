@@ -22,7 +22,7 @@ export default function Influencer() {
           <span className='text-2xl md:text-4xl text-center font-semibold'>
             Real Reviews from Real Influencers
           </span>
-          <span className='text-base md:text-lg text-ktheme-500 text-center'>
+          <span className='text-base md:text-lg drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)] text-ktheme-500 text-center'>
             Why They Love Khuraak!
           </span>
         </div>
