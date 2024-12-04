@@ -51,7 +51,7 @@ export default function Home() {
                     </div>
                     <div>
                         {/* <Image src={siteTheme === "light" ? assets.right_to_welcome : assets.right_to_welcome_dark} width={500} height={500} alt="Khuraak" className='w-[60vw] mt-12 md:mt-0 md:w-[25vw] drop-shadow-xl max-w-[380px]' /> */}
-                        {/* <Lottie animationData={girl_animation} loop={true} className='w-[80vw] mt-2 md:mt-0 md:w-[35vw] drop-shadow-xl max-w-[400px]' /> */}
+                        <Lottie animationData={girl_animation} loop={true} className='w-[80vw] mt-2 md:mt-0 md:w-[35vw] drop-shadow-xl max-w-[400px]' />
                     </div>
                 </div>
                 <div className='w-full'>
