@@ -37,9 +37,8 @@ export default function Header({ darkFlag=false }) {
     setSiteTheme(siteTheme === 'dark' ? 'light' : 'dark');
   };
 
-
   return (
-    <div className={`w-full flex justify-center z-0 ${isScrolled ? 'bg-white dark:bg-background/90 fixed top-0 z-50 shadow-lg border-b' : 'absolute'}`}>
+    <div className={`w-full flex justify-center ${isScrolled ? 'bg-white dark:bg-background/90 fixed top-0 z-50 shadow-lg border-b' : 'absolute'}`}>
       <div
         className={`py-2 md:py-1 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300 z-50 w-full max-w-7xl`}>
         <Link href="/">
@@ -52,9 +51,9 @@ export default function Header({ darkFlag=false }) {
           />
         </Link>
         <div className='flex items-center justify-center gap-3'>
-          <button className="text-ktheme-500 dark:text-gray-700 dark:bg-ktheme-500 font-bold text-sm md:text-lg py-2 px-6 md:px-12 rounded-lg border-2 border-ktheme-500 dark:border-gray-800">
-            <span className='drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)]'>Join Us</span>
-          </button>
+          <Link href={"/menu"} className="text-ktheme-500 dark:text-gray-700 dark:bg-ktheme-500 font-bold text-sm md:text-lg py-2 px-6 md:px-8 rounded-lg border-2 border-ktheme-500 dark:border-gray-800">
+            <span className='drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)]'>Our Menu</span>
+          </Link>
           <button onClick={toggleTheme}>
             {siteTheme === "light" ? <GoMoon size={30} className={themeState ? "text-white" : "text-black"} /> : <IoSunnyOutline size={30} color="white" />}
           </button>
