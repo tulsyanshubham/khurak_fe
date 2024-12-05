@@ -56,7 +56,7 @@ export default function Header({ darkFlag = false }) {
           {pathname !== "/menu" &&(<Link href={"/menu"} className="dark:text-ktheme-500 text-gray-700 bg-ktheme-500 dark:bg-transparent font-bold text-sm md:text-lg py-2 px-6 md:px-8 rounded-lg border-0 dark:border-2 dark:border-ktheme-500">
             <span>Our Menu</span>
           </Link>)}
-          <button onClick={toggleTheme}>
+          <button className={`p-1 hover:dark:bg-gray-800/70 ${themeState ? "hover:bg-gray-800/70" : "hover:bg-gray-200"} rounded-xl`} onClick={toggleTheme}>
             {siteTheme === "light" ? <GoMoon size={30} className={themeState ? "text-white" : "text-black"} /> : <IoSunnyOutline size={30} color="white" />}
           </button>
         </div>

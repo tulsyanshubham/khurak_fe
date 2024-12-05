@@ -1,5 +1,6 @@
 "use client";
 import Header from '@/components/Header'
+import Menu from '@/components/Menu';
 import { theme } from '@/hooks/Atoms';
 import { useAtom } from 'jotai';
 import React, { useEffect } from 'react'
@@ -20,6 +21,7 @@ export default function Page() {
   return (
     <div>
       <Header />
+      <Menu />
     </div>
   )
 }
