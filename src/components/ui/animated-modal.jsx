@@ -145,7 +145,7 @@ export const ModalFooter = ({
 };
 
 const Overlay = ({
-  className
+  className=""
 }) => {
   return (
     (<motion.div

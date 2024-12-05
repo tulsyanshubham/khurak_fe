@@ -39,7 +39,7 @@ export default function Header({ darkFlag=false }) {
 
 
   return (
-    <div className={`w-full flex justify-center ${isScrolled ? 'bg-white dark:bg-background/90 fixed top-0 z-50 shadow-lg border-b' : 'absolute'}`}>
+    <div className={`w-full flex justify-center z-0 ${isScrolled ? 'bg-white dark:bg-background/90 fixed top-0 z-50 shadow-lg border-b' : 'absolute'}`}>
       <div
         className={`py-2 md:py-1 flex flex-wrap justify-between items-center px-4 md:px-20 transition-all duration-300 z-50 w-full max-w-7xl`}>
         <Link href="/">
