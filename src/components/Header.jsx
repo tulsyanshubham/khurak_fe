@@ -7,10 +7,12 @@ import Image from 'next/image';
 import { assets } from '@/constants/assets';
 import { useAtom } from 'jotai';
 import { theme } from '@/hooks/Atoms';
+import { usePathname } from 'next/navigation';
 
-export default function Header({ darkFlag=false }) {
+export default function Header({ darkFlag = false }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [themeState, setThemeState] = useState(darkFlag);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,8 +33,8 @@ export default function Header({ darkFlag=false }) {
     };
   }, []);
 
-  const [siteTheme,setSiteTheme] = useAtom(theme)
-  
+  const [siteTheme, setSiteTheme] = useAtom(theme)
+
   const toggleTheme = () => {
     setSiteTheme(siteTheme === 'dark' ? 'light' : 'dark');
   };
@@ -51,9 +53,9 @@ export default function Header({ darkFlag=false }) {
           />
         </Link>
         <div className='flex items-center justify-center gap-3'>
-          <Link href={"/menu"} className="text-ktheme-500 dark:text-gray-700 dark:bg-ktheme-500 font-bold text-sm md:text-lg py-2 px-6 md:px-8 rounded-lg border-2 border-ktheme-500 dark:border-gray-800">
-            <span className='drop-shadow-[0_1px_0px_rgba(0,0,0,0.5)]'>Our Menu</span>
-          </Link>
+          {pathname !== "/menu" &&(<Link href={"/menu"} className="dark:text-ktheme-500 text-gray-700 bg-ktheme-500 dark:bg-transparent font-bold text-sm md:text-lg py-2 px-6 md:px-8 rounded-lg border-0 dark:border-2 dark:border-ktheme-500">
+            <span>Our Menu</span>
+          </Link>)}
           <button onClick={toggleTheme}>
             {siteTheme === "light" ? <GoMoon size={30} className={themeState ? "text-white" : "text-black"} /> : <IoSunnyOutline size={30} color="white" />}
           </button>
