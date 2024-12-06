@@ -1,6 +1,6 @@
 "use client";
 import Header from '@/components/Header'
-import Menu from '@/components/Menu';
+import Menu from '@/components/menu/Menu';
 import { theme } from '@/hooks/Atoms';
 import { useAtom } from 'jotai';
 import React, { useEffect } from 'react'
