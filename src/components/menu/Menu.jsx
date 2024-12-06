@@ -109,9 +109,9 @@ export default function Menu() {
                                 <h2 className="text-xl md:text-lg font-semibold text-amber-500 my-2">
                                     {item.name}
                                 </h2>
-                                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
+                                {/* <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
                                     {item.description}
-                                </p>
+                                </p> */}
                             </div>
                         </div>
                     ))}
