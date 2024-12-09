@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import BlogData from './BlogData'
 import { blogData } from '@/constants/blog'
-import Link from 'next/link'
 import { revealOptions } from '@/constants/scrollRevealOptions'
 
 export default function Blog() {
