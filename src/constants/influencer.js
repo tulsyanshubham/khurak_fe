@@ -1,12 +1,5 @@
 export const influencerReviews = [
     {
-        heading: "Game-Changer for Healthy Eating!",
-        content: "Khuraak has completely transformed my approach to healthy eating. The food is not only delicious but also guilt-free. I no longer have to choose between taste and health. The meals are perfectly balanced, nutritious, and truly satisfying. I can confidently say that Khuraak has made it so much easier to maintain a healthy lifestyle without sacrificing flavor. Highly recommend it to anyone looking for healthy and convenient meal options!",
-        image: "/images/influencers/1.png",
-        name: "Ranveer Allahbadia",
-        url: "https://www.instagram.com/ranveerallahbadia/"
-    },
-    {
         heading: "Nourishing and Flavorful!",
         content: "Khuraak is a lifesaver! I’ve been ordering from them for a while now, and I couldn’t be happier with the meals. They are always so fresh, and every dish I’ve tried has been packed with flavor. The best part is that the meals are balanced and nourishing, keeping me energized throughout the day. I’m always excited to see what’s on the menu next. Khuraak makes healthy eating so easy and enjoyable!",
         image: "/images/influencers/2.png",

@@ -63,9 +63,9 @@ export const AnimatedTestimonials = ({
     }, [])
 
     return (
-        <div className="max-w-md md:max-w-4xl mx-auto antialiased font-sans px-4 md:pl-8 lg:px-12 py-5 md:pt-12 md:pb-10">
-            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-20">
-                <div className="pt-1 pb-10 md:py-5 px-10 md:px-0 md:h-full h-[40vh]">
+        <div className="max-w-md md:max-w-4xl w-full mx-auto antialiased font-sans px-4 md:pl-8 lg:px-12 py-5 md:pt-12">
+            <div className="relative flex flex-col md:flex-row items-center justify-center gap-0 md:gap-20">
+                <div className="pt-1 pb-10 md:py-5 px-10 md:px-0 md:h-96 h-[40vh] w-full md:w-[40%]">
                     <div ref={image} className="relative h-full md:h-5/6 w-full drop-shadow-[0_0_5rem_#f5da94] dark:drop-shadow-[0_0_5rem_#be9a3e91]">
                         <AnimatePresence>
                             {testimonials.map((testimonial, index) => (
@@ -108,7 +108,7 @@ export const AnimatedTestimonials = ({
                         </AnimatePresence>
                     </div>
                 </div>
-                <div ref={imageData} className="flex justify-between flex-col py-0 md:py-4">
+                <div ref={imageData} className="flex md:w-fit w-full justify-center items-center flex-col py-0 md:py-4">
                     <motion.div
                     className="text-center md:text-start"
                         key={active}
@@ -128,13 +128,13 @@ export const AnimatedTestimonials = ({
                             duration: 0.2,
                             ease: "easeInOut",
                         }}>
-                        <h3 className="text-2xl font-bold dark:text-white text-black">
+                        <h3 className="text-2xl md:text-4xl font-bold dark:text-white text-black">
                             {testimonials[active].name}
                         </h3>
-                        <p className="text-base text-gray-800 dark:text-neutral-100">
+                        <p className="text-base text-gray-800 text-center dark:text-neutral-100">
                             {testimonials[active].heading}
                         </p>
-                        <motion.p className="text-sm md:text-lg text-gray-900 mt-4 md:mt-8 dark:text-neutral-50">
+                        {/* <motion.p className="text-sm md:text-lg text-gray-900 mt-4 md:mt-8 dark:text-neutral-50">
                             {testimonials[active].content.split(" ").map((word, index) => (
                                 <motion.span
                                     key={index}
@@ -157,8 +157,10 @@ export const AnimatedTestimonials = ({
                                     {word}&nbsp;
                                 </motion.span>
                             ))}
-                        </motion.p>
-                        <motion.p>
+                        </motion.p> */}
+                        <motion.p
+                        className="text-center"
+                        >
                             <motion.span
                                 initial={{
                                     filter: "blur(10px)",
@@ -173,7 +175,7 @@ export const AnimatedTestimonials = ({
                                 transition={{
                                     duration: 0.2,
                                     ease: "easeInOut",
-                                    delay: 0.02 * testimonials[active].content.split(" ").length,
+                                    delay: 0.02,
                                 }}
                                 className="inline-block mt-3 text-xl">
                                 <Link href={testimonials[active].url} target="_blank" rel="noopener noreferrer">
