@@ -1,139 +1,698 @@
 export const menuItems = [
-    {
-      name: "Chicken (Fit Fuel) Brown Rice Bowl",
-      category: "Lean Meals",
-      price: 299,
-      calories: 440,
-      image_src: "/",
-      description: "Tender, seasoned chicken (150g) rests atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish."
-    },
-    {
-      name: "Egg (Fit Fuel) Brown Rice Bowl",
-      category: "Lean Meals",
-      price: 249,
-      calories: 384,
-      image_src: "/",
-      description: "Scrambled eggs (3) rest atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish. Perfect for health-conscious foodies!"
-    },
-    {
-      name: "Tofu (Fit Fuel) Brown Rice Bowl",
-      category: "Lean Meals",
-      price: 249,
-      calories: 460,
-      image_src: "/",
-      description: "Grilled Tofu (150g) rests atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish."
-    },
-    {
-      name: "Paneer (Fit Fuel) Brown Rice Bowl",
-      category: "Lean Meals",
-      price: 299,
-      calories: 604,
-      image_src: "/",
-      description: "Grilled paneer (150g) rests atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish. Perfect for health-conscious foodies!"
-    },
-    {
-      name: "Fit Fuel Vegetable & Mushroom Brown Rice Bowl",
-      category: "Lean Meals",
-      price: 249,
-      calories: 264,
-      image_src: "/",
-      description: "Grilled mushrooms (100g) rest atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish."
-    },
-    {
-      name: "Grilled Chicken with Salsa",
-      category: "Lean Meals",
-      price: 349,
-      calories: 519,
-      image_src: "/",
-      description: "Grilled shredded chicken with brown rice, assorted veggies (carrots, beans, sweet corn, zucchini, bell peppers, cucumber, mushrooms, cherry tomatoes, broccoli), served with pepperoni sauce made from tomatoes, onions, and herbs. Includes lemon, celery, and herb water."
-    },
-    {
-      name: "Grilled Chicken with Pepperoni Sauce",
-      category: "Lean Meals",
-      price: 349,
-      calories: 519,
-      image_src: "/",
-      description: "Assorted veggies (carrots, beans, sweet corn, zucchini, bell peppers, cucumber, mushrooms, cherry tomatoes, broccoli) served with salsa sauce made from tomatoes, onions, and herbs. Includes lemon, celery, and herb water."
-    },
-    {
-      name: "Grilled Chicken with Lemon Butter",
-      category: "Lean Meals",
-      price: 349,
-      calories: 519,
-      image_src: "/",
-      description: "French beans, carrot, zucchini, bell peppers, baby corn, mushroom, lemon, black pepper served with brown rice."
-    },
-    {
-      name: "Crock Pot Chicken with Brown Rice",
-      category: "Packed on Meals",
-      price: 399,
-      calories: 614,
-      image_src: "/",
-      description: "Juicy chicken, brown rice, carrots, onions, garlic, chicken broth, and seasonings slow-cooked to perfection. A hearty, wholesome meal!"
-    },
-    {
-      name: "Grilled Lemon and Pepper Chicken",
-      category: "Packed on Meals",
-      price: 399,
-      calories: 614,
-      image_src: "/",
-      description: "Tender chicken breasts marinated with zesty lemon juice, cracked black pepper, garlic, olive oil, and fresh herbs, then grilled to a smoky perfection."
-    },
-    {
-      name: "Grilled Chicken with Marinara Sauce",
-      category: "Packed on Meals",
-      price: 399,
-      calories: 614,
-      image_src: "/",
-      description: "Succulent grilled chicken breasts topped with a rich marinara sauce made from ripe tomatoes, garlic, olive oil, and Italian herbs. A flavorful, protein-packed delight!"
-    },
-    {
-      name: "Grilled Chicken with Honey Mustard",
-      category: "Packed on Meals",
-      price: 399,
-      calories: 614,
-      image_src: "/",
-      description: "Perfectly grilled chicken breasts glazed with a tangy-sweet mix of honey, Dijon mustard, garlic, and a hint of lemon juice. A deliciously balanced dish!"
-    },
-    {
-      name: "Grilled Chicken with Creamy Mushroom",
-      category: "Packed on Meals",
-      price: 399,
-      calories: 614,
-      image_src: "/",
-      description: "Juicy grilled chicken breasts paired with a velvety mushroom sauce made from cream, garlic, onions, and fresh herbs. A rich and savory delight!"
-    },
-    {
-      name: "Herb Roasted Chicken with Peri Peri Sauce",
-      category: "Packed on Meals",
-      price: 399,
-      calories: 614,
-      image_src: "/",
-      description: "Flavorful roasted chicken infused with aromatic herbs, served with a spicy and tangy peri peri sauce made from chilies, garlic, and citrus. A fiery and zesty treat!"
-    },
-    {
-      name: "Chicken Steak with Rice Bowl",
-      category: "Packed on Meals",
-      price: 449,
-      calories: 614,
-      image_src: "/",
-      description: "Tender chicken steak seasoned to perfection, served over a bed of fluffy steamed rice, paired with sautéed vegetables and a savory sauce. A hearty and balanced meal!"
-    },
-    {
-      name: "Grilled Paneer Platter",
-      category: "Packed on Meals",
-      price: 399,
-      calories: 440,
-      image_src: "/",
-      description: "Soft paneer cubes marinated in yogurt, spices, and herbs, grilled to perfection and served with fresh veggies, mint chutney, and a sprinkle of chaat masala. A wholesome vegetarian delight!"
-    },
-    {
-      name: "Veg Falafel Platter",
-      category: "Packed on Meals",
-      price: 399,
-      calories: 500,
-      image_src: "/",
-      description: "Savor the wholesome goodness of our Veg Falafel Platter—crispy falafels, fresh veggies, and creamy dips, all under 500 calories!"
-    }
-  ];
-  
+  {
+    name: "Chicken (Fit Fuel) Brown Rice Bowl",
+    category: "Lean Meals",
+    price: 299,
+    calories: 440,
+    image_src: "/images/menu/chicken-brown-rice-bowl.jpg",
+    veg: false,
+    description: "Tender, seasoned chicken (150g) rests atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish."
+  },
+  {
+    name: "Egg (Fit Fuel) Brown Rice Bowl",
+    category: "Lean Meals",
+    price: 249,
+    calories: 384,
+    image_src: "/images/menu/egg-brown-rice-bowl.jpg",
+    veg: false,
+    description: "Scrambled eggs (3) rest atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish. Perfect for health-conscious foodies!"
+  },
+  {
+    name: "Tofu (Fit Fuel) Brown Rice Bowl",
+    category: "Lean Meals",
+    price: 249,
+    calories: 460,
+    image_src: "/images/menu/tofu-brown-rice-bowl.jpg",
+    veg: true,
+    description: "Grilled Tofu (150g) rests atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish."
+  },
+  {
+    name: "Paneer (Fit Fuel) Brown Rice Bowl",
+    category: "Lean Meals",
+    price: 299,
+    calories: 604,
+    image_src: "/images/menu/paneer-brown-rice-bowl.jpg",
+    veg: true,
+    description: "Grilled paneer (150g) rests atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish. Perfect for health-conscious foodies!"
+  },
+  {
+    name: "Fit Fuel Vegetable & Mushroom Brown Rice Bowl",
+    category: "Lean Meals",
+    price: 249,
+    calories: 264,
+    image_src: "/images/menu/vegetable-mushroom-brown-rice-bowl.jpg",
+    veg: true,
+    description: "Grilled mushrooms (100g) rest atop a bed of cilantro lime rice. Colorful bell peppers, red beans, sweet corn, and juicy cherry tomatoes add freshness. Drizzle with avocado cilantro lime dressing for a delightful finish."
+  },
+  {
+    name: "Grilled Chicken with Salsa",
+    category: "Lean Meals",
+    price: 349,
+    calories: 519,
+    image_src: "/images/menu/grilled-chicken-salsa.jpg",
+    veg: false,
+    description: "Grilled shredded chicken with brown rice, assorted veggies (carrots, beans, sweet corn, zucchini, bell peppers, cucumber, mushrooms, cherry tomatoes, broccoli), served with pepperoni sauce made from tomatoes, onions, and herbs. Includes lemon, celery, and herb water."
+  },
+  {
+    name: "Grilled Chicken with Pepperoni Sauce",
+    category: "Lean Meals",
+    price: 349,
+    calories: 519,
+    image_src: "/images/menu/grilled-chicken-pepperoni-sauce.jpg",
+    veg: false,
+    description: "Assorted veggies (carrots, beans, sweet corn, zucchini, bell peppers, cucumber, mushrooms, cherry tomatoes, broccoli) served with salsa sauce made from tomatoes, onions, and herbs. Includes lemon, celery, and herb water."
+  },
+  {
+    name: "Grilled Chicken with Lemon Butter",
+    category: "Lean Meals",
+    price: 349,
+    calories: 519,
+    image_src: "/images/menu/grilled-chicken-lemon-butter.jpg",
+    veg: false,
+    description: "French beans, carrot, zucchini, bell peppers, baby corn, mushroom, lemon, black pepper served with brown rice."
+  },
+  {
+    name: "Crock Pot Chicken with Brown Rice",
+    category: "Packed on Meals",
+    price: 399,
+    calories: 614,
+    image_src: "/images/menu/crock-pot-chicken-brown-rice.jpg",
+    veg: false,
+    description: "Juicy chicken, brown rice, carrots, onions, garlic, chicken broth, and seasonings slow-cooked to perfection. A hearty, wholesome meal!"
+  },
+  {
+    name: "Grilled Lemon and Pepper Chicken",
+    category: "Packed on Meals",
+    price: 399,
+    calories: 614,
+    image_src: "/images/menu/grilled-lemon-pepper-chicken.jpg",
+    veg: false,
+    description: "Tender chicken breasts marinated with zesty lemon juice, cracked black pepper, garlic, olive oil, and fresh herbs, then grilled to a smoky perfection."
+  },
+  {
+    name: "Grilled Chicken with Marinara Sauce",
+    category: "Packed on Meals",
+    price: 399,
+    calories: 614,
+    image_src: "/images/menu/grilled-chicken-marinara-sauce.jpg",
+    veg: false,
+    description: "Succulent grilled chicken breasts topped with a rich marinara sauce made from ripe tomatoes, garlic, olive oil, and Italian herbs. A flavorful, protein-packed delight!"
+  },
+  {
+    name: "Grilled Chicken with Honey Mustard",
+    category: "Packed on Meals",
+    price: 399,
+    calories: 614,
+    image_src: "/images/menu/grilled-chicken-honey-mustard.jpg",
+    veg: false,
+    description: "Perfectly grilled chicken breasts glazed with a tangy-sweet mix of honey, Dijon mustard, garlic, and a hint of lemon juice. A deliciously balanced dish!"
+  },
+  {
+    name: "Grilled Chicken with Creamy Mushroom",
+    category: "Packed on Meals",
+    price: 399,
+    calories: 614,
+    image_src: "/images/menu/grilled-chicken-creamy-mushroom.jpg",
+    veg: false,
+    description: "Juicy grilled chicken breasts paired with a velvety mushroom sauce made from cream, garlic, onions, and fresh herbs. A rich and savory delight!"
+  },
+  {
+    name: "Herb Roasted Chicken with Peri Peri Sauce",
+    category: "Packed on Meals",
+    price: 399,
+    calories: 614,
+    image_src: "/images/menu/herb-roasted-chicken-peri-peri-sauce.jpg",
+    veg: false,
+    description: "Flavorful roasted chicken infused with aromatic herbs, served with a spicy and tangy peri peri sauce made from chilies, garlic, and citrus. A fiery and zesty treat!"
+  },
+  {
+    name: "Chicken Steak with Rice Bowl",
+    category: "Packed on Meals",
+    price: 449,
+    calories: 614,
+    image_src: "/images/menu/chicken-steak-rice-bowl.jpg",
+    veg: false,
+    description: "Tender chicken steak seasoned to perfection, served over a bed of fluffy steamed rice, paired with sautéed vegetables and a savory sauce. A hearty and balanced meal!"
+  },
+  {
+    name: "Grilled Paneer Platter",
+    category: "Packed on Meals",
+    price: 399,
+    calories: 440,
+    image_src: "/images/menu/grilled-paneer-platter.jpg",
+    veg: true,
+    description: "Soft paneer cubes marinated in yogurt, spices, and herbs, grilled to perfection and served with fresh veggies, mint chutney, and a sprinkle of chaat masala. A wholesome vegetarian delight!"
+  },
+  {
+    name: "Veg Falafel Platter",
+    category: "Packed on Meals",
+    price: 399,
+    calories: 500,
+    image_src: "/images/menu/veg-falafel-platter.jpg",
+    veg: true,
+    description: "Savor the wholesome goodness of our Veg Falafel Platter—crispy falafels, fresh veggies, and creamy dips, all under 500 calories!"
+  },
+  {
+    name: "BOILED CHICKEN WITH VEGGIES",
+    category: "Contest Prep Meal",
+    calories: 269,
+    price: 299,
+    image_src: "/images/menu/boiled-chicken-veggies.jpg",
+    veg: false,
+    description: "Lean chicken boiled to perfection, paired with fresh steamed vegetables like broccoli, carrots, and zucchini, lightly seasoned for a healthy, low calorie meal.",
+  },
+  {
+    name: "BOILED FISH MEALS WITH FRESH VEGGIES",
+    category: "Contest Prep Meal",
+    calories: 245,
+    price: 349,
+    image_src: "/images/menu/boiled-fish-veggies.jpg",
+    veg: false,
+    description: "Lean, tender fish boiled and served with a mix of fresh, steamed vegetables like spinach, carrots, and peas. A light, nutritious, and low calorie option!",
+  },
+  {
+    name: "BOILED TOFU WITH FRESH VEGGIES",
+    category: "Contest Prep Meal",
+    calories: 348,
+    price: 249,
+    image_src: "/images/menu/boiled-tofu-veggies.jpg",
+    veg: true,
+    description: "Soft, protein-rich tofu boiled and paired with a vibrant mix of fresh, steamed vegetables like bell peppers, broccoli, and carrots. A wholesome and light meal!",
+  },
+  {
+    name: "PANEER VEGGI",
+    category: "Contest Prep Meal",
+    calories: 504,
+    price: 249,
+    image_src: "/images/menu/paneer-veggi.jpg",
+    veg: true,
+    description: "Soft paneer cubes sautéed with a colorful mix of fresh vegetables like bell peppers, tomatoes, and spinach, seasoned with aromatic spices. A flavorful and nutritious vegetarian dish!",
+  },
+  {
+    name: "SCRAMBLED EGG",
+    category: "Contest Prep Meal",
+    calories: 319,
+    price: 249,
+    image_src: "/images/menu/scrambled-egg.jpg",
+    veg: false,
+    description: "Fluffy scrambled eggs cooked with a touch of butter, salt, and pepper, served with optional herbs or veggies for extra flavor. A simple and satisfying protein-packed meal!",
+  },
+  {
+    name: "BOILED VEGETABLES",
+    category: "Contest Prep Meal",
+    calories: 193,
+    price: 199,
+    image_src: "/images/menu/boiled-vegetables.jpg",
+    veg: true,
+    description: "A healthy mix of steamed vegetables like carrots, broccoli, and peas, lightly seasoned for a nutritious, low-calorie side dish. Simple, wholesome, and packed with vitamins!",
+  },
+  {
+    name: "Muscle Man Protein Shake (350 ML)",
+    category: "Shakes",
+    calories: 289,
+    price: 199,
+    image_src: "/images/menu/muscle-man-protein-shake.jpg",
+    veg: true,
+    description: "Handcrafted with 1 scoop isolated whey protein and 1 scoop zero sugar peanut butter blended with Healthy Soya Milk to give you a creamy and rich taste.",
+  },
+  {
+    name: "Strawberry Banana Shake (350 ML)",
+    category: "Shakes",
+    calories: 120,
+    price: 149,
+    image_src: "/images/menu/strawberry-banana-shake.jpg",
+    veg: true,
+    description: "Fresh strawberry pulp with only 10% sugar and honey. Handcrafted with Healthy Soya Milk to give you a creamy and rich taste.",
+  },
+  {
+    name: "Blueberry-Lavender Shake (350 ML)",
+    category: "Shakes",
+    calories: 120,
+    price: 149,
+    image_src: "/images/menu/blueberry-lavender-shake.jpg",
+    veg: true,
+    description: "Handcrafted with Healthy Soya Milk to give you a creamy and rich taste.",
+  },
+  {
+    name: "Cold Coffee (350 ML)",
+    category: "Shakes",
+    calories: null,
+    price: 149,
+    image_src: "/images/menu/cold-coffee.jpg",
+    veg: true,
+    description: "Handcrafted with Healthy Soya Milk to give you a creamy and rich taste.",
+  },
+  {
+    name: "Blueberry Bliss",
+    category: "Smoothies",
+    price: 199,
+    calories: null,
+    image_src: "/images/menu/blueberry-bliss.jpg",
+    veg: true,
+    description: "Blueberry cranberry... Handcrafted with Healthy Soya Milk to give you a creamy and rich taste.",
+  },
+  {
+    name: "Kiwi Vitality Burst",
+    category: "Smoothies",
+    price: 199,
+    calories: null,
+    image_src: "/images/menu/kiwi-vitality-burst.jpg",
+    veg: true,
+    description: "Kiwi and green apple with Greek Yogurt. Handcrafted with Healthy Soya Milk to give you a creamy and rich taste.",
+  },
+  {
+    name: "Nutty Bliss",
+    category: "Smoothies",
+    price: 199,
+    calories: null,
+    image_src: "/images/menu/nutty-bliss.jpg",
+    veg: true,
+    description: "A rich mix of walnut, peanut, cashew nut, anjeer, almond, and yogurt. Sweetened with brown sugar. Handcrafted with Healthy Soya Milk to give you a creamy and rich taste.",
+  },
+  {
+    name: "Strawberry",
+    category: "Smoothies",
+    price: 199,
+    calories: null,
+    image_src: "/images/menu/strawberry.jpg",
+    veg: true,
+    description: "A fresh blend of strawberries, banana, apples, and yogurt. Handcrafted with Healthy Soya Milk to give you a creamy and rich taste.",
+  },
+  {
+    name: "Protein Power Paneer Wrap",
+    category: "Whole Wheat Wraps",
+    price: 219,
+    calories: 394,
+    image_src: "/images/menu/protein-power-paneer-wrap.jpg",
+    veg: true,
+    description: "Whole wheat wrap filled with grilled paneer, veggies, and a protein-packed sauce. A satisfying, nutritious snack!",
+  },
+  {
+    name: "Protein Power Egg Wrap",
+    category: "Whole Wheat Wraps",
+    price: 299,
+    calories: 298,
+    image_src: "/images/menu/protein-power-egg-wrap.jpg",
+    veg: false,
+    description: "Whole wheat wrap filled with scrambled eggs, veggies, and a light dressing. A healthy, protein-rich snack!",
+  },
+  {
+    name: "Protein Power Chicken Wrap",
+    category: "Whole Wheat Wraps",
+    price: 199,
+    calories: 300,
+    image_src: "/images/menu/protein-power-chicken-wrap.jpg",
+    veg: false,
+    description: "Grilled chicken, fresh veggies, and a light sauce wrapped in a whole wheat tortilla. A lean, protein-packed meal!",
+  },
+  {
+    name: "Lean & Tofu Wrap",
+    category: "Whole Wheat Wraps",
+    price: 249,
+    calories: 229,
+    image_src: "/images/menu/lean-tofu-wrap.jpg",
+    veg: true,
+    description: "Soft tofu, fresh veggies, and a light sauce wrapped in a whole wheat tortilla. A low calorie, protein-rich, and flavorful meal!",
+  },
+  {
+    name: "Grilled Fish with Hollandaise Sauce",
+    category: "Seaside Selection",
+    price: 499,
+    calories: 482,
+    image_src: "/images/menu/grilled-fish-hollandaise-sauce.jpg",
+    veg: false,
+    description: "Hummus, Pita Bread, Assorted Veggies, Nachos, Oriental Rice, Fresh Water Basa cooked in Hollandaise Sauce.",
+  },
+  {
+    name: "Grilled Fish with Marinara Sauce",
+    category: "Seaside Selection",
+    price: 399,
+    calories: 482,
+    image_src: "/images/menu/grilled-fish-marinara-sauce.jpg",
+    veg: false,
+    description: "Hummus, Pita Bread, Assorted Veggies, Nachos, Oriental Rice, Fresh Water Basa cooked in Marinara Sauce prepared with tomato sauce, garlic, herbs, and onions.",
+  },
+  {
+    name: "Grilled Fish with Mushroom Sauce",
+    category: "Seaside Selection",
+    price: 399,
+    calories: 482,
+    image_src: "/images/menu/grilled-fish-mushroom-sauce.jpg",
+    veg: false,
+    description: "Hummus, Pita Bread, Assorted Veggies, Nachos, Oriental Rice, Fresh Water Basa cooked in Mushroom Sauce prepared with garlic, herbs, and onions.",
+  },
+  {
+    name: "Steam Fish Italian Sauce",
+    category: "Seaside Selection",
+    price: 399,
+    calories: 319,
+    image_src: "/images/menu/steam-fish-italian-sauce.jpg",
+    veg: false,
+    description: "Hummus, Pita Bread, Assorted Veggies, Nachos, Oriental Rice, Fresh Water Basa cooked in Italian Sauce prepared with tomato, garlic, herbs, and onions.",
+  },
+  {
+    name: "Grilled Fish with Cocktail Sauce",
+    category: "Seaside Selection",
+    price: 499,
+    calories: 482,
+    image_src: "/images/menu/grilled-fish-cocktail-sauce.jpg",
+    veg: false,
+    description: "Tender grilled fish served with a tangy cocktail sauce made from ketchup, horseradish, and lemon juice. A light, flavorful meal.",
+  },
+  // SALAD SERENITY Category
+  {
+    "name": "Warm Roasted Chicken Salad",
+    "category": "Salad Serenity",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/warm-roasted-chicken-salad.jpg",
+    "veg": false,
+    "description": "Roasted chicken on mixed greens with veggies and light dressing. A healthy, satisfying salad!"
+  },
+  {
+    "name": "Chicken Ceaser Salad",
+    "category": "Salad Serenity",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/chicken-caeser-salad.jpg",
+    "veg": false,
+    "description": "Grilled chicken, crisp romaine lettuce, Parmesan, and a light Caesar dressing. A flavorful, low-calorie salad!"
+  },
+  {
+    "name": "Chicken Chipotle Salad",
+    "category": "Salad Serenity",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/chicken-chipotle-salad.jpg",
+    "veg": false,
+    "description": "Grilled chicken, mixed greens, corn, black beans, and a smoky chipotle dressing. A zesty and nutritious salad!"
+  },
+  {
+    "name": "Kidney Bean Salad",
+    "category": "Salad Serenity",
+    "price": 199,
+    "calories": null,
+    "image_src": "/images/menu/kidney-bean-salad.jpg",
+    "veg": true,
+    "description": "Kidney beans mixed with fresh veggies like tomatoes, onions, and cucumbers, dressed in a tangy vinaigrette. A hearty, protein-packed salad!"
+  },
+  {
+    "name": "Grilled Tofu Salad",
+    "category": "Salad Serenity",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/grilled-tofu-salad.jpg",
+    "veg": true,
+    "description": "Grilled tofu served on a bed of mixed greens, with vegetables like cucumbers, tomatoes, and a light dressing. A flavorful, plant-based, and nutritious salad!"
+  },
+  {
+    "name": "Panner Salad",
+    "category": "Salad Serenity",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/panner-salad.jpg",
+    "veg": true,
+    "description": "Cubes of paneer mixed with fresh veggies like cucumbers, tomatoes, and onions, dressed with a tangy vinaigrette. A protein-rich, refreshing salad!"
+  },
+
+  {
+    "name": "Chicken Burritos Rice Bowl",
+    "category": "Mexican Burritos Rice Bowl",
+    "price": 349,
+    "calories": null,
+    "image_src": "/images/menu/chicken-burritos-rice-bowl.jpg",
+    "veg": false,
+    "description": "Grilled chicken, seasoned rice, black beans, veggies, and salsa, all served in a bowl for a flavorful and satisfying meal. A delicious, balanced dish!"
+  },
+  {
+    "name": "Panner Burritos Rice Bowl",
+    "category": "Mexican Burritos Rice Bowl",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/panner-burritos-rice-bowl.jpg",
+    "veg": true,
+    "description": "Soft paneer cubes, seasoned rice, black beans, veggies, and salsa, all layered in a bowl for a hearty, flavorful meal. A filling vegetarian delight!"
+  },
+  {
+    "name": "Tofu Burritos Rice Bowl",
+    "category": "Mexican Burritos Rice Bowl",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/tofu-burritos-rice-bowl.jpg",
+    "veg": true,
+    "description": "Grilled tofu, seasoned rice, black beans, veggies, and salsa, served in a bowl for a protein-packed, flavorful meal. A satisfying, plant-based option!"
+  },
+  {
+    "name": "Egg Burritos Rice Bowl",
+    "category": "Mexican Burritos Rice Bowl",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/egg-burritos-rice-bowl.jpg",
+    "veg": false,
+    "description": "Scrambled eggs, seasoned rice, black beans, veggies, and salsa, all combined in a bowl for a delicious, protein-packed meal. A flavorful and filling option!"
+  },
+  {
+    "name": "Mushroom Rice Bowl",
+    "category": "Mexican Burritos Rice Bowl",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/mushroom-rice-bowl.jpg",
+    "veg": true,
+    "description": "Sautéed mushrooms served over a bed of seasoned rice, topped with fresh herbs. A light, flavorful, and nutritious meal!"
+  },
+  {
+    "name": "Grilled Chicken Served with Hummus & Greek Salad",
+    "category": "Lebanese Food",
+    "price": 399,
+    "calories": null,
+    "image_src": "/images/menu/grilled_chicken_hummus_greek_salad.jpg",
+    "veg": false,
+    "description": "Juicy grilled chicken served alongside creamy hummus and a refreshing Greek salad with cucumbers, tomatoes, olives, and feta. A balanced, Mediterranean-inspired meal!"
+  },
+  {
+    "name": "Shishkabob Chicken Served with Labneh & Fattoush Salad",
+    "category": "Lebanese Food",
+    "price": 399,
+    "calories": null,
+    "image_src": "/images/menu/shishkabob_chicken_labneh_fattoush.jpg",
+    "veg": false,
+    "description": "Tender chicken skewers grilled to perfection, served with creamy labneh and a vibrant fattoush salad of mixed greens, crispy pita, and tangy dressing. A flavorful, Mediterranean feast!"
+  },
+  {
+    "name": "Fasolla Served with Green Beans, Tomato, Onion with Rice",
+    "category": "Lebanese Food",
+    "price": 349,
+    "calories": null,
+    "image_src": "/images/menu/fasolla_green_beans_rice.jpg",
+    "veg": true,
+    "description": "A hearty dish of fasolla beans paired with sautéed green beans, tomatoes, and onions, served over a bed of rice."
+  },
+  {
+    "name": "Hummus & Pita Bread",
+    "category": "Lebanese Food",
+    "price": 199,
+    "calories": null,
+    "image_src": "/images/menu/hummus_pita_bread.jpg",
+    "veg": true,
+    "description": "Creamy hummus served with warm, soft pita bread for a flavorful and satisfying snack or appetizer."
+  },
+  {
+    "name": "Tofu Tango Sandwich",
+    "category": "Multigrain Sub Sandwich",
+    "price": 199,
+    "calories": null,
+    "image_src": "/images/menu/tofu_tango_sandwich.jpg",
+    "veg": true,
+    "description": "Grilled Tofu | Fresh Lettuce | Tomato | Cucumber | Avocado | Light Sauce | Whole Grain Bread."
+  },
+  {
+    "name": "Herb Grilled Chicken Sandwich",
+    "category": "Multigrain Sub Sandwich",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/herb_grilled_chicken_sandwich.jpg",
+    "veg": false,
+    "description": "Grilled Chicken | Fresh Lettuce | Tomato | Cucumber | Herb-infused Mayo | Whole Grain Bread."
+  },
+  {
+    "name": "Paneer Paradise Sandwich",
+    "category": "Multigrain Sub Sandwich",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/paneer_paradise_sandwich.jpg",
+    "veg": true,
+    "description": "Grilled Paneer | Fresh Lettuce | Tomato | Cucumber | Mint Yogurt Sauce | Multigrain Bread."
+  },
+  {
+    "name": "Eggstravaganza Sandwich",
+    "category": "Multigrain Sub Sandwich",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/eggstravaganza_sandwich.jpg",
+    "veg": false,
+    "description": "Boiled Eggs | Fresh Lettuce | Tomato | Cucumber | Light Mayo | Whole Wheat Bread."
+  },
+  {
+    "name": "Veg Farmhouse Sandwich",
+    "category": "Multigrain Sub Sandwich",
+    "price": 199,
+    "calories": null,
+    "image_src": "/images/menu/veg_farmhouse_sandwich.jpg",
+    "veg": true,
+    "description": "Grilled Vegetables (Bell Peppers, Zucchini, Mushrooms) | Fresh Lettuce | Tomato | Cucumber | Avocado | Whole Grain Bread."
+  },
+  {
+    "name": "Chicken Sandwich",
+    "category": "Multigrain Sub Sandwich",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/chicken_sandwich.jpg",
+    "veg": false,
+    "description": "Grilled Chicken | Fresh Lettuce | Tomato | Cucumber | Light Mayo | Whole Wheat Bread."
+  },
+  {
+    "name": "Paneer Sandwich",
+    "category": "Multigrain Sub Sandwich",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/paneer_sandwich.jpg",
+    "veg": true,
+    "description": "Grilled Paneer | Fresh Lettuce | Tomato | Cucumber | Mint Yogurt Sauce | Multigrain Bread."
+  },
+  {
+    "name": "Tofu Mushroom Sandwich",
+    "category": "Multigrain Sub Sandwich",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/tofu_mushroom_sandwich.jpg",
+    "veg": true,
+    "description": "Grilled Tofu | Fresh Lettuce | Tomato | Cucumber | Avocado | Whole Grain Bread."
+  },
+  {
+    "name": "Paneer Pita Sandwich with Hummus",
+    "category": "Pita Sandwich",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/paneer_pita_sandwich_with_hummus.jpg",
+    "veg": true,
+    "description": "Paneer pita sandwich paired with creamy hummus - a delicious fusion of flavors!"
+  },
+  {
+    "name": "Chicken Pita Sandwich with Hummus",
+    "category": "Pita Sandwich",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/chicken_pita_sandwich_with_hummus.jpg",
+    "veg": false,
+    "description": "Chicken pita sandwich served with creamy hummus - a hearty and flavorful treat!"
+  },
+  {
+    "name": "Egg Pita Sandwich with Hummus",
+    "category": "Pita Sandwich",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/egg_pita_sandwich_with_hummus.jpg",
+    "veg": false,
+    "description": "Scrambled eggs and creamy hummus wrapped in a soft pita for a protein-packed, delicious sandwich."
+  },
+  {
+    "name": "Tofu Pita Sandwich with Hummus",
+    "category": "Pita Sandwich",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/tofu_pita_sandwich_with_hummus.jpg",
+    "veg": true,
+    "description": "Grilled tofu and creamy hummus stuffed in a soft pita, offering a tasty, plant-based bite."
+  },
+  {
+    "name": "Veg. Quesadilla",
+    "category": "Quesadilla",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/veg_quesadilla.jpg",
+    "veg": true,
+    "description": "Cheesy veg quesadilla - a crispy, savory Mexican treat!"
+  },
+  {
+    "name": "Chicken Quesadilla",
+    "category": "Quesadilla",
+    "price": 299,
+    "calories": null,
+    "image_src": "/images/menu/chicken_quesadilla.jpg",
+    "veg": false,
+    "description": "Cheesy chicken quesadilla - a flavorful, hearty Mexican favorite!"
+  },
+  {
+    "name": "Egg Quesadilla",
+    "category": "Quesadilla",
+    "price": 199,
+    "calories": null,
+    "image_src": "/images/menu/egg_quesadilla.jpg",
+    "veg": false,
+    "description": "Egg quesadilla - a tasty, savory blend of eggs, cheese, and crispy tortillas!"
+  },
+  {
+    "name": "Grilled Tofu Quesadilla",
+    "category": "Quesadilla",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/grilled_tofu_quesadilla.jpg",
+    "veg": true,
+    "description": "Grilled tofu quesadilla - crispy, flavorful, and packed with plant-based goodness!"
+  },
+  {
+    "name": "Chicken & Egg",
+    "category": "Egg to Order",
+    "price": 250,
+    "calories": null,
+    "image_src": "/images/menu/chicken_egg.jpg",
+    "veg": false,
+    "description": "Chicken & egg quesadilla - a hearty, protein-packed delight!"
+  },
+  {
+    "name": "Mushroom & Egg",
+    "category": "Egg to Order",
+    "price": 199,
+    "calories": null,
+    "image_src": "/images/menu/mushroom_egg.jpg",
+    "veg": true,
+    "description": "Mushroom & egg quesadilla - a flavorful, wholesome, and protein-rich treat!"
+  },
+  {
+    "name": "Vegetable & Egg",
+    "category": "Egg to Order",
+    "price": 149,
+    "calories": null,
+    "image_src": "/images/menu/vegetable_egg.jpg",
+    "veg": true,
+    "description": "Vegetable & egg quesadilla - a tasty, nutritious, and protein-packed delight!"
+  },
+  {
+    "name": "Fudgy Chewy Brownies",
+    "category": "Dessert",
+    "price": 199,
+    "calories": null,
+    "image_src": "/images/menu/fudgy_chewy_brownies.jpg",
+    "veg": true,
+    "description": "Raw Wheat Brownies, made with Dark chocolate, choco chips and exclusive dry fruits."
+  },
+  {
+    "name": "Protein Pancakes",
+    "category": "Dessert",
+    "price": 199,
+    "calories": null,
+    "image_src": "/images/menu/protein_pancakes.jpg",
+    "veg": true,
+    "description": "Raw Oats, banana, peanut butter, and honey blended together to give you a delicious texture altogether."
+  },
+  {
+    "name": "Blueberry Pancakes",
+    "category": "Dessert",
+    "price": 249,
+    "calories": null,
+    "image_src": "/images/menu/blueberry_pancakes.jpg",
+    "veg": true,
+    "description": "Raw Oats, banana, peanut butter, and honey blended together to give you a delicious texture altogether."
+  }
+
+];

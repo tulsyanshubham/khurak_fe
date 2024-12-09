@@ -22,13 +22,13 @@ export default function WhyChooseUs() {
         async function animate() {
             const sr = (await import("scrollreveal")).default
             if (fromTop.current) {
-                sr(revealOptions).reveal(fromTop.current,{ origin: 'top' })
+                sr(revealOptions).reveal(fromTop.current, { origin: 'top' })
             }
             itemRefs.current.forEach((itemRef) => {
                 if (itemRef) {
-                  sr(revealOptions).reveal(itemRef, { origin: "bottom" });
+                    sr(revealOptions).reveal(itemRef, { origin: "bottom" });
                 }
-              });
+            });
         }
         animate()
     }, [])
@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
                 <div className='md:w-[70%] w-[90%]'>
                     {reasonsToChooseKhuraak.map((reason, index) => (
                         <Accordion expanded={expanded === index} key={reason.title} onChange={handleChange(index)}
-                        ref={(el) => (itemRefs.current[index] = el)}
+                            ref={(el) => (itemRefs.current[index] = el)}
                             sx={{ "&:before": { content: "none" } }} className='!rounded-lg border !bg-transparent !border-ktheme-800 my-[6px]'>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon className='dark:text-white' />}
