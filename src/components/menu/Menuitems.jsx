@@ -162,7 +162,7 @@ export default function MenuItems({ filteredItems }) {
                 </motion.div>
                 <motion.div
                   onClick={() => setActive(item)}
-                  className='cursor-pointer text-gray-700 dark:text-gray-200 border rounded-3xl w-fit py-[2px] px-4 hover:text-gray-800 dark:hover:text-gray-300 text-sm md:text-sm mt-2 bg-gray-100 dark:bg-gray-800'
+                  className='cursor-pointer text-gray-700 dark:text-gray-200 border rounded-3xl w-fit py-[2px] px-4 hover:text-gray-800 dark:hover:text-gray-300 text-sm md:text-sm mt-2 bg-gray-100 dark:bg-gray-900'
                 >
                   More Details &nbsp; &rarr;
                 </motion.div>
