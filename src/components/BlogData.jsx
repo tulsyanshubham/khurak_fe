@@ -16,6 +16,7 @@ export default function BlogData({ data, page }) {
     const itemRefs = useRef([]);
     const fromBottom = useRef(null);
 
+
     useEffect(() => {
         function onKeyDown(event) {
             if (event.key === "Escape") {
