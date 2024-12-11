@@ -87,30 +87,36 @@ body {
 }
 
 .spread {
-  font-family: "Hachi Maru Pop", cursive;
+  font-family: 'Hachi Maru Pop', cursive;
 }
 
 .cursive {
-  font-family: "League Script", cursive;
+  font-family: 'League Script', cursive;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
+@media (min-width: 768px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--trackbackground);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--trackbackground);
-}
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  border-radius: 25px;
 }
